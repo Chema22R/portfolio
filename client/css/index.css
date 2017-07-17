@@ -1,0 +1,18 @@
+html, body {
+    background-color: #202020;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Projects */
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.project {
+    background-color: pink;
+    float: left;
+}
