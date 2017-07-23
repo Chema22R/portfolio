@@ -7,11 +7,26 @@ html, body {
 
 /* Projects */
 
-.projects.container {
-    height: 100%;
+.projects.project {
+    float: left;
+    overflow: hidden;
 }
 
-.projects.project {
-    background-color: pink;
-    float: left;
+.projects.trigger {
+    height: 100%;
+    width: 100%;
+
+    border: none;
+    
+    color: #000;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.projects.trigger:hover {
+    font-size: 1.3em;
 }
