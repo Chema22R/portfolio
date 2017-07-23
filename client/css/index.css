@@ -25,6 +25,7 @@ html, body {
     text-transform: uppercase;
 
     cursor: pointer;
+    background-color: #EEE;
 }
 
 .projects.trigger:hover {
