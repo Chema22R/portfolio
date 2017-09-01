@@ -5,27 +5,35 @@ $(function() {
         dataType: "json",
         success: function(data, status) {
             generateProjects(data)
-            organizeProjects()
+            //organizeProjects()
         },
         error: function(jqXHR, status, err) {
             console.log(err);
         }
     });
 
-
-    /* Functions */
-
     function generateProjects(data) {
         for (var i=0; i<data.length; i++) {
-            $(
-                "<form action='http://"+serverAddress+"/"+data[i].url+"' method='get' class='projects project'>" +
-                    "<button type='submit' class='projects trigger'>"+data[i].name+"</button>" +
-                "</form>"
-            ).appendTo(".projects.container");
+            $("<div class='containerProject'>"+
+                    "<a href='http://"+serverAddress+"/"+data[i].url+"'>"+
+                        "<figure>"+
+                            "<img class='front' src='img/"+data[i].url+".png' alt='memoriizu'>"+
+                            "<figcaption class='back'>"+
+                                "<h2>"+data[i].name+"</h2>"+
+                                "<hr>"+
+                                "<p>"+data[i].description+"</p>"+
+                                "<div class='"+data[i].access+"'>"+
+                                    "<p>"+data[i].access+"</p>"+
+                                "</div>"+
+                            "</figcaption>"+
+                        "</figure>"+
+                    "</a>"+
+                "</div>"
+            ).appendTo(".container");
         }
     }
 
-    function organizeProjects() {
+    /*function organizeProjects() {
         var heightRatio = 0.5;
         var widthRatio = 0.2;
         var marginRatio = 0.2;
@@ -74,12 +82,12 @@ $(function() {
             "padding-left": containerPadding,
             "padding-right": containerPadding
         });
-    }
+    }*/
 
 
     /* Triggers */
 
-    $(window).resize(function() {
+    /*$(window).resize(function() {
 		organizeProjects();
-	});
+	});*/
 });

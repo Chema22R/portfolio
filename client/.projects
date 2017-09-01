@@ -1,10 +1,14 @@
 [
     {
-        "name": "メモリーズ",
-        "url": "memoriizu"
+        "name": "Memoriizu",
+        "url": "memoriizu",
+        "description": "Application for language study.",
+        "access": "private"
     },
     {
         "name": "3D Preview",
-        "url": "3dpreview"
+        "url": "3dpreview",
+        "description": "3D print objects previewer.",
+        "access": "private"
     }
 ]
