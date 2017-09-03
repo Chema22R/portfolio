@@ -1,6 +1,6 @@
 $(function() {
     $.ajax({
-        url: ".projects",
+        url: "projects",
         method: "GET",
         dataType: "json",
         success: function(data, status) {
