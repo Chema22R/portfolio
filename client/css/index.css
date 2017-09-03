@@ -28,10 +28,10 @@ a {text-decoration: none;}
 .project {margin: 20px;}
 
 .project:hover figure {
-    -webkit-transform: perspective(600px) rotateY(180deg);
-    -ms-transform: perspective(600px) rotateY(180deg);
-    -o-transform: perspective(600px) rotateY(180deg);
-    transform: perspective(600px) rotateY(180deg);
+    -webkit-transform: perspective(600px) rotateY(179.9999deg); /* the four decimals are because a little overflow in firefox (to get maximun proximity to 180deg) */
+    -ms-transform: perspective(600px) rotateY(179.9999deg);
+    -o-transform: perspective(600px) rotateY(179.9999deg);
+    transform: perspective(600px) rotateY(179.9999deg);
 
     -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
@@ -74,7 +74,10 @@ a {text-decoration: none;}
     transition: all ease -5s;
 }
 
-.project figure .projectFront {display: block;}
+.project figure .projectFront {
+    display: block;
+    background-color: #f0f2f1;
+}
 
 .project figure .projectBack {
     position: absolute;
