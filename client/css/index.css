@@ -146,7 +146,7 @@ a {text-decoration: none;}
 
 
 @media screen and (max-width: 992px) {
-    figure .projectBack {
+    .project figure .projectBack {
         backface-visibility: visible;
         -webkit-transform: perspective(600px) rotateY(0deg);
         -ms-transform: perspective(600px) rotateY(0deg);
