@@ -9,6 +9,6 @@
         "name": "3D Preview",
         "url": "3dpreview",
         "description": "3D print objects previewer.",
-        "access": "private"
+        "access": "public"
     }
 ]

@@ -14,22 +14,22 @@ $(function() {
 
     function generateProjects(data) {
         for (var i=0; i<data.length; i++) {
-            $("<div class='containerProject'>"+
+            $("<div class='project'>"+
                     "<a href='http://"+serverAddress+"/"+data[i].url+"'>"+
                         "<figure>"+
-                            "<img class='front' src='img/"+data[i].url+".png' alt='memoriizu'>"+
-                            "<figcaption class='back'>"+
+                            "<img class='projectFront' src='img/"+data[i].url+".png' alt='memoriizu'>"+
+                            "<figcaption class='projectBack'>"+
                                 "<h2>"+data[i].name+"</h2>"+
                                 "<hr>"+
                                 "<p>"+data[i].description+"</p>"+
-                                "<div class='"+data[i].access+"'>"+
+                                "<div class='"+data[i].access+"Project'>"+
                                     "<p>"+data[i].access+"</p>"+
                                 "</div>"+
                             "</figcaption>"+
                         "</figure>"+
                     "</a>"+
                 "</div>"
-            ).appendTo(".container");
+            ).appendTo("#proyectsContainer");
         }
     }
 

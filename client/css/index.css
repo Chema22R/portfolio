@@ -13,18 +13,21 @@ body {
 
 a {text-decoration: none;}
 
-.container {
-    max-width: 1200px;
-    margin: 50px auto;
+
+#proyectsContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    max-width: 1360px;
+    margin: 50px auto;
+    
     justify-content: center;
 }
 
-.containerProject {margin: 20px;}
+.project {margin: 20px;}
 
-.containerProject:hover figure {
+.project:hover figure {
     -webkit-transform: perspective(600px) rotateY(180deg);
     -ms-transform: perspective(600px) rotateY(180deg);
     -o-transform: perspective(600px) rotateY(180deg);
@@ -35,38 +38,50 @@ a {text-decoration: none;}
     box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
 }
 
-.containerProject a {display: inline-block;}
+.project a {display: inline-block;}
 
-figure {
+.project figure {
     position: relative;
     width: 300px;
     height: 350px;
     margin: 0;
     border-radius: 5px;
-
+    
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
     transition: all ease .5s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
+
+    -webkit-transform: perspective(600px) rotateY(0deg);
+    -ms-transform: perspective(600px) rotateY(0deg);
+    -o-transform: perspective(600px) rotateY(0deg);
     transform: perspective(600px) rotateY(0deg);
 }
 
-figure .front, figure .back {
+.project figure .projectFront,
+.project figure .projectBack {
     width: 100%;
     height: 100%;
     border-radius: 5px;
     
+    -webkit-transition: all ease -5s;
+    -moz-transition: all ease -5s;
+    -o-transition: all ease -5s;
     transition: all ease -5s;
 }
 
-figure .front {display: block;}
+.project figure .projectFront {display: block;}
 
-figure .back {
+.project figure .projectBack {
     position: absolute;
     top: 0;
     padding: 20px;
+
     color: #fff;
-    transform: perspective(600px) rotateY(180deg);
-    backface-visibility: hidden;
-    overflow: auto;
 
     background: rgba(100,100,100,0.7);
     background: -moz-linear-gradient(top, rgba(100,100,100,1) 0%, rgba(128,128,128,0.7) 100%);
@@ -76,33 +91,41 @@ figure .back {
     background: -ms-linear-gradient(top, rgba(100,100,100,1) 0%, rgba(128,128,128,0.7) 100%);
     background: linear-gradient(to bottom, rgba(100,100,100,1) 0%, rgba(128,128,128,0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#646464', endColorstr='#808080', GradientType=0);
+    
+    backface-visibility: hidden;
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    -ms-transform: perspective(600px) rotateY(180deg);
+    -o-transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg);
+
+    overflow: auto;
 }
 
-figure .back h2 {
+.project figure .projectBack h2 {
     margin-bottom: 20px;
 
-    color: #fff;
-    font-weight: normal;
     font-size: 24px;
+    font-weight: normal;
     text-align: center;
 }
 
-figure .back hr {
+.project figure .projectBack hr {
     height: 2px;
-    background: #fff;
-    border: none;
     margin-bottom: 20px;
-    opacity: .5;
+    border: none;
+
+    opacity: .8;
+    background: #fff;
 }
 
-figure .back p {
-    line-height: 22px;
+.project figure .projectBack p {
     font-size: 14px;
+    line-height: 22px;
     text-align: justify;
 }
 
-figure .back .public,
-figure .back .private {
+.project figure .projectBack .publicProject,
+.project figure .projectBack .privateProject {
     position: absolute;
     left:0;
     right: 0;
@@ -110,24 +133,31 @@ figure .back .private {
     padding: 8px 20px;
 }
 
-figure .back .public p,
-figure .back .private p {
-    line-height: 22px;
+.project figure .projectBack .publicProject p,
+.project figure .projectBack .privateProject p {
     font-size: 18px;
+    line-height: 22px;
     text-align: center;
     text-transform: capitalize;
 }
 
-figure .back .public {background: #008000;}
-figure .back .private {background: #ff0000;}
+.project figure .projectBack .publicProject {background: #008000;}
+.project figure .projectBack .privateProject {background: #ff0000;}
+
 
 @media screen and (max-width: 992px) {
-    figure .back {
+    figure .projectBack {
         backface-visibility: visible;
+        -webkit-transform: perspective(600px) rotateY(0deg);
+        -ms-transform: perspective(600px) rotateY(0deg);
+        -o-transform: perspective(600px) rotateY(0deg);
         transform: perspective(600px) rotateY(0deg);
     }
 
-    .containerProject:hover figure {
+    .project:hover figure {
+        -webkit-transform: perspective(600px) rotateY(0deg);
+        -ms-transform: perspective(600px) rotateY(0deg);
+        -o-transform: perspective(600px) rotateY(0deg);
         transform: perspective(600px) rotateY(0deg);
     }
 }
