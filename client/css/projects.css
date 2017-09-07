@@ -1,0 +1,153 @@
+#proyectsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    max-width: 1360px;
+    margin: 50px auto;
+    
+    justify-content: center;
+}
+
+.project {margin: 20px;}
+
+.project:hover figure {
+    -webkit-transform: perspective(600px) rotateY(179.9999deg); /* the four decimals are because a little overflow in firefox (to get maximun proximity to 180deg) */
+    -ms-transform: perspective(600px) rotateY(179.9999deg);
+    -o-transform: perspective(600px) rotateY(179.9999deg);
+    transform: perspective(600px) rotateY(179.9999deg);
+
+    -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+}
+
+.project.mobile:hover figure {
+    -webkit-transform: perspective(600px) rotateY(0deg);
+    -ms-transform: perspective(600px) rotateY(0deg);
+    -o-transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(0deg);
+}
+
+
+.project a {display: inline-block;}
+
+.project figure {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 0;
+    border-radius: 5px;
+    
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform: perspective(600px) rotateY(0deg);
+    -ms-transform: perspective(600px) rotateY(0deg);
+    -o-transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.project figure .projectFront,
+.project figure .projectBack {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    
+    -webkit-transition: all ease -5s;
+    -moz-transition: all ease -5s;
+    -o-transition: all ease -5s;
+    transition: all ease -5s;
+}
+
+.project figure .projectFront {
+    display: block;
+    background-color: #f0f2f1;
+}
+
+.project figure .projectBack {
+    position: absolute;
+    top: 0;
+    padding: 20px;
+
+    color: #fff;
+
+    background: rgba(100,100,100,0.7);
+    background: -moz-linear-gradient(top, rgba(100,100,100,1) 0%, rgba(128,128,128,0.7) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(100,100,100,1)), color-stop(100%, rgba(128,128,128,0.7)));
+    background: -webkit-linear-gradient(top, rgba(100,100,100,1) 0%, rgba(128,128,128,0.7) 100%);
+    background: -o-linear-gradient(top, rgba(100,100,100,1) 0%, rgba(128,128,128,0.7) 100%);
+    background: -ms-linear-gradient(top, rgba(100,100,100,1) 0%, rgba(128,128,128,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(100,100,100,1) 0%, rgba(128,128,128,0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#646464', endColorstr='#808080', GradientType=0);
+    
+    backface-visibility: hidden;
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    -ms-transform: perspective(600px) rotateY(180deg);
+    -o-transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg);
+
+    overflow: auto;
+}
+
+.project.mobile figure .projectBack {
+    backface-visibility: visible;
+    -webkit-transform: perspective(600px) rotateY(0deg);
+    -ms-transform: perspective(600px) rotateY(0deg);
+    -o-transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.project figure .projectBack h2 {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.project figure .projectBack hr {
+    height: 2px;
+    margin-bottom: 20px;
+    border: none;
+
+    opacity: .8;
+    background: #fff;
+}
+
+.project figure .projectBack p {
+    max-height: 200px;
+    
+    font-size: 14px;
+    line-height: 22px;
+    text-align: justify;
+
+    overflow: scroll;
+}
+
+
+.project figure .projectBack .publicProject,
+.project figure .projectBack .privateProject {
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    padding: 8px 20px;
+}
+
+.project figure .projectBack .publicProject {background: #008000;}
+.project figure .projectBack .privateProject {background: #ff0000;}
+
+.project figure .projectBack .publicProject p,
+.project figure .projectBack .privateProject p {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: capitalize;
+}

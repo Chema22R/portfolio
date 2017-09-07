@@ -1,36 +1,68 @@
 $(function() {
-    $.ajax({
-        url: "projects",
-        method: "GET",
-        dataType: "json",
-        success: function(data, status) {
-            generateProjects(data)
-            //organizeProjects()
+    var projects = [
+        {
+            "name": "Memoriizu",
+            "url": "memoriizu",
+            "description":  "Aplicación para el estudio de idiomas en la que el usuario añade los idiomas y el contenido"+
+                            " que desea estudiar, además del periodo en el que desea que se reparta dicho contenido.<br>"+
+                            "A diario se generará una sesión con el contenido que el usuario debe completar para ese día,"+
+                            " haciendo hincapié en los fallos cometidos en sesiones anteriores.<br>Una vez completadas todas"+
+                            " las sesiones del periodo actual, éste se reiniciará repartiendo el contenido nuevamente"+
+                            " entre las sesiones del siguiente periodo.",
+            "access": "private"
         },
-        error: function(jqXHR, status, err) {
-            console.log(err);
+        {
+            "name": "3D Preview",
+            "url": "3dpreview",
+            "description":  "Previsualizador de objetos 3D con los que el usuario podrá interactuar y llevar a cabo ciertas"+
+                            " operaciones básicas, las cuales le permitan analizar el objeto en detalle.<br>Además de la"+
+                            " función de visualización y manipulación, la aplicación se encargará de almacenar la geometría"+
+                            " extraída y procesada de los objetos, de modo que estos puedan ser accesibles posteriormente.",
+            "access": "public"
         }
-    });
+    ];
 
-    function generateProjects(data) {
-        for (var i=0; i<data.length; i++) {
-            $("<div class='project'>"+
-                    "<a href='http://"+serverAddress+"/"+data[i].url+"'>"+
-                        "<figure>"+
-                            "<img class='projectFront' src='img/"+data[i].url+".png' alt='memoriizu'>"+
-                            "<figcaption class='projectBack'>"+
-                                "<h2>"+data[i].name+"</h2>"+
-                                "<hr>"+
-                                "<p>"+data[i].description+"</p>"+
-                                "<div class='"+data[i].access+"Project'>"+
-                                    "<p>"+data[i].access+"</p>"+
-                                "</div>"+
-                            "</figcaption>"+
-                        "</figure>"+
-                    "</a>"+
-                "</div>"
-            ).appendTo("#proyectsContainer");
+    var isMobile = {    // allows to detect mobile devices
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
+    };
+
+    var device = "";
+    if (isMobile.any()) {device = " mobile";}
+    
+    for (var i=0; i<projects.length; i++) {
+        $("<div class='project"+device+"'>"+
+                "<a href='http://"+serverAddress+"/"+projects[i].url+"'>"+
+                    "<figure>"+
+                        "<img class='projectFront' src='img/"+projects[i].url+".png' alt='memoriizu'>"+
+                        "<figcaption class='projectBack'>"+
+                            "<h2>"+projects[i].name+"</h2>"+
+                            "<hr>"+
+                            "<p>"+projects[i].description+"</p>"+
+                            "<div class='"+projects[i].access+"Project'>"+
+                                "<p>"+projects[i].access+"</p>"+
+                            "</div>"+
+                        "</figcaption>"+
+                    "</figure>"+
+                "</a>"+
+            "</div>"
+        ).appendTo("#proyectsContainer");
     }
 
     /*function organizeProjects() {
@@ -83,11 +115,4 @@ $(function() {
             "padding-right": containerPadding
         });
     }*/
-
-
-    /* Triggers */
-
-    /*$(window).resize(function() {
-		organizeProjects();
-	});*/
 });
