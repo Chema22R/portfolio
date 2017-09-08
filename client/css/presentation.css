@@ -2,8 +2,8 @@
     display: none;
     position: fixed;
     top: 5%;
-    right: 5%;
     bottom: 5%;
+    right: 5%;
     left: 5%;
 
     z-index: 2000;
@@ -32,10 +32,11 @@
 .section {margin: 20px 0;}
 
 
+
 /* Basic Section
     ========================================================================== */
 
-.section.basic * {margin: 8px auto;}
+.section.basic * {margin: 10px auto;}
 .section.basic h3 {font-weight: normal;}
 .section.basic p {font-size: 0.9em;}
 
@@ -47,8 +48,9 @@
 
 .section.basic .country img {
     height: 20px;
-    margin: 0;
+    margin: 0 4px 0 0;
 }
+
 
 
 /* Slides Section
@@ -68,16 +70,16 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 120px;
+    width: 20%;
 
-    text-align: center;
     opacity: 0;
-
     z-index: 3000;
 }
 
 .section.slides .previowsArrow {
     left: -20px;
+
+    text-align: left;
 
     background: rgba(222,222,222,0.5);
     background: -moz-linear-gradient(left, rgba(222,222,222,0.5) 0%, rgba(255,255,255,0.01) 100%);
@@ -91,6 +93,8 @@
 
 .section.slides .nextArrow {
     right: -20px;
+    
+    text-align: right;
 
     background: rgba(255,255,255,0.01);
     background: -moz-linear-gradient(left, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 0%, rgba(222,222,222,0.5) 100%);
@@ -129,6 +133,10 @@
     font-size: 50px;
 }
 
+.section.slides .previowsArrow a span {margin-left: 20px}
+.section.slides .nextArrow a span {margin-right: 20px}
+
+
 .section.slides .slide {
     position: relative;
     width: 100%;
@@ -145,6 +153,7 @@
     font-weight: normal;
 }
 
+.section.slides .slide h3.nbsp {margin-right: 4px;}
 .section.slides .slide h3.bold {font-weight: bold;}
 .section.slides .slide h3.size01 {font-size: 1em;}
 .section.slides .slide h3.size02 {font-size: 0.9em;}
@@ -157,6 +166,7 @@
 }
 
 .section.slides .slide div.lessImportant h3 {font-size: 1em;}
+
 
 
 /* SlideCounter Section
@@ -175,6 +185,7 @@
 .section.slideCounter span.current {background: #0c0;}
 
 
+
 /* Social Section
     ========================================================================== */
 
@@ -184,3 +195,27 @@
 }
 
 .section.social .socialLink:hover {opacity: 0.6;}
+
+
+
+/* Special Behaviours
+    ========================================================================== */
+
+@media screen and (max-width: 420px) {
+    .section.slides .previowsArrow,
+    .section.slides .nextArrow {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .section.slides .slide h3.floatR {float: none;}
+    .section.slides .slide h3.lineBreak {margin-top: 3px;}
+}
+
+@media screen and (max-width: 1000px) {
+    #presentationContainer {
+        top: 10%;
+        bottom: 10%;
+    }
+}

@@ -3,21 +3,23 @@ $(function() {
         {
             "name": "Memoriizu",
             "url": "memoriizu",
-            "description":  "Aplicación para el estudio de idiomas en la que el usuario añade los idiomas y el contenido"+
+            "descriptionSpa": "Aplicación para el estudio de idiomas en la que el usuario añade los idiomas y el contenido"+
                             " que desea estudiar, además del periodo en el que desea que se reparta dicho contenido.<br>"+
                             "A diario se generará una sesión con el contenido que el usuario debe completar para ese día,"+
                             " haciendo hincapié en los fallos cometidos en sesiones anteriores.<br>Una vez completadas todas"+
                             " las sesiones del periodo actual, éste se reiniciará repartiendo el contenido nuevamente"+
                             " entre las sesiones del siguiente periodo.",
+            "descriptionEng":  "english",
             "access": "private"
         },
         {
             "name": "3D Preview",
             "url": "3dpreview",
-            "description":  "Previsualizador de objetos 3D con los que el usuario podrá interactuar y llevar a cabo ciertas"+
+            "descriptionSpa": "Previsualizador de objetos 3D con los que el usuario podrá interactuar y llevar a cabo ciertas"+
                             " operaciones básicas, las cuales le permitan analizar el objeto en detalle.<br>Además de la"+
                             " función de visualización y manipulación, la aplicación se encargará de almacenar la geometría"+
                             " extraída y procesada de los objetos, de modo que estos puedan ser accesibles posteriormente.",
+            "descriptionEng":  "english",
             "access": "public"
         }
     ];
@@ -54,7 +56,8 @@ $(function() {
                         "<figcaption class='projectBack'>"+
                             "<h2>"+projects[i].name+"</h2>"+
                             "<hr>"+
-                            "<p>"+projects[i].description+"</p>"+
+                            "<p class='spanishContent'>"+projects[i].descriptionSpa+"</p>"+
+                            "<p class='englishContent'>"+projects[i].descriptionEng+"</p>"+
                             "<div class='"+projects[i].access+"Project'>"+
                                 "<p>"+projects[i].access+"</p>"+
                             "</div>"+
