@@ -9,7 +9,12 @@ $(function() {
                             " haciendo hincapié en los fallos cometidos en sesiones anteriores.<br>Una vez completadas todas"+
                             " las sesiones del periodo actual, éste se reiniciará repartiendo el contenido nuevamente"+
                             " entre las sesiones del siguiente periodo.",
-            "descriptionEng":  "english",
+            "descriptionEng": "Application for the language study in which the user adds the languages and the content"+
+                            " he wants to study, in addition to the period in which he wants that content to be distributed."+
+                            "<br>A session will be generated daily with the content that the user must complete for that day,"+
+                            " emphasizing the mistakes made in previous sessions.<br>Once all sessions of the current period"+
+                            " have been completed, it will be restarted distributing the content again between the sessions of"+
+                            " the next period.",
             "access": "private"
         },
         {
@@ -19,7 +24,10 @@ $(function() {
                             " operaciones básicas, las cuales le permitan analizar el objeto en detalle.<br>Además de la"+
                             " función de visualización y manipulación, la aplicación se encargará de almacenar la geometría"+
                             " extraída y procesada de los objetos, de modo que estos puedan ser accesibles posteriormente.",
-            "descriptionEng":  "english",
+            "descriptionEng": "3D objects previewer with which the user can interact and carry out certain basic operations,"+
+                            " allowing him to analyze the object in detail.<br>In addition to the visualization and manipulation"+
+                            " functions, the application will be in charge of storing the extracted and processed geometry of"+
+                            " objects, so it can be accessed later.",
             "access": "public"
         }
     ];
@@ -58,6 +66,7 @@ $(function() {
                             "<hr>"+
                             "<p class='spanishContent'>"+projects[i].descriptionSpa+"</p>"+
                             "<p class='englishContent'>"+projects[i].descriptionEng+"</p>"+
+                            "<p class='ellipsis'>. . .</p>"+
                             "<div class='"+projects[i].access+"Project'>"+
                                 "<p>"+projects[i].access+"</p>"+
                             "</div>"+
@@ -67,6 +76,15 @@ $(function() {
             "</div>"
         ).appendTo("#proyectsContainer");
     }
+    
+
+    $(".project figure .projectBack p").on("scroll", function(e) {
+        if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 10) {
+            $(this).siblings(".ellipsis").fadeOut(0);
+        } else {
+            $(this).siblings(".ellipsis").fadeIn(0);
+        }
+    });
 
     /*function organizeProjects() {
         var heightRatio = 0.5;

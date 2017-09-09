@@ -40,6 +40,14 @@ $(function() {
     /* Triggers
     ========================================================================== */
 
+    $("#buttonProfile").on("click touchstart", function(e) {
+        e.preventDefault();
+
+        $("#leftover, #presentationContainer").fadeIn("slow");
+
+        organize();
+    });
+    
     $(".section.slides .previowsArrow").on("click touchstart", function(e) {    // previows slide
         e.preventDefault();
 
@@ -130,14 +138,6 @@ $(function() {
                 blockSlider = false;
             });
         }
-    });
-
-    $("#buttonProfile").on("click touchstart", function(e) {
-        e.preventDefault();
-
-        $("#leftover, #presentationContainer").fadeIn("slow");
-
-        organize();
     });
 
     

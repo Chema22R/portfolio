@@ -131,6 +131,17 @@
     overflow: scroll;
 }
 
+.project figure .projectBack p.ellipsis {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    line-height: 2px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 
 .project figure .projectBack .publicProject,
 .project figure .projectBack .privateProject {
