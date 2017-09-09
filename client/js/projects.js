@@ -66,7 +66,7 @@ $(function() {
                             "<hr>"+
                             "<p class='spanishContent'>"+projects[i].descriptionSpa+"</p>"+
                             "<p class='englishContent'>"+projects[i].descriptionEng+"</p>"+
-                            "<p class='ellipsis'>. . .</p>"+
+                            "<p class='ellipsis'>&darr; . . . &darr;</p>"+
                             "<div class='"+projects[i].access+"Project'>"+
                                 "<p>"+projects[i].access+"</p>"+
                             "</div>"+
@@ -77,6 +77,16 @@ $(function() {
         ).appendTo("#proyectsContainer");
     }
     
+
+    $(".project").on("mouseenter", function() {
+        var currentDescr = $(this).find("p.spanishContent:visible, p.englishContent:visible")[0];
+
+        if (currentDescr.offsetHeight + currentDescr.scrollTop >= currentDescr.scrollHeight - 10) {
+            $(this).find("p.ellipsis").fadeOut(0);
+        } else {
+            $(this).find("p.ellipsis").fadeIn(0);
+        }
+    });
 
     $(".project figure .projectBack p").on("scroll", function(e) {
         if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 10) {

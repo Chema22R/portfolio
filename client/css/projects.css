@@ -132,14 +132,17 @@
 }
 
 .project figure .projectBack p.ellipsis {
+    display: none;
     position: absolute;
     left: 0;
     right: 0;
 
-    line-height: 2px;
+    line-height: 10px;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
+
+    overflow: visible;
 }
 
 
