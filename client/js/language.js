@@ -1,7 +1,7 @@
 $(function() {
     var lang;
 
-    $("#buttons .langSelector").on("click touchstart", function(e) {
+    $("#buttonsRight .langSelector").on("click touchstart", function(e) {
         e.preventDefault();
 
         if (e.target.id) {
@@ -11,13 +11,13 @@ $(function() {
         }
         
         
-        $("#buttons .langSelector.current").removeClass("current");
+        $("#buttonsRight .langSelector.current").removeClass("current");
         $("#" + lang).addClass("current");
 
 
-        for (var i=0; i<$("#buttons .langSelector").length; i++) {
-            if ($("#buttons .langSelector")[i].id != lang) {
-                $("." + $("#buttons .langSelector")[i].id).fadeOut(0);
+        for (var i=0; i<$("#buttonsRight .langSelector").length; i++) {
+            if ($("#buttonsRight .langSelector")[i].id != lang) {
+                $("." + $("#buttonsRight .langSelector")[i].id).fadeOut(0);
             }
         }
 

@@ -13,7 +13,7 @@
 #presentation {
     position: relative;
     margin: auto;
-    padding: 20px;
+    padding: 10px 0;
     
     width: 100%;
     max-width: 800px;
@@ -71,13 +71,14 @@
     top: 0;
     bottom: 0;
     width: 20%;
+    max-width: 100px;
 
     opacity: 0;
     z-index: 3000;
 }
 
 .section.slides .previowsArrow {
-    left: -20px;
+    left: 0px;
 
     text-align: left;
 
@@ -92,7 +93,7 @@
 }
 
 .section.slides .nextArrow {
-    right: -20px;
+    right: 0px;
     
     text-align: right;
 
@@ -133,14 +134,14 @@
     font-size: 50px;
 }
 
-.section.slides .previowsArrow a span {margin-left: 20px}
-.section.slides .nextArrow a span {margin-right: 20px}
+.section.slides .previowsArrow a span {padding-left: 20px}
+.section.slides .nextArrow a span {padding-right: 20px}
 
 
 .section.slides .slide {
     position: relative;
     width: 100%;
-    padding: 10px;
+    padding: 10px 30px;
 }
 
 .section.slides .slide h2 {text-align: center;}
@@ -203,7 +204,7 @@
 
 @media screen and (max-width: 420px) {
     .section.slides .previowsArrow,
-    .section.slides .nextArrow {width: 30%;}
+    .section.slides .nextArrow {width: 25%;}
 }
 
 @media screen and (max-width: 700px) {
