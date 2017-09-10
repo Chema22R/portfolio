@@ -55,7 +55,7 @@ $(function() {
 
     var device = "";
     if (isMobile.any()) {device = " mobile";}
-    
+
     for (var i=0; i<projects.length; i++) {
         $("<div class='project"+device+"'>"+
                 "<a href='http://"+serverAddress+"/"+projects[i].url+"'>"+
@@ -80,6 +80,8 @@ $(function() {
 
     $(".project").on("mouseenter", function() {
         var currentDescr = $(this).find("p.spanishContent:visible, p.englishContent:visible")[0];
+
+        currentDescr.scrollTop = 0; // to set the scroll to the beginning
 
         if (currentDescr.offsetHeight + currentDescr.scrollTop >= currentDescr.scrollHeight - 10) {
             $(this).find("p.ellipsis").fadeOut(0);
