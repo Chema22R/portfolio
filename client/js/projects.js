@@ -91,10 +91,12 @@ $(function() {
     });
 
     $(".project figure .projectBack p").on("scroll", function(e) {
-        if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 10) {
-            $(this).siblings(".ellipsis").fadeOut(0);
-        } else {
-            $(this).siblings(".ellipsis").fadeIn(0);
+        if (!isMobile.any()) {
+            if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 10) {
+                $(this).siblings(".ellipsis").fadeOut(0);
+            } else {
+                $(this).siblings(".ellipsis").fadeIn(0);
+            }
         }
     });
 
