@@ -78,27 +78,27 @@ $(function() {
     }
     
 
-    $(".project").on("mouseenter", function() {
-        var currentDescr = $(this).find("p.spanishContent:visible, p.englishContent:visible")[0];
+    if (!isMobile.any()) {
+        $(".project").on("mouseenter", function() {
+            var currentDescr = $(this).find("p.spanishContent:visible, p.englishContent:visible")[0];
 
-        currentDescr.scrollTop = 0; // to set the scroll to the beginning
+            currentDescr.scrollTop = 0; // to set the scroll to the beginning
 
-        if (currentDescr.offsetHeight + currentDescr.scrollTop >= currentDescr.scrollHeight - 10) {
-            $(this).find("p.ellipsis").fadeOut(0);
-        } else {
-            $(this).find("p.ellipsis").fadeIn(0);
-        }
-    });
+            if (currentDescr.offsetHeight + currentDescr.scrollTop >= currentDescr.scrollHeight - 10) {
+                $(this).find("p.ellipsis").fadeOut(0);
+            } else {
+                $(this).find("p.ellipsis").fadeIn(0);
+            }
+        });
 
-    $(".project figure .projectBack p").on("scroll", function(e) {
-        if (!isMobile.any()) {
+        $(".project figure .projectBack p").on("scroll", function(e) {
             if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 10) {
                 $(this).siblings(".ellipsis").fadeOut(0);
             } else {
                 $(this).siblings(".ellipsis").fadeIn(0);
             }
-        }
-    });
+        });
+    }
 
     /*function organizeProjects() {
         var heightRatio = 0.5;
