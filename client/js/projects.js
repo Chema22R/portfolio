@@ -84,7 +84,7 @@ $(function() {
 
             currentDescr.scrollTop = 0; // to set the scroll to the beginning
 
-            if (currentDescr.offsetHeight + currentDescr.scrollTop >= currentDescr.scrollHeight - 10) {
+            if (currentDescr.offsetHeight + currentDescr.scrollTop >= currentDescr.scrollHeight - 7) {
                 $(this).find("p.ellipsis").fadeOut(0);
             } else {
                 $(this).find("p.ellipsis").fadeIn(0);
@@ -92,7 +92,7 @@ $(function() {
         });
 
         $(".project figure .projectBack p").on("scroll", function(e) {
-            if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 10) {
+            if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 7) {
                 $(this).siblings(".ellipsis").fadeOut(0);
             } else {
                 $(this).siblings(".ellipsis").fadeIn(0);
