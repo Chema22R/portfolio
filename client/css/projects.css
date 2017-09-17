@@ -128,7 +128,7 @@
     line-height: 22px;
     text-align: justify;
 
-    overflow: scroll;
+    overflow: auto;
 }
 
 .project figure .projectBack p.ellipsis {
