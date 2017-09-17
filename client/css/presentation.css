@@ -29,6 +29,19 @@
     overflow-y: scroll;
 }
 
+.exitButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 12px;
+    padding: 3px;
+
+    color: #888;
+    cursor: pointer;
+}
+
+.exitButton:hover {color: #e00;}
+
 .section {margin: 20px 0;}
 
 

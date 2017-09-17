@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?rb5dsh');
-  src:  url('fonts/icomoon.eot?rb5dsh#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?rb5dsh') format('truetype'),
-    url('fonts/icomoon.woff?rb5dsh') format('woff'),
-    url('fonts/icomoon.svg?rb5dsh#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?n77wxz');
+  src:  url('fonts/icomoon.eot?n77wxz#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?n77wxz') format('truetype'),
+    url('fonts/icomoon.woff?n77wxz') format('woff'),
+    url('fonts/icomoon.svg?n77wxz#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-quit:before {
+  content: "\2297";
+}
 .icon-gmail:before {
   content: "\e900";
   color: #d14836;
