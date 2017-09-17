@@ -206,6 +206,7 @@
 .section.social .socialLink {
     margin: 10px;
     font-size: 40px;
+    color: #777;
 }
 
 .section.social .socialLink:hover {opacity: 0.6;}
