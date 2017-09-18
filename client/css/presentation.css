@@ -29,7 +29,7 @@
     overflow-y: auto;
 }
 
-.exitButton {
+#presentation .exitButton {
     position: absolute;
     top: 0;
     right: 0;
@@ -40,7 +40,7 @@
     cursor: pointer;
 }
 
-.exitButton:hover {color: #e00;}
+#presentation .exitButton:hover {color: #e00;}
 
 .section {margin: 20px 0;}
 
@@ -87,6 +87,7 @@
     max-width: 100px;
 
     opacity: 0;
+    cursor: pointer;
     z-index: 3000;
 }
 
@@ -123,17 +124,8 @@
 .section.slides .previowsArrow:hover,
 .section.slides .nextArrow:hover  {opacity: 1;}
 
-.section.slides .previowsArrow a,
-.section.slides .nextArrow a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.section.slides .previowsArrow a span,
-.section.slides .nextArrow a span {
+.section.slides .previowsArrow button span,
+.section.slides .nextArrow button span {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -147,8 +139,8 @@
     font-size: 50px;
 }
 
-.section.slides .previowsArrow a span {padding-left: 20px}
-.section.slides .nextArrow a span {padding-right: 20px}
+.section.slides .previowsArrow button span {left: -20px}
+.section.slides .nextArrow button span {right: -20px}
 
 
 .section.slides .slide {

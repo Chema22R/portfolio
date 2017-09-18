@@ -13,6 +13,14 @@ body {
 
 a {text-decoration: none;}
 
+button {
+    background: transparent;
+    outline: none;
+    
+    border: none;
+    cursor: pointer;
+}
+
 #leftover {
     display: none;
     position: fixed;
@@ -44,8 +52,8 @@ a {text-decoration: none;}
     z-index: 3000;
 }
 
-#buttonsLeft a {float: left;}
-#buttonsRight a {float: right;}
+#buttonsLeft button {float: left;}
+#buttonsRight button {float: right;}
 
 
 #buttonsLeft .icon {
@@ -58,8 +66,10 @@ a {text-decoration: none;}
 #buttonsLeft .icon:hover {color: #777;}
 
 
+#buttonsRight .langSelector {height: 40px;}
+
 #buttonsRight .langSelector img {
-    height: 40px;
+    height: 100%;
     filter: grayscale(100%);
 }
 
