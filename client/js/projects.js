@@ -64,11 +64,11 @@ $(function() {
                         "<figcaption class='projectBack'>"+
                             "<h2>"+projects[i].name+"</h2>"+
                             "<hr>"+
-                            "<div class='description spanishContent'>"+
+                            "<div class='description spanishContent scroll'>"+
                                 "<p>"+projects[i].descriptionSpa+"</p>"+
                             "</div>"+
-                            "<div class='description englishContent'>"+
-                                "<div>"+projects[i].descriptionEng+"</div>"+
+                            "<div class='description englishContent scroll'>"+
+                                "<p>"+projects[i].descriptionEng+"</p>"+
                             "</div>"+
                             "<p class='ellipsis'>&darr; . . . &darr;</p>"+
                             "<div class='"+projects[i].access+"Project'>"+

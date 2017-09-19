@@ -8,7 +8,7 @@ $(function() {
         if (!blockSlider) {
             blockSlider = true;
 
-            if (e.target.id) {
+            if (e.target.id) {  // to make crossbrowser the id capture
                 lang = e.target.id;
             } else {
                 lang = e.target.parentElement.id;
@@ -19,20 +19,22 @@ $(function() {
             $("#" + lang).addClass("current");
 
 
-            for (var i=0; i<$("#buttonsRight .langSelector").length; i++) {
+            for (var i=0; i<$("#buttonsRight .langSelector").length; i++) { // fade out all elements of all languages, except the elements of current language
                 if ($("#buttonsRight .langSelector")[i].id != lang) {
                     $("." + $("#buttonsRight .langSelector")[i].id).fadeOut(0);
                 }
             }
 
-            $("." + lang).fadeIn("slow");
+            $("." + lang).fadeIn("slow");   // fade in all element of current language
 
 
-            $(".section.slides").animate({
+            $(".section.slides").animate({  // special: resize the current slide height
                 height: $(".section.slides .slide.current").height() + 20
             }, "slow", function() {
                 blockSlider = false;
             });
+
+            $(".scroll").perfectScrollbar("update");    // to update the scrollbars
         }
     });
 });

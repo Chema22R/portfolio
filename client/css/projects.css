@@ -92,8 +92,6 @@
     -ms-transform: perspective(600px) rotateY(180deg);
     -o-transform: perspective(600px) rotateY(180deg);
     transform: perspective(600px) rotateY(180deg);
-
-    overflow: auto;
 }
 
 .project.mobile figure .projectBack {
@@ -123,7 +121,9 @@
 
 .project figure .projectBack .description {
     position: relative;
+    width: 275px;
     max-height: 200px;
+    padding-right: 15px;
     
     font-size: 14px;
     line-height: 22px;

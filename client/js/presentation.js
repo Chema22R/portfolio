@@ -34,6 +34,8 @@ $(function() {
         $(".section.slides .slide.previous").css("left", -slideLeft);
     
         $(".section.slides").css("height", slideHeight);
+
+        $(".scroll").perfectScrollbar("update");
     }
 
 
@@ -67,7 +69,9 @@ $(function() {
 
             $(".section.slides").animate({
                 height: slideHeight
-            }, sliderSpeed);
+            }, sliderSpeed, function() {
+                $(".scroll").perfectScrollbar("update");
+            });
 
             $(".section.slides .slide.current").animate({
                 left: "+=" + slideLeft
@@ -113,7 +117,9 @@ $(function() {
 
             $(".section.slides").animate({
                 height: slideHeight
-            }, sliderSpeed);
+            }, sliderSpeed, function() {
+                $(".scroll").perfectScrollbar("update");
+            });
             
             $(".section.slides .slide.current").animate({
                 left: "-=" + slideLeft
