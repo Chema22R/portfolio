@@ -121,7 +121,8 @@
     background: #fff;
 }
 
-.project figure .projectBack p {
+.project figure .projectBack .description {
+    position: relative;
     max-height: 200px;
     
     font-size: 14px;

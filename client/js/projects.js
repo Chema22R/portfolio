@@ -64,8 +64,12 @@ $(function() {
                         "<figcaption class='projectBack'>"+
                             "<h2>"+projects[i].name+"</h2>"+
                             "<hr>"+
-                            "<p class='spanishContent'>"+projects[i].descriptionSpa+"</p>"+
-                            "<p class='englishContent'>"+projects[i].descriptionEng+"</p>"+
+                            "<div class='description spanishContent'>"+
+                                "<p>"+projects[i].descriptionSpa+"</p>"+
+                            "</div>"+
+                            "<div class='description englishContent'>"+
+                                "<div>"+projects[i].descriptionEng+"</div>"+
+                            "</div>"+
                             "<p class='ellipsis'>&darr; . . . &darr;</p>"+
                             "<div class='"+projects[i].access+"Project'>"+
                                 "<p>"+projects[i].access+"</p>"+
@@ -80,7 +84,7 @@ $(function() {
 
     if (!isMobile.any()) {
         $(".project").on("mouseenter", function() {
-            var currentDescr = $(this).find("p.spanishContent:visible, p.englishContent:visible")[0];
+            var currentDescr = $(this).find(".description:visible")[0];
 
             currentDescr.scrollTop = 0; // to set the scroll to the beginning
 
@@ -91,7 +95,7 @@ $(function() {
             }
         });
 
-        $(".project figure .projectBack p").on("scroll", function(e) {
+        $(".project figure .projectBack .description").on("scroll", function(e) {
             if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 7) {
                 $(this).siblings(".ellipsis").fadeOut(0);
             } else {
