@@ -44,6 +44,10 @@
 
 .section {margin: 20px 0;}
 
+.section h2,
+.section h3,
+.section p {cursor: default;}
+
 
 
 /* Basic Section
