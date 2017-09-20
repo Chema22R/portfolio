@@ -35,6 +35,7 @@ $(function() {
     
         $(".section.slides").css("height", slideHeight);
 
+        $("#presentation").scrollTop(0);
         $(".scroll").perfectScrollbar("update");
     }
 
@@ -66,6 +67,10 @@ $(function() {
             }
 
             $(".section.slides .slide.previous").fadeIn(0);
+
+            $("#presentation").animate({
+                scrollTop: 0
+            }, sliderSpeed);
 
             $(".section.slides").animate({
                 height: slideHeight
@@ -114,6 +119,10 @@ $(function() {
             }
 
             $(".section.slides .slide.next").fadeIn(0);
+
+            $("#presentation").animate({
+                scrollTop: 0
+            }, sliderSpeed);
 
             $(".section.slides").animate({
                 height: slideHeight
