@@ -32,7 +32,7 @@ button {
     background: #000;
     opacity: 0.4;
 
-    z-index: 1000;
+    z-index: 2;
 }
 
 
@@ -45,11 +45,14 @@ button {
     top: 0;
 }
 
-#buttonsLeft {left: 5px;}
+#buttonsLeft {
+    left: 5px;
+    z-index: 1;
+}
 
 #buttonsRight {
     right: 0;
-    z-index: 3000;
+    z-index: 4;
 }
 
 #buttonsLeft button {float: left;}
@@ -82,3 +85,16 @@ button {
     ========================================================================== */
 
 .spanishContent {display: none;}
+
+
+/* Z-index guide
+    ==========================================================================
+
+buttonsLeft             1
+leftover                2
+presentationContainer   3
+buttonsRight            4
+previowsArrow           4
+nextArrow               4
+ps__scrollbar-y-rail    4
+*/
