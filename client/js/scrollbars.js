@@ -1,5 +1,6 @@
 $(function() {
     $(".scroll").perfectScrollbar({
-        suppressScrollX: true
+        suppressScrollX: true,
+        minScrollbarLength: 20
     });
 });
