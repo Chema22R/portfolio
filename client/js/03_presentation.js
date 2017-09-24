@@ -35,7 +35,6 @@ $(function() {
     
         $(".section.slides").css("height", slideHeight);
 
-        $("#presentation").scrollTop(0);
         $(".scroll").perfectScrollbar("update");
     }
 
@@ -49,6 +48,8 @@ $(function() {
         $("#leftover, #presentationContainer").fadeIn("slow");
 
         organize();
+        
+        $("#presentation").scrollTop(0);
     });
     
     $(".section.slides .previowsArrow").on("click touchstart", function(e) {    // previows slide
@@ -74,7 +75,7 @@ $(function() {
 
             $(".section.slides").animate({
                 height: slideHeight
-            }, sliderSpeed, function() {
+            }, sliderSpeed+10, function() {
                 $(".scroll").perfectScrollbar("update");
             });
 
@@ -126,7 +127,7 @@ $(function() {
 
             $(".section.slides").animate({
                 height: slideHeight
-            }, sliderSpeed, function() {
+            }, sliderSpeed+10, function() {
                 $(".scroll").perfectScrollbar("update");
             });
             
