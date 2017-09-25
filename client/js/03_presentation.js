@@ -75,7 +75,7 @@ $(function() {
 
             $(".section.slides").animate({
                 height: slideHeight
-            }, sliderSpeed+10, function() {
+            }, sliderSpeed+100, function() {
                 $(".scroll").perfectScrollbar("update");
             });
 
@@ -127,7 +127,7 @@ $(function() {
 
             $(".section.slides").animate({
                 height: slideHeight
-            }, sliderSpeed+10, function() {
+            }, sliderSpeed+100, function() {
                 $(".scroll").perfectScrollbar("update");
             });
             
