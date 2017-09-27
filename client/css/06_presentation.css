@@ -182,7 +182,7 @@
 /* SlideCounter Section
     ========================================================================== */
 
-.section.slideCounter span {
+.section.slideCounter button {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -192,7 +192,8 @@
     background: #ddd;
 }
 
-.section.slideCounter span.current {background: #0c0;}
+.section.slideCounter button.current {background: #0c0;}
+.section.slideCounter button:hover {border: 1px solid #0c0;}
 
 
 

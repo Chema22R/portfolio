@@ -9,11 +9,11 @@ $(function() {
         var code = "";
 
         for (var i=0; i<$(".section.slides .slide").length; i++) {
-            code += "<span></span>";
+            code += "<button></button>";
         }
 
         $(code).appendTo(".section.slideCounter");
-        $(".section.slideCounter span").first().addClass("current");
+        $(".section.slideCounter button").first().addClass("current");
     }
 
     function organize() {
@@ -39,6 +39,87 @@ $(function() {
     }
 
 
+    function recursiveSlidePrevious(distance) {
+        slideHeight = $(".section.slides .slide.previous").height() + 20;
+
+        if ($(".section.slideCounter button.current").prev().length > 0) {
+            $(".section.slideCounter button.current").removeClass("current").prev().addClass("current");
+        } else {
+            $(".section.slideCounter button").removeClass("current").last().addClass("current");
+        }
+
+        $(".section.slides .slide.previous").fadeIn(0);
+
+        $(".section.slides").animate({
+            height: slideHeight
+        }, sliderSpeed);
+
+        $(".section.slides .slide.current").animate({
+            left: "+=" + slideLeft
+        }, sliderSpeed);
+    
+        $(".section.slides .slide.previous").animate({
+            left: "+=" + slideLeft
+        }, sliderSpeed, function() {
+            $(".section.slides .slide.current").fadeOut(0);
+
+            $(".section.slides .slide.next").removeClass("next").addClass("static");
+            $(".section.slides .slide.current").removeClass("current").addClass("next");
+            $(".section.slides .slide.previous").removeClass("previous").addClass("current");
+
+            if ($(".section.slides .slide.current").prev().length > 0) {
+                $(".section.slides .slide.current").prev().removeClass("static").addClass("previous");
+            } else {
+                $(".section.slides .slide.static").last().removeClass("static").addClass("previous");
+            }
+    
+            $(".section.slides .slide.previous").css("left", -slideLeft);
+            
+            if (--distance > 0) {recursiveSlidePrevious(distance)}
+        });
+    }
+
+    function recursiveSlideNext(distance) {
+        slideHeight = $(".section.slides .slide.next").height() + 20;
+
+        if ($(".section.slideCounter button.current").next().length > 0) {
+            $(".section.slideCounter button.current").removeClass("current").next().addClass("current");
+        } else {
+            $(".section.slideCounter button").removeClass("current").first().addClass("current");
+        }
+
+        $(".section.slides .slide.next").fadeIn(0);
+
+        $(".section.slides").animate({
+            height: slideHeight
+        }, sliderSpeed);
+        
+        $(".section.slides .slide.current").animate({
+            left: "-=" + slideLeft
+        }, sliderSpeed);
+    
+        $(".section.slides .slide.next").animate({
+            left: "-=" + slideLeft
+        }, sliderSpeed, function() {
+            $(".section.slides .slide.current").fadeOut(0);
+
+            $(".section.slides .slide.previous").removeClass("previous").addClass("static");
+            $(".section.slides .slide.current").removeClass("current").addClass("previous");
+            $(".section.slides .slide.next").removeClass("next").addClass("current");
+    
+            if ($(".section.slides .slide.current").next().length > 0) {
+                $(".section.slides .slide.current").next().removeClass("static").addClass("next");
+            } else {
+                $(".section.slides .slide.static").first().removeClass("static").addClass("next");
+            }
+    
+            $(".section.slides .slide.static, .section.slides .slide.next").css("left", slideLeft);
+            
+            if (--distance > 0) {recursiveSlideNext(distance)}
+        });
+    }
+
+
     /* Triggers
     ========================================================================== */
 
@@ -61,10 +142,10 @@ $(function() {
             slideHeight = $(".section.slides .slide.previous").height() + 20;
             slideLeft = $(".section.slides").width() + 20;
 
-            if ($(".section.slideCounter span.current").prev().length > 0) {
-                $(".section.slideCounter span.current").removeClass("current").prev().addClass("current");
+            if ($(".section.slideCounter button.current").prev().length > 0) {
+                $(".section.slideCounter button.current").removeClass("current").prev().addClass("current");
             } else {
-                $(".section.slideCounter span").removeClass("current").last().addClass("current");
+                $(".section.slideCounter button").removeClass("current").last().addClass("current");
             }
 
             $(".section.slides .slide.previous").fadeIn(0);
@@ -113,10 +194,10 @@ $(function() {
             slideHeight = $(".section.slides .slide.next").height() + 20;
             slideLeft = $(".section.slides").width() + 20;
 
-            if ($(".section.slideCounter span.current").next().length > 0) {
-                $(".section.slideCounter span.current").removeClass("current").next().addClass("current");
+            if ($(".section.slideCounter button.current").next().length > 0) {
+                $(".section.slideCounter button.current").removeClass("current").next().addClass("current");
             } else {
-                $(".section.slideCounter span").removeClass("current").first().addClass("current");
+                $(".section.slideCounter button").removeClass("current").first().addClass("current");
             }
 
             $(".section.slides .slide.next").fadeIn(0);
@@ -153,6 +234,67 @@ $(function() {
                 $(".section.slides .slide.static, .section.slides .slide.next").css("left", slideLeft);
                 blockSlider = false;
             });
+        }
+    });
+
+    $(".section.slideCounter button").on("click touchstart", function(e) {
+        e.preventDefault();
+
+        if (!blockSlider && !e.target.classList.contains("current")) {
+            blockSlider = true;
+
+            var pointer;
+            var previousDist = 0;
+            var nextDist = 0;
+
+            pointer = e.target
+            while (!pointer.classList.contains("current")) {
+                previousDist++;
+
+                if (!pointer.previousSibling) {
+                    pointer = pointer.parentNode.lastChild;
+                } else {
+                    pointer = pointer.previousSibling
+                }
+            }
+
+            pointer = e.target
+            while (!pointer.classList.contains("current")) {
+                nextDist++;
+
+                if (!pointer.nextSibling) {
+                    pointer = pointer.parentNode.firstChild;
+                } else {
+                    pointer = pointer.nextSibling
+                }
+            }
+            
+            previousDist = e.target.parentNode.childElementCount - previousDist;
+            nextDist = e.target.parentNode.childElementCount - nextDist;
+
+
+            sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
+            slideLeft = $(".section.slides").width() + 20;
+
+            $("#presentation").animate({
+                scrollTop: 0
+            }, sliderSpeed);
+
+            if (nextDist > previousDist) {
+                recursiveSlidePrevious(previousDist);
+
+                setTimeout(function() {
+                    $(".scroll").perfectScrollbar("update");
+                    blockSlider = false;
+                }, sliderSpeed * previousDist + 20);
+            } else {
+                recursiveSlideNext(nextDist);
+
+                setTimeout(function() {
+                    $(".scroll").perfectScrollbar("update");
+                    blockSlider = false;
+                }, sliderSpeed * nextDist + 20);
+            }
         }
     });
 
