@@ -31,10 +31,9 @@ $(function() {
             $(".section.slides").animate({  // special: resize the current slide height
                 height: $(".section.slides .slide.current").height() + 20
             }, "slow", function() {
+                $(".scroll").perfectScrollbar("update");
                 blockSlider = false;
             });
-
-            $(".scroll").perfectScrollbar("update");    // to update the scrollbars
         }
     });
 });
