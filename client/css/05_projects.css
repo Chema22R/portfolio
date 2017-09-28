@@ -9,7 +9,12 @@
     justify-content: center;
 }
 
-.project {margin: 20px;}
+.project {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
 
 .project:hover figure {
     -webkit-transform: perspective(600px) rotateY(179.9999deg); /* the four decimals are because a little overflow in firefox (to get maximun proximity to 180deg) */
