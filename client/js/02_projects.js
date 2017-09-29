@@ -15,7 +15,8 @@ $(function() {
                             " emphasizing the mistakes made in previous sessions.<br>Once all sessions of the current period"+
                             " have been completed, it will be restarted distributing the content again between the sessions of"+
                             " the next period.",
-            "access": "private"
+            "access": "private",
+            "demo": false
         },
         {
             "name": "3D Preview",
@@ -28,7 +29,8 @@ $(function() {
                             " allowing him to analyze the object in detail.<br>In addition to the visualization and manipulation"+
                             " functions, the application will be in charge of storing the extracted and processed geometry of"+
                             " objects, so it can be accessed later.",
-            "access": "public"
+            "access": "public",
+            "demo": false
         }
     ];
 
@@ -71,8 +73,9 @@ $(function() {
                                 "<p>"+projects[i].descriptionEng+"</p>"+
                             "</div>"+
                             "<p class='ellipsis'>&darr; . . . &darr;</p>"+
-                            "<div class='"+projects[i].access+"Project'>"+
+                            "<div class='"+projects[i].access+"Project demo"+projects[i].demo+"'>"+
                                 "<p>"+projects[i].access+"</p>"+
+                                "<span class='demoLink'>Demo</span>"+
                             "</div>"+
                         "</figcaption>"+
                     "</figure>"+
@@ -80,6 +83,12 @@ $(function() {
             "</div>"
         ).appendTo("#proyectsContainer");
     }
+
+
+    $(".project figure .projectBack .demotrue .demoLink").on("click touchstart", function(e) {  // demoLink trigger
+        e.preventDefault();
+        window.location.href = e.target.parentNode.parentNode.parentNode.parentNode.href+"Demo";
+    });
     
 
     if (!isMobile.any()) {
