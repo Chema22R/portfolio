@@ -16,7 +16,7 @@ $(function() {
                             " have been completed, it will be restarted distributing the content again between the sessions of"+
                             " the next period.",
             "access": "private",
-            "demo": false
+            "demo": true
         },
         {
             "name": "3D Preview",
