@@ -1,6 +1,20 @@
 $(function() {
     var projects = [
         {
+            "name": "3D Preview",
+            "url": "3dpreview",
+            "descriptionSpa": "Previsualizador de objetos 3D con los que el usuario podrá interactuar y llevar a cabo ciertas"+
+                            " operaciones básicas, las cuales le permitan analizar el objeto en detalle.<br>Además de la"+
+                            " función de visualización y manipulación, la aplicación se encargará de almacenar la geometría"+
+                            " extraída y procesada de los objetos, de modo que estos puedan ser accesibles posteriormente.",
+            "descriptionEng": "3D objects previewer with which the user can interact and carry out certain basic operations,"+
+                            " allowing him to analyze the object in detail.<br>In addition to the visualization and manipulation"+
+                            " functions, the application will be in charge of storing the extracted and processed geometry of"+
+                            " objects, so it can be accessed later.",
+            "access": "public",
+            "demo": false
+        },
+        {
             "name": "Memoriizu",
             "url": "memoriizu",
             "descriptionSpa": "Aplicación para el estudio de idiomas en la que el usuario añade los idiomas y el contenido"+
@@ -17,20 +31,6 @@ $(function() {
                             " the next period.",
             "access": "private",
             "demo": true
-        },
-        {
-            "name": "3D Preview",
-            "url": "3dpreview",
-            "descriptionSpa": "Previsualizador de objetos 3D con los que el usuario podrá interactuar y llevar a cabo ciertas"+
-                            " operaciones básicas, las cuales le permitan analizar el objeto en detalle.<br>Además de la"+
-                            " función de visualización y manipulación, la aplicación se encargará de almacenar la geometría"+
-                            " extraída y procesada de los objetos, de modo que estos puedan ser accesibles posteriormente.",
-            "descriptionEng": "3D objects previewer with which the user can interact and carry out certain basic operations,"+
-                            " allowing him to analyze the object in detail.<br>In addition to the visualization and manipulation"+
-                            " functions, the application will be in charge of storing the extracted and processed geometry of"+
-                            " objects, so it can be accessed later.",
-            "access": "public",
-            "demo": false
         }
     ];
 
