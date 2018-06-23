@@ -163,7 +163,7 @@
     font-weight: normal;
 }
 
-.section.slides .slide h3.nbsp {margin-right: 4px;}
+.section.slides .slide h3.nbsp {margin-right: 8px;}
 .section.slides .slide h3.bold {font-weight: bold;}
 .section.slides .slide h3.size01 {font-size: 1em;}
 .section.slides .slide h3.size02 {font-size: 0.9em;}
@@ -201,7 +201,7 @@
     ========================================================================== */
 
 .section.social .socialLink {
-    margin: 10px;
+    margin: 12px;
     font-size: 40px;
     color: #777;
 }
