@@ -39,43 +39,43 @@ $(function() {
                 list: [
                     {
                         title: 'Emprendimiento Social',
-                        period: '(2017)',
+                        period: '2017',
                         duration: '30 horas',
                         location: 'Miríada X'
                     },
                     {
                         title: 'Taller Emprendedor ágil. Lean Startup en el canal online',
-                        period: '(2017)',
+                        period: '2017',
                         duration: '20 horas',
                         location: 'Fundación General de la Universidad de León y de la empresa, FGULEM'
                     },
                     {
                         title: 'Curso básico de Marketing Digital',
-                        period: '(2016)',
+                        period: '2016',
                         duration: '40 horas',
                         location: 'Programa Actívate, Google'
                     },
                     {
                         title: 'Diseño web con HTML5 y CSS3',
-                        period: '(2015)',
+                        period: '2015',
                         duration: '120 horas',
                         location: 'Seis Cocos Technical School'
                     },
                     {
                         title: 'Unity 3D',
-                        period: '(2015)',
+                        period: '2015',
                         duration: '40 horas',
                         location: 'Universidad de León'
                     },
                     {
                         title: 'Desarrollo web con Joomla',
-                        period: '(2015)',
+                        period: '2015',
                         duration: '',
                         location: 'Cowabi Web Solutions'
                     },
                     {
                         title: 'Programación en C',
-                        period: '(2014)',
+                        period: '2014',
                         duration: '40 horas',
                         location: 'Universidad de León'
                     }
@@ -85,27 +85,21 @@ $(function() {
                 title: 'Experiencia Profesional',
                 list: [
                     {
-                        title: 'Modelador 3D',
-                        location: 'Universidad de León, León (España)',
-                        period: '09/2015–presente',
-                        description: 'Proyecto de investigación para el desarrollo de prótesis de bajo coste para animales con miembros amputados, mediante el uso de escaneado, modelado e impresión 3D. Encargado de todas las tareas descritas anteriormente.'
-                    },
-                    {
                         title: 'Profesor de clases particulares',
                         location: '',
-                        period: '09/2015–presente',
-                        description: 'Profesor de clases particulares para alumnos de Ingenierías y enseñanzas técnicas.<br>Materias impartidas: Java y desarrollo web.'
+                        period: '09/2015 - presente',
+                        description: 'Profesor de clases particulares para alumnos de Ingenierías y enseñanzas técnicas.<br>Materias impartidas: Java, C y desarrollo web.'
                     },
                     {
-                        title: 'Desarrollador Web FullStack',
-                        location: 'HP SCDS, León (España)',
-                        period: '11/2016–07/2017',
-                        description: 'Creación de un previsualizador de impresión 3D utilizando tecnologías HTML5/JS. Este proyecto constituye las prácticas de empresa y el proyecto final del Grado en Ingeniería Informática. Además, fue premiado como el mejor proyecto del XII Observatorio Tecnológico de HP.'
+                        title: 'Modelador 3D',
+                        location: 'Universidad de León, León (España)',
+                        period: '09/2015 - 06/2018',
+                        description: 'Proyecto de investigación para el desarrollo de prótesis de bajo coste para animales con miembros amputados, mediante el uso de escaneado, modelado e impresión 3D. Encargado de todas las tareas descritas anteriormente.'
                     },
                     {
                         title: 'Profesor invitado',
                         location: 'Universidad de León, León (España)',
-                        period: '09/2016',
+                        period: '09/2016 - 09/2016',
                         description: 'Profesor en la Universidad de León durante el curso de extensión universitaria Unity 3D. Encargado de parte de las clases relacionadas con Autodesk Maya y modelado 3D.'
                     }
                 ]
@@ -127,7 +121,7 @@ $(function() {
                     {
                         title: 'Mejor proyecto del XII Observatorio Tecnológico de HP',
                         period: '2017',
-                        description: 'Ganador del XII Observatorio Tecnológico de HP, por el desarrollo de un previsualizador de impresión 3D utilizando tecnologías HTML5/JS.​'
+                        description: 'Ganador del XII Observatorio Tecnológico de HP, por el desarrollo de un previsualizador de impresión 3D utilizando tecnologías HTML5/JS.'
                     }
                 ]
             }
@@ -168,43 +162,43 @@ $(function() {
                 list: [
                     {
                         title: 'Social Entrepreneurship',
-                        period: '(2017)',
+                        period: '2017',
                         duration: '30 hours',
                         location: 'Miríada X'
                     },
                     {
-                        title: 'Agile Entrepreneur Workshop. Lean Startup on the online channel',
-                        period: '(2017)',
+                        title: 'Agile Entrepreneur workshop. Lean Startup on the online channel',
+                        period: '2017',
                         duration: '20 hours',
                         location: 'General Foundation of the University of León and the company, FGULEM'
                     },
                     {
-                        title: 'Basic Digital Marketing Course',
-                        period: '(2016)',
+                        title: 'Basic Digital Marketing course',
+                        period: '2016',
                         duration: '40 hours',
                         location: 'Actívate program, Google'
                     },
                     {
                         title: 'Web design with HTML5 and CSS3',
-                        period: '(2015)',
+                        period: '2015',
                         duration: '120 hours',
                         location: 'Seis Cocos Technical School'
                     },
                     {
                         title: 'Unity 3D',
-                        period: '(2015)',
+                        period: '2015',
                         duration: '40 hours',
                         location: 'University of León'
                     },
                     {
                         title: 'Web development with Joomla',
-                        period: '(2015)',
+                        period: '2015',
                         duration: '',
                         location: 'Cowabi Web Solutions'
                     },
                     {
                         title: 'C programming',
-                        period: '(2014)',
+                        period: '2014',
                         duration: '40 hours',
                         location: 'University of León'
                     }
@@ -214,27 +208,21 @@ $(function() {
                 title: 'Work Experience',
                 list: [
                     {
-                        title: '3D Modeler',
-                        location: 'University of León, León (Spain)',
-                        period: '09/2015–present',
-                        description: 'Research project to develop low-cost prostheses for animals with amputated limbs, through the use of scanning, modeling and 3D printing. In charge of all the tasks described above.'
-                    },
-                    {
                         title: 'Private tutor',
                         location: '',
-                        period: '09/2015–present',
-                        description: 'Private tutor for students of Engineering and technical education.<br>Subjects taught: Java and web development.'
+                        period: '09/2015 - present',
+                        description: 'Private tutor for students of Engineering and technical education.<br>Subjects taught: Java, C and web development.'
                     },
                     {
-                        title: 'FullStack Web Developer',
-                        location: 'HP SCDS, León (Spain)',
-                        period: '11/2016–07/2017',
-                        description: "Creation of a 3D print previewer using HTML5/JS technologies. This project constitutes the company practices and the final project of the Bachelor's Degree in Computer Engineering. In addition, it was awarded as the best project of the XII Technology Observatory of HP."
+                        title: '3D Modeler',
+                        location: 'University of León, León (Spain)',
+                        period: '09/2015 - 06/2018',
+                        description: 'Research project to develop low-cost prostheses for animals with amputated limbs, through the use of scanning, modeling and 3D printing. In charge of all the tasks described above.'
                     },
                     {
                         title: 'Guest professor',
                         location: 'University of León, León (Spain)',
-                        period: '09/2016',
+                        period: '09/2016 - 09/2016',
                         description: 'Professor at the University of León during the university extension course Unity 3D. In charge of the classes related to Autodesk Maya and 3D modeling.'
                     }
                 ]
@@ -339,7 +327,7 @@ $(function() {
 
             for (var j=0; j<curriculum[i].courses.list.length; j++) {
                 codeHTML += '<h3 class="size01 bold nbsp">' + curriculum[i].courses.list[j].title + '</h3>' +
-                            '<h3 class="size02 nbsp lineBreak">' + curriculum[i].courses.list[j].period + '</h3>' +
+                            '<h3 class="size02 nbsp lineBreak">(' + curriculum[i].courses.list[j].period + ')</h3>' +
                             '<h3 class="size02 floatR lineBreak">' + curriculum[i].courses.list[j].duration + '</h3>' +
                             '<p>' + curriculum[i].courses.list[j].location + '</p>';
             }
