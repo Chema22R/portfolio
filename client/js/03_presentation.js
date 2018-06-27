@@ -498,7 +498,7 @@ $(function() {
     /* Triggers
     ========================================================================== */
 
-    $("#buttonProfile").on("click touchstart", function(e) {
+    $("#buttonProfile").click(function(e) {
         e.preventDefault();
 
         $("#leftover, #presentationContainer").fadeIn("slow");
@@ -508,7 +508,7 @@ $(function() {
         $("#presentation").scrollTop(0);
     });
     
-    $(".section.slides .previowsArrow").on("click touchstart", function(e) {    // previows slide
+    $(".section.slides .previowsArrow").click(function(e) {    // previows slide
         e.preventDefault();
 
         if (!blockSlider) {
@@ -560,7 +560,7 @@ $(function() {
         }
     });
 
-    $(".section.slides .nextArrow").on("click touchstart", function(e) {    // next slide
+    $(".section.slides .nextArrow").click(function(e) {    // next slide
         e.preventDefault();
 
         if (!blockSlider) {
@@ -612,7 +612,7 @@ $(function() {
         }
     });
 
-    $(".section.slideCounter button").on("click touchstart", function(e) {
+    $(".section.slideCounter button").click(function(e) {
         e.preventDefault();
 
         if (!blockSlider && !e.target.classList.contains("current")) {
@@ -674,7 +674,7 @@ $(function() {
     });
 
     
-    $(window).on("click touchstart", function(e) {
+    $(window).click(function(e) {
         if ($("#presentationContainer").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #presentationContainer *") || $(e.target).is(".exitButton"))) {
             $("#leftover, #presentationContainer").fadeOut("slow");
         }

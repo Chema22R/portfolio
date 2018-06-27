@@ -2,7 +2,7 @@ $(function() {
     var blockSlider = false;
     var lang;
 
-    $("#buttonsRight .langSelector").on("click touchstart", function(e) {
+    $("#buttonsRight .langSelector").click(function(e) {
         e.preventDefault();
 
         if (!blockSlider) {

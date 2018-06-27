@@ -85,7 +85,7 @@ $(function() {
     }
 
 
-    $(".project figure .projectBack .demotrue .demoLink").on("click touchstart", function(e) {  // demoLink trigger
+    $(".project figure .projectBack .demotrue .demoLink").click(function(e) {  // demoLink trigger
         e.preventDefault();
         window.location.href = e.target.parentNode.parentNode.parentNode.parentNode.href+"Demo";
     });
