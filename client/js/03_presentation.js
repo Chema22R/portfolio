@@ -674,7 +674,7 @@ $(function() {
     });
 
     
-    $(window).click(function(e) {
+    $(window).on("click touchstart", function(e) {
         if ($("#presentationContainer").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #presentationContainer *") || $(e.target).is(".exitButton"))) {
             $("#leftover, #presentationContainer").fadeOut("slow");
         }
