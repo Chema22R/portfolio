@@ -85,6 +85,12 @@ $(function() {
                 title: 'Experiencia Profesional',
                 list: [
                     {
+                        title: 'Ingeniero de software',
+                        location: 'León (España)',
+                        period: '07/2018 - presente',
+                        description: 'Creación de un previsualizador de impresión 3D utilizando tecnologías HTML5/JS: Este proyecto constituye las prácticas de empresa y el proyecto final del Grado en Ingeniería Informática. Fue premiado como el mejor proyecto del XII Observatorio Tecnológico de HP.<br>Gestión de prototipos de impresoras conectadas a la red: Este proyecto constituye las prácticas de empresa y el proyecto final del Máster en Ingeniería Informática.'
+                    },
+                    {
                         title: 'Profesor de clases particulares',
                         location: '',
                         period: '09/2015 - presente',
@@ -207,6 +213,12 @@ $(function() {
             workExp: {
                 title: 'Work Experience',
                 list: [
+                    {
+                        title: 'Software engineer',
+                        location: 'León (Spain)',
+                        period: '07/2018 - present',
+                        description: "Creation of a 3D print previewer using HTML5/JS technologies: This project constitutes the company practices and the final project of the Bachelor's Degree in Computer Engineering. It was awarded as the best project of the XII Technology Observatory of HP.<br>Network printers prototypes management: This project constitutes the company practices and the final project of the Master's Degree in Computer Engineering."
+                    },
                     {
                         title: 'Private tutor',
                         location: '',
