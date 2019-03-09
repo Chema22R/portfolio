@@ -22,7 +22,7 @@ $(function() {
                 list: [
                     {
                         title: 'Máster en Ingeniería Informática',
-                        period: '(09/2017 - presente)',
+                        period: '(09/2017 - 02/2019)',
                         level: 'EQF-MEC 7',
                         location: 'Universidad de León, León (España)'
                     },
@@ -151,7 +151,7 @@ $(function() {
                 list: [
                     {
                         title: 'Master’s Degree in Computer Engineering',
-                        period: '(09/2017 - present)',
+                        period: '(09/2017 - 02/2019)',
                         level: 'EQF 7',
                         location: 'University of León, León (Spain)'
                     },

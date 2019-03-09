@@ -3,13 +3,13 @@ $(function() {
         {
             "name": "3D Preview",
             "url": "3dpreview",
-            "descriptionSpa": "Previsualizador de objetos 3D con los que el usuario podrá interactuar y llevar a cabo ciertas"+
+            "descriptionSpa": "Previsualizador de objetos 3D con los que el usuario puede interactuar y llevar a cabo ciertas"+
                             " operaciones básicas, las cuales le permitan analizar el objeto en detalle.<br>Además de la"+
-                            " función de visualización y manipulación, la aplicación se encargará de almacenar la geometría"+
+                            " función de visualización y manipulación, la aplicación se encarga de almacenar la geometría"+
                             " extraída y procesada de los objetos, de modo que estos puedan ser accesibles posteriormente.",
             "descriptionEng": "3D objects previewer with which the user can interact and carry out certain basic operations,"+
                             " allowing him to analyze the object in detail.<br>In addition to the visualization and manipulation"+
-                            " functions, the application will be in charge of storing the extracted and processed geometry of"+
+                            " functions, the application is in charge of storing the extracted and processed geometry of"+
                             " objects, so it can be accessed later.",
             "access": "public",
             "demo": false
@@ -31,6 +31,20 @@ $(function() {
                             " the next period.",
             "access": "private",
             "demo": true
+        },
+        {
+            "name": "Printers Discovery",
+            "url": "printersDiscovery",
+            "descriptionSpa": "Aplicación que se encarga de analizar la red local en búsqueda de prototipos de impresoras,"+
+                            " de modo que se capture y almacene su información.<br>A través de la interfaz, los usuarios"+
+                            " pueden modificar la información de las impresoras detectadas y reservarlas para poder"+
+                            " utilizarlas y trabajar con ellas durante un periodo de tiempo.",
+            "descriptionEng": "Responsible application for analyzing the local network in search of prototypes of printers"+
+                            " so their information is captured and stored. Through the interface, users can modify the"+
+                            " information of the detected printers and reserve them to use and work with them for a period"+
+                            " of time.",
+            "access": "public",
+            "demo": false
         }
     ];
 
