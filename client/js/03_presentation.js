@@ -5,7 +5,7 @@ $(function() {
     var curriculum = [
         {
             title: 'spanish',
-            url: 'https://drive.google.com/file/d/1EIjlQ1Zv4wf7v92kyCPZz0wDqiCzqBJ8/view?usp=sharing',
+            url: 'https://drive.google.com/file/d/1teqoDzJVKS2bTjNJdnl1XK3kQHTC5iBb/view?usp=sharing',
             personal: {
                 name: 'José María Rivera Alonso',
                 role: 'Desarrollador FullStack',
@@ -134,7 +134,7 @@ $(function() {
         },
         {
             title: 'english',
-            url: 'https://drive.google.com/file/d/1UsV83YE_Dq2WZ3Sfj_qCT5_LwcMgWYEs/view?usp=sharing',
+            url: 'https://drive.google.com/file/d/1bKwHEJ-dqufh7fZ1n2RjhQo9E__pSg88/view?usp=sharing',
             personal: {
                 name: 'José María Rivera Alonso',
                 role: 'FullStack Developer',
