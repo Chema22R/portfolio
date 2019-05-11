@@ -135,7 +135,7 @@ $(function() {
         },
         {
             title: 'english',
-            linkedin: 'https://www.linkedin.com/in/chema22r/?locale=en_US',
+            linkedin: 'https://www.linkedin.com/in/chema22r',
             driveCv: 'https://drive.google.com/file/d/1bKwHEJ-dqufh7fZ1n2RjhQo9E__pSg88/view?usp=sharing',
             personal: {
                 name: 'José María Rivera Alonso',
