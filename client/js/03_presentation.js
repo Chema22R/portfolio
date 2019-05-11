@@ -8,7 +8,7 @@ $(function() {
             url: 'https://drive.google.com/file/d/1teqoDzJVKS2bTjNJdnl1XK3kQHTC5iBb/view?usp=sharing',
             personal: {
                 name: 'José María Rivera Alonso',
-                role: 'Desarrollador FullStack',
+                role: 'Desarrollador Full-stack',
                 email: 'chema22r@gmail.com',
                 phone: '(+34) 697946985',
                 country: {
@@ -137,7 +137,7 @@ $(function() {
             url: 'https://drive.google.com/file/d/1bKwHEJ-dqufh7fZ1n2RjhQo9E__pSg88/view?usp=sharing',
             personal: {
                 name: 'José María Rivera Alonso',
-                role: 'FullStack Developer',
+                role: 'Full-stack Developer',
                 email: 'chema22r@gmail.com',
                 phone: '(+34) 697946985',
                 country: {
@@ -687,7 +687,7 @@ $(function() {
 
     
     $(window).on("click touchstart", function(e) {
-        if ($("#presentationContainer").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #presentationContainer *") || $(e.target).is(".exitButton"))) {
+        if ($("#presentationContainer").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #presentationContainer *") || $(e.target).is(".exitButton"))) {
             $("#leftover, #presentationContainer").fadeOut("slow");
         }
     });
