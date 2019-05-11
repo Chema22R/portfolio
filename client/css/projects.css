@@ -181,12 +181,12 @@
 }
 
 
-.project figure .projectBack .demofalse .demoLink {display: none;}
+.project figure .projectBack .demofalse .demoLink {display: none;}
 
 .project figure .projectBack .demotrue * {float: left;}
 .project figure .projectBack .demotrue p {width: 70%;}
 
-.project figure .projectBack .demotrue .demoLink {
+.project figure .projectBack .demotrue .demoLink {
     width: 30%;
     background: #080;
 }
