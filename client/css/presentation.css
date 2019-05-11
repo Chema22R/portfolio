@@ -200,13 +200,13 @@
 /* Social Section
     ========================================================================== */
 
-.section.social .socialLink {
+.section.social a {
     margin: 12px;
     font-size: 40px;
     color: #777;
 }
 
-.section.social .socialLink:hover {opacity: 0.6;}
+.section.social a:hover {opacity: 0.6;}
 
 
 

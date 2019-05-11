@@ -5,7 +5,8 @@ $(function() {
     var curriculum = [
         {
             title: 'spanish',
-            url: 'https://drive.google.com/file/d/1teqoDzJVKS2bTjNJdnl1XK3kQHTC5iBb/view?usp=sharing',
+            linkedin: 'https://www.linkedin.com/in/chema22r',
+            driveCv: 'https://drive.google.com/file/d/1teqoDzJVKS2bTjNJdnl1XK3kQHTC5iBb/view?usp=sharing',
             personal: {
                 name: 'José María Rivera Alonso',
                 role: 'Desarrollador Full-stack',
@@ -134,7 +135,8 @@ $(function() {
         },
         {
             title: 'english',
-            url: 'https://drive.google.com/file/d/1bKwHEJ-dqufh7fZ1n2RjhQo9E__pSg88/view?usp=sharing',
+            linkedin: 'https://www.linkedin.com/in/chema22r/?locale=en_US',
+            driveCv: 'https://drive.google.com/file/d/1bKwHEJ-dqufh7fZ1n2RjhQo9E__pSg88/view?usp=sharing',
             personal: {
                 name: 'José María Rivera Alonso',
                 role: 'Full-stack Developer',
@@ -262,20 +264,6 @@ $(function() {
             }
         }
     ];
-    var social = [
-        {
-            title: 'linkedin',
-            url: 'https://www.linkedin.com/in/chema22r'
-        },
-        {
-            title: 'facebook',
-            url: 'https://www.facebook.com/Chema22R'
-        },
-        {
-            title: 'gmail',
-            url: 'mailto:' + curriculum[0].personal.email
-        }
-    ];
 
     generateSlides();
     generateSlideCounter();
@@ -296,14 +284,14 @@ $(function() {
         $(slides[slides.length-1]).addClass('previous');
 
 
-        for (var i=0; i<social.length; i++) {
-            codeHTML =  '<a class="socialLink icon-' + social[i].title + ' icon" href="' + social[i].url + '" target="_blank" rel="external"></a>';
-            $('#presentation > .section.social').append(codeHTML);
-        }
-
-
         for (var i=0; i<curriculum.length; i++) {
-            codeHTML =  '<a class="socialLink ' + curriculum[i].title + 'Content icon-cv icon" href="' + curriculum[i].url + '" target="_blank" rel="external"></a>';
+            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-lkdn icon" href="' + curriculum[i].linkedin + '" target="_blank" rel="external"></a>';
+            $('#presentation > .section.social').append(codeHTML);
+
+            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gml icon" href="' + curriculum[i].personal.email + '" target="_blank" rel="external"></a>';
+            $('#presentation > .section.social').append(codeHTML);
+
+            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-cv icon" href="' + curriculum[i].driveCv + '" target="_blank" rel="external"></a>';
             $('#presentation > .section.social').append(codeHTML);
 
             codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
