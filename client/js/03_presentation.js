@@ -395,10 +395,6 @@ $(function() {
         slideHeight = $(".section.slides .slide.current").height() + 20;
         slideLeft = $(".section.slides").width() + 20;
 
-        $("#presentationContainer").css({
-            left: ($(window).width() - $("#presentationContainer").width()) / 2
-        });
-
         $(".section.slides .slide").css({
             display: "none",
             position: "absolute",
@@ -413,8 +409,6 @@ $(function() {
         $(".section.slides .slide.previous").css("left", -slideLeft);
     
         $(".section.slides").css("height", slideHeight);
-
-        $(".scroll").perfectScrollbar("update");
     }
 
 
@@ -506,6 +500,7 @@ $(function() {
         e.preventDefault();
 
         $("#leftover, #presentationContainer").fadeIn("slow");
+        $(document.body).css({overflow: "hidden"});
 
         organize();
         
@@ -535,9 +530,7 @@ $(function() {
 
             $(".section.slides").animate({
                 height: slideHeight
-            }, sliderSpeed+100, function() {
-                $(".scroll").perfectScrollbar("update");
-            });
+            }, sliderSpeed+100);
 
             $(".section.slides .slide.current").animate({
                 left: "+=" + slideLeft
@@ -587,9 +580,7 @@ $(function() {
 
             $(".section.slides").animate({
                 height: slideHeight
-            }, sliderSpeed+100, function() {
-                $(".scroll").perfectScrollbar("update");
-            });
+            }, sliderSpeed+100);
             
             $(".section.slides .slide.current").animate({
                 left: "-=" + slideLeft
@@ -663,14 +654,12 @@ $(function() {
                 recursiveSlidePrevious(previousDist);
 
                 setTimeout(function() {
-                    $(".scroll").perfectScrollbar("update");
                     blockSlider = false;
                 }, sliderSpeed * previousDist + 20);
             } else {
                 recursiveSlideNext(nextDist);
 
                 setTimeout(function() {
-                    $(".scroll").perfectScrollbar("update");
                     blockSlider = false;
                 }, sliderSpeed * nextDist + 20);
             }
@@ -681,6 +670,7 @@ $(function() {
     $(window).on("click touchstart", function(e) {
         if ($("#presentationContainer").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #presentationContainer *") || $(e.target).is(".exitButton"))) {
             $("#leftover, #presentationContainer").fadeOut("slow");
+            $(document.body).css({overflow: "unset"});
         }
     });
 

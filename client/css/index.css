@@ -52,7 +52,7 @@ button {
 
 #buttonsRight {
     right: 0;
-    z-index: 4;
+    z-index: 3;
 }
 
 #buttonsLeft button {float: left;}
@@ -69,7 +69,7 @@ button {
 #buttonsLeft .icon:hover {color: #777;}
 
 
-#buttonsRight .langSelector {height: 40px;}
+#buttonsRight .langSelector {height: 30px;}
 
 #buttonsRight .langSelector img {
     height: 100%;
@@ -97,4 +97,5 @@ buttonsRight            4
 previowsArrow           4
 nextArrow               4
 ps__scrollbar-y-rail    4
+exitButton              5
 */

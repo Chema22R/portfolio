@@ -39,7 +39,7 @@ $(function() {
                             " de modo que se capture y almacene su información.<br>A través de la interfaz, los usuarios"+
                             " pueden modificar la información de las impresoras detectadas y reservarlas para poder"+
                             " utilizarlas y trabajar con ellas durante un periodo de tiempo.",
-            "descriptionEng": "Responsible application for analyzing the local network in search of prototypes of printers"+
+            "descriptionEng": "Application responsible for analyzing the local network in search of prototypes of printers"+
                             " so their information is captured and stored. Through the interface, users can modify the"+
                             " information of the detected printers and reserve them to use and work with them for a period"+
                             " of time.",

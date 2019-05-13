@@ -17,7 +17,8 @@
 }
 
 .project:hover figure {
-    -webkit-transform: perspective(600px) rotateY(179.9999deg); /* the four decimals are because a little overflow in firefox (to get maximun proximity to 180deg) */
+    /* the four decimals are because a little overflow in firefox (to get maximun proximity to 180deg) */
+    -webkit-transform: perspective(600px) rotateY(179.9999deg);
     -ms-transform: perspective(600px) rotateY(179.9999deg);
     -o-transform: perspective(600px) rotateY(179.9999deg);
     transform: perspective(600px) rotateY(179.9999deg);
