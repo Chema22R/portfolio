@@ -395,6 +395,10 @@ $(function() {
         slideHeight = $(".section.slides .slide.current").height() + 20;
         slideLeft = $(".section.slides").width() + 20;
 
+        $("#presentationContainer").css({
+            left: ($(window).width() - $("#presentationContainer").width()) / 2
+        });
+
         $(".section.slides .slide").css({
             display: "none",
             position: "absolute",
