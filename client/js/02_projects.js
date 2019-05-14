@@ -10,9 +10,7 @@ $(function() {
             "descriptionEng": "Application with the aim of analyzing the local network in search of prototypes of printers"+
                             " capturing and storing their information.<br>Through the interface, users can modify the"+
                             " information of the detected printers and reserve them to be able to use and work freely"+
-                            " with them for a period of time.",
-            "access": "public",
-            "demo": false
+                            " with them for a period of time."
         },
         {
             "name": "Memoriizu",
@@ -24,9 +22,7 @@ $(function() {
             "descriptionEng": "Application for languages study focused on users adding the languages and content they wish"+
                             " to study, in addition to the period in which they want that content to be distributed.<br>A"+
                             " session is generated daily with the content that users should complete for that day, emphasizing"+
-                            " the mistakes made in previous sessions.",
-            "access": "private",
-            "demo": true
+                            " the mistakes made in previous sessions."
         },
         {
             "name": "3D Preview",
@@ -37,9 +33,7 @@ $(function() {
                             " puedan ser facilmente cargados de nuevo.",
             "descriptionEng": "3D object previewer that allows users to interact and carry out certain basic operations on loaded"+
                             " objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and"+
-                            " processed geometry of the objects, so that they can be easily loaded again.",
-            "access": "public",
-            "demo": false
+                            " processed geometry of the objects, so that they can be easily loaded again."
         }
     ];
 
@@ -81,23 +75,13 @@ $(function() {
                             "<div class='description englishContent scroll'>"+
                                 "<p>"+projects[i].descriptionEng+"</p>"+
                             "</div>"+
-                            "<p class='ellipsis'>&darr; . . . &darr;</p>"+
-                            "<div class='"+projects[i].access+"Project demo"+projects[i].demo+"'>"+
-                                "<p>"+projects[i].access+"</p>"+
-                                "<span class='demoLink'>Demo</span>"+
-                            "</div>"+
+                            "<p class='ellipsis'>. . .</p>"+
                         "</figcaption>"+
                     "</figure>"+
                 "</a>"+
             "</div>"
         ).appendTo("#proyectsContainer");
     }
-
-
-    $(".project figure .projectBack .demotrue .demoLink").click(function(e) {  // demoLink trigger
-        e.preventDefault();
-        window.location.href = e.target.parentNode.parentNode.parentNode.parentNode.href+"Demo";
-    });
     
 
     if (!isMobile.any()) {

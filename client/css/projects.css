@@ -128,7 +128,7 @@
 .project figure .projectBack .description {
     position: relative;
     width: 275px;
-    max-height: 200px;
+    max-height: 240px;
     padding-right: 15px;
     
     font-size: 14px;
@@ -151,45 +151,3 @@
 
     overflow: visible;
 }
-
-
-.project figure .projectBack .publicProject,
-.project figure .projectBack .privateProject {
-    position: absolute;
-    left:0;
-    right: 0;
-    bottom: 0;
-
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-
-    overflow: hidden;
-}
-
-.project figure .projectBack .publicProject {background: #080;}
-.project figure .projectBack .privateProject {background: #f00;}
-
-.project figure .projectBack .publicProject *,
-.project figure .projectBack .privateProject * {
-    padding: 8px 0;
-
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    text-transform: capitalize;
-
-    overflow: hidden;
-}
-
-
-.project figure .projectBack .demofalse .demoLink {display: none;}
-
-.project figure .projectBack .demotrue * {float: left;}
-.project figure .projectBack .demotrue p {width: 70%;}
-
-.project figure .projectBack .demotrue .demoLink {
-    width: 30%;
-    background: #080;
-}
-
-.project figure .projectBack .demotrue .demoLink:hover {background: #090;}
