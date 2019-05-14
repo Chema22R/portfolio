@@ -119,7 +119,7 @@ $(function() {
                 },
                 other: {
                     title: 'Otros idiomas',
-                    val: 'Inglés (nivel B2)<br>Japonés (nivel A2/A1)'
+                    val: 'Inglés (nivel B2)<br>Japonés (nivel A1/A2)'
                 }
             },
             awards: {
@@ -249,7 +249,7 @@ $(function() {
                 },
                 other: {
                     title: 'Other languages',
-                    val: 'English (level B2)<br>Japanese (level A2/A1)'
+                    val: 'English (B2 level)<br>Japanese (A1/A2 level)'
                 }
             },
             awards: {
@@ -258,7 +258,7 @@ $(function() {
                     {
                         title: 'Best project of the XII Technology Observatory of HP',
                         period: '2017',
-                        description: '​Winner of the XII Technology Observatory of HP, for the development of a 3D print previewer using HTML5/JS technologies.​'
+                        description: 'Winner of the XII Technology Observatory of HP, for the development of a 3D print previewer using HTML5/JS technologies.'
                     }
                 ]
             }
