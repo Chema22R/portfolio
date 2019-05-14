@@ -1,48 +1,46 @@
 $(function() {
     var projects = [
         {
-            "name": "3D Preview",
-            "url": "3dpreview",
-            "descriptionSpa": "Previsualizador de objetos 3D con los que el usuario puede interactuar y llevar a cabo ciertas"+
-                            " operaciones básicas, las cuales le permitan analizar el objeto en detalle.<br>Además de la"+
-                            " función de visualización y manipulación, la aplicación se encarga de almacenar la geometría"+
-                            " extraída y procesada de los objetos, de modo que estos puedan ser accesibles posteriormente.",
-            "descriptionEng": "3D objects previewer with which the user can interact and carry out certain basic operations,"+
-                            " allowing him to analyze the object in detail.<br>In addition to the visualization and manipulation"+
-                            " functions, the application is in charge of storing the extracted and processed geometry of"+
-                            " objects, so it can be accessed later.",
+            "name": "Printers Discovery",
+            "url": "printersDiscovery",
+            "descriptionSpa": "Aplicación con el objetivo de analizar la red local en búsqueda de prototipos de impresoras,"+
+                            " capturando y almacenando su información.<br>A través de la interfaz, los usuarios"+
+                            " pueden modificar la información de las impresoras detectadas y reservarlas para poder"+
+                            " utilizarlas y trabajar libremente con ellas durante un periodo de tiempo.",
+            "descriptionEng": "Application with the aim of analyzing the local network in search of prototypes of printers"+
+                            " capturing and storing its information.<br>Through the interface, users can modify the"+
+                            " information of the detected printers and reserve them to be able to use and work freely"+
+                            " with them for a period of time.",
             "access": "public",
             "demo": false
         },
         {
             "name": "Memoriizu",
             "url": "memoriizu",
-            "descriptionSpa": "Aplicación para el estudio de idiomas en la que el usuario añade los idiomas y el contenido"+
-                            " que desea estudiar, además del periodo en el que desea que se reparta dicho contenido.<br>"+
-                            "A diario se generará una sesión con el contenido que el usuario debe completar para ese día,"+
+            "descriptionSpa": "Aplicación para el estudio de idiomas enfocada en que los usuarios añadan los idiomas y el contenido"+
+                            " que desean estudiar, además del periodo en el que desean que se reparta dicho contenido.<br> A"+
+                            " diario se genera una sesión con el contenido que los usuarios deben completar para ese día,"+
                             " haciendo hincapié en los fallos cometidos en sesiones anteriores.<br>Una vez completadas todas"+
-                            " las sesiones del periodo actual, éste se reiniciará repartiendo el contenido nuevamente"+
-                            " entre las sesiones del siguiente periodo.",
-            "descriptionEng": "Application for the language study in which the user adds the languages and the content"+
-                            " he wants to study, in addition to the period in which he wants that content to be distributed."+
-                            "<br>A session will be generated daily with the content that the user must complete for that day,"+
-                            " emphasizing the mistakes made in previous sessions.<br>Once all sessions of the current period"+
-                            " have been completed, it will be restarted distributing the content again between the sessions of"+
-                            " the next period.",
+                            " las sesiones del periodo actual, éste se reinicia repartiendo el contenido nuevamente entre"+
+                            " las sesiones del siguiente periodo.",
+            "descriptionEng": "Application for languages study focused on users adding the languages and content they wish"+
+                            " to study, in addition to the period in which they want that content to be distributed.<br>A"+
+                            " session is generated daily with the content that users should complete for that day,  emphasizing"+
+                            " the mistakes made in previous sessions.<br>Once all sessions of the current period have been"+
+                            " completed, it restarts distributing the content again between the sessions of the next period.",
             "access": "private",
             "demo": true
         },
         {
-            "name": "Printers Discovery",
-            "url": "printersDiscovery",
-            "descriptionSpa": "Aplicación que se encarga de analizar la red local en búsqueda de prototipos de impresoras,"+
-                            " de modo que se capture y almacene su información.<br>A través de la interfaz, los usuarios"+
-                            " pueden modificar la información de las impresoras detectadas y reservarlas para poder"+
-                            " utilizarlas y trabajar con ellas durante un periodo de tiempo.",
-            "descriptionEng": "Application responsible for analyzing the local network in search of prototypes of printers"+
-                            " so their information is captured and stored. Through the interface, users can modify the"+
-                            " information of the detected printers and reserve them to use and work with them for a period"+
-                            " of time.",
+            "name": "3D Preview",
+            "url": "3dpreview",
+            "descriptionSpa": "Previsualizador de objetos 3D que permite a los usuarios interactuar y llevar a cabo ciertas"+
+                            " operaciones básicas sobre los objetos cargados, posibilitando su análisis en detalle.<br>Además,"+
+                            " la aplicación almacena la geometría extraída y procesada de los objetos, de modo que éstos"+
+                            " puedan ser cargados de nuevo directamente.",
+            "descriptionEng": "3D object previewer that allows users to interact and carry out certain basic operations on loaded"+
+                            " objects, enabling their analysis in detail. In addition, the application stores the extracted and"+
+                            " processed geometry of the objects, so that they can be loaded directly again.",
             "access": "public",
             "demo": false
         }
