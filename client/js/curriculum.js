@@ -499,7 +499,7 @@ $(function() {
     $("#buttonProfile").click(function(e) {
         e.preventDefault();
 
-        $("#leftover, #curriculumMain").fadeIn("slow");
+        $("#leftover, #curriculumContainer").fadeIn("slow");
         $(document.body).css({overflow: "hidden"});
 
         organize();
@@ -668,8 +668,8 @@ $(function() {
 
     
     $(window).on("click touchstart", function(e) {
-        if ($("#curriculumMain").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #curriculumMain *") || $(e.target).is(".exitButton"))) {
-            $("#leftover, #curriculumMain").fadeOut("slow");
+        if ($("#curriculumContainer").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #curriculumContainer *") || $(e.target).is(".exitButton"))) {
+            $("#leftover, #curriculumContainer").fadeOut("slow");
             $(document.body).css({overflow: "unset"});
         }
     });
