@@ -286,13 +286,13 @@ $(function() {
 
         for (var i=0; i<curriculum.length; i++) {
             codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-lkdn icon" href="' + curriculum[i].linkedin + '" target="_blank" rel="external"></a>';
-            $('#presentation > .section.social').append(codeHTML);
+            $('#curriculumData > .section.social').append(codeHTML);
 
             codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gml icon" href="mailto:' + curriculum[i].personal.email + '" rel="external"></a>';
-            $('#presentation > .section.social').append(codeHTML);
+            $('#curriculumData > .section.social').append(codeHTML);
 
             codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-cv icon" href="' + curriculum[i].driveCv + '" target="_blank" rel="external"></a>';
-            $('#presentation > .section.social').append(codeHTML);
+            $('#curriculumData > .section.social').append(codeHTML);
 
             codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
                             '<h2>' + curriculum[i].personal.name + '</h2>' +
@@ -304,7 +304,7 @@ $(function() {
                             '</p>' +
                         '</div>';
 
-            $('#presentation > .section.basic').append(codeHTML);   // end basic or personal info
+            $('#curriculumData > .section.basic').append(codeHTML);   // end basic or personal info
 
 
             codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
@@ -499,12 +499,12 @@ $(function() {
     $("#buttonProfile").click(function(e) {
         e.preventDefault();
 
-        $("#leftover, #presentationContainer").fadeIn("slow");
+        $("#leftover, #curriculumMain").fadeIn("slow");
         $(document.body).css({overflow: "hidden"});
 
         organize();
         
-        $("#presentation").scrollTop(0);
+        $("#curriculumData").scrollTop(0);
     });
     
     $(".section.slides .previowsArrow").click(function(e) {    // previows slide
@@ -524,7 +524,7 @@ $(function() {
 
             $(".section.slides .slide.previous").fadeIn(0);
 
-            $("#presentation").animate({
+            $("#curriculumData").animate({
                 scrollTop: 0
             }, sliderSpeed);
 
@@ -574,7 +574,7 @@ $(function() {
 
             $(".section.slides .slide.next").fadeIn(0);
 
-            $("#presentation").animate({
+            $("#curriculumData").animate({
                 scrollTop: 0
             }, sliderSpeed);
 
@@ -646,7 +646,7 @@ $(function() {
             sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
             slideLeft = $(".section.slides").width() + 20;
 
-            $("#presentation").animate({
+            $("#curriculumData").animate({
                 scrollTop: 0
             }, sliderSpeed);
 
@@ -668,8 +668,8 @@ $(function() {
 
     
     $(window).on("click touchstart", function(e) {
-        if ($("#presentationContainer").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #presentationContainer *") || $(e.target).is(".exitButton"))) {
-            $("#leftover, #presentationContainer").fadeOut("slow");
+        if ($("#curriculumMain").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #curriculumMain *") || $(e.target).is(".exitButton"))) {
+            $("#leftover, #curriculumMain").fadeOut("slow");
             $(document.body).css({overflow: "unset"});
         }
     });

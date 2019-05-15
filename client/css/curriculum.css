@@ -1,4 +1,4 @@
-#presentationContainer {
+#curriculumMain {
     display: none;
 
     position: fixed;
@@ -14,7 +14,7 @@
     background: #fafafa;
 }
 
-#presentationContainer .exitButton {
+#curriculumMain .exitButton {
     position: absolute;
     top: 0;
     right: 0;
@@ -27,12 +27,12 @@
     z-index: 5;
 }
 
-#presentationContainer .exitButton:hover {
+#curriculumMain .exitButton:hover {
     border-top-right-radius: 8px;
     color: #e00;
 }
 
-#presentation {
+#curriculumData {
     height: 100%;
     padding: 10px 0;
 
