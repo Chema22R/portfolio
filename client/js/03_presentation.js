@@ -392,7 +392,7 @@ $(function() {
     }
 
     function organize() {
-        slideHeight = $(".section.slides .slide.current").height() + 20;
+        slideHeight = $(".section.slides .slide.current").height() + 40;
         slideLeft = $(".section.slides").width() + 20;
 
         $(".section.slides .slide").css({
