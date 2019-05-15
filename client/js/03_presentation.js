@@ -413,7 +413,7 @@ $(function() {
 
 
     function recursiveSlidePrevious(distance) {
-        slideHeight = $(".section.slides .slide.previous").height() + 20;
+        slideHeight = $(".section.slides .slide.previous").height() + 40;
 
         if ($(".section.slideCounter button.current").prev().length > 0) {
             $(".section.slideCounter button.current").removeClass("current").prev().addClass("current");
@@ -453,7 +453,7 @@ $(function() {
     }
 
     function recursiveSlideNext(distance) {
-        slideHeight = $(".section.slides .slide.next").height() + 20;
+        slideHeight = $(".section.slides .slide.next").height() + 40;
 
         if ($(".section.slideCounter button.current").next().length > 0) {
             $(".section.slideCounter button.current").removeClass("current").next().addClass("current");
@@ -513,7 +513,7 @@ $(function() {
         if (!blockSlider) {
             blockSlider = true;
             sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
-            slideHeight = $(".section.slides .slide.previous").height() + 20;
+            slideHeight = $(".section.slides .slide.previous").height() + 40;
             slideLeft = $(".section.slides").width() + 20;
 
             if ($(".section.slideCounter button.current").prev().length > 0) {
@@ -563,7 +563,7 @@ $(function() {
         if (!blockSlider) {
             blockSlider = true;
             sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
-            slideHeight = $(".section.slides .slide.next").height() + 20;
+            slideHeight = $(".section.slides .slide.next").height() + 40;
             slideLeft = $(".section.slides").width() + 20;
 
             if ($(".section.slideCounter button.current").next().length > 0) {
