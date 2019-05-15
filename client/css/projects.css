@@ -128,7 +128,7 @@
 .project figure .projectBack .description {
     position: relative;
     width: 275px;
-    max-height: 240px;
+    max-height: 230px;
     padding-right: 15px;
     
     font-size: 14px;
@@ -136,6 +136,10 @@
     text-align: justify;
 
     overflow: auto;
+}
+
+.project figure .projectBack .description p br {
+    margin-bottom: 5px;
 }
 
 .project figure .projectBack p.ellipsis {
