@@ -288,7 +288,7 @@ $(function() {
             codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-lkdn icon" href="' + curriculum[i].linkedin + '" target="_blank" rel="external"></a>';
             $('#presentation > .section.social').append(codeHTML);
 
-            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gml icon" href="' + curriculum[i].personal.email + '" target="_blank" rel="external"></a>';
+            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gml icon" href="mailto:' + curriculum[i].personal.email + '" rel="external"></a>';
             $('#presentation > .section.social').append(codeHTML);
 
             codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-cv icon" href="' + curriculum[i].driveCv + '" target="_blank" rel="external"></a>';
