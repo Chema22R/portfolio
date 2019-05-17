@@ -1,5 +1,19 @@
+"use strict";
+
 $(function() {
     var projects = [
+        {
+            "name": "José María Rivera Alonso",
+            "url": "buttonProfile",
+            "descriptionSpa": "¡Bienvenid@ a mi página web!<br>"+
+                            " "+
+                            " "+
+                            " .",
+            "descriptionEng": ""+
+                            " "+
+                            " "+
+                            " ."
+        },
         {
             "name": "Printers Discovery",
             "url": "printersDiscovery",
@@ -38,34 +52,35 @@ $(function() {
     ];
 
     var isMobile = {    // allows to detect mobile devices
-        Android: function() {
+        Android: () => {
             return navigator.userAgent.match(/Android/i);
         },
-        BlackBerry: function() {
+        BlackBerry: () => {
             return navigator.userAgent.match(/BlackBerry/i);
         },
-        iOS: function() {
+        iOS: () => {
             return navigator.userAgent.match(/iPhone|iPad|iPod/i);
         },
-        Opera: function() {
+        Opera: () => {
             return navigator.userAgent.match(/Opera Mini/i);
         },
-        Windows: function() {
+        Windows: () => {
             return navigator.userAgent.match(/IEMobile/i);
         },
-        any: function() {
+        any: () => {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
     };
 
-    var device = "";
-    if (isMobile.any()) {device = " mobile";}
 
-    for (var i=0; i<projects.length; i++) {
+    for (let i=0, specialCVId="", device=""; i<projects.length; i++) {
+        device = (isMobile.any()) ? " mobile" : "";
+        specialCVId = (projects[i].url === "buttonProfile") ? " id='projectCurriculum'" : "";
+
         $("<div class='project"+device+"'>"+
-                "<a href='http://"+serverAddress+"/"+projects[i].url+"'>"+
+                "<a" + specialCVId + " href='http://"+serverAddress+"/"+projects[i].url+"'>"+
                     "<figure>"+
-                        "<img class='projectFront' src='img/"+projects[i].url+".png' alt='memoriizu'>"+
+                        "<img class='projectFront' src='img/"+projects[i].url+".png' alt='" + projects[i].name + "'>"+
                         "<figcaption class='projectBack'>"+
                             "<h2>"+projects[i].name+"</h2>"+
                             "<hr>"+
@@ -82,7 +97,7 @@ $(function() {
             "</div>"
         ).appendTo("#proyectsContainer");
     }
-    
+
 
     if (!isMobile.any()) {
         $(".project").on("mouseenter", function() {

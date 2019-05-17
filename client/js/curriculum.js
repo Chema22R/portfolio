@@ -1,3 +1,5 @@
+"use strict";
+
 $(function() {
     var blockSlider = false;
     var sliderSpeedMult = 2;
@@ -405,12 +407,10 @@ $(function() {
             display: "block",
             left: 0
         });
-        
+
         $(".section.slides .slide.previous").css("left", -slideLeft);
-    
         $(".section.slides").css("height", slideHeight);
     }
-
 
     function recursiveSlidePrevious(distance) {
         slideHeight = $(".section.slides .slide.previous").height() + 40;
@@ -496,17 +496,45 @@ $(function() {
     /* Triggers
     ========================================================================== */
 
-    $("#buttonProfile").click(function(e) {
+    $("#buttonProfile, #projectCurriculum").click(function(e) {
         e.preventDefault();
 
         $("#leftover, #curriculumContainer").fadeIn("slow");
         $(document.body).css({overflow: "hidden"});
 
         organize();
-        
+
         $("#curriculumData").scrollTop(0);
     });
-    
+
+    $("#buttonsRight .langSelector").click(function(e) {
+        e.preventDefault();
+
+        if (!blockSlider) {
+            let lang = (e.target.id) ? e.target.id : e.target.parentElement.id; // to make crossbrowser the id capture
+            blockSlider = true;
+
+            $("#buttonsRight .langSelector.current").removeClass("current");
+            $("#" + lang).addClass("current");
+
+
+            for (var i=0; i<$("#buttonsRight .langSelector").length; i++) { // fade out all elements of all languages, except the elements of current language
+                if ($("#buttonsRight .langSelector")[i].id != lang) {
+                    $("." + $("#buttonsRight .langSelector")[i].id).fadeOut(0);
+                }
+            }
+
+            $("." + lang).fadeIn("slow");   // fade in all element of current language
+
+
+            $(".section.slides").animate({  // special: resize the current slide height
+                height: $(".section.slides .slide.current").height() + 40
+            }, "slow", function() {
+                blockSlider = false;
+            });
+        }
+    });
+
     $(".section.slides .previowsArrow").click(function(e) {    // previows slide
         e.preventDefault();
 
@@ -620,23 +648,13 @@ $(function() {
             pointer = e.target
             while (!pointer.classList.contains("current")) {
                 previousDist++;
-
-                if (!pointer.previousSibling) {
-                    pointer = pointer.parentNode.lastChild;
-                } else {
-                    pointer = pointer.previousSibling
-                }
+                pointer = (!pointer.previousSibling) ? pointer.parentNode.lastChild : pointer.previousSibling;
             }
 
             pointer = e.target
             while (!pointer.classList.contains("current")) {
                 nextDist++;
-
-                if (!pointer.nextSibling) {
-                    pointer = pointer.parentNode.firstChild;
-                } else {
-                    pointer = pointer.nextSibling
-                }
+                pointer = (!pointer.nextSibling) ? pointer.parentNode.firstChild : pointer.nextSibling;
             }
             
             previousDist = e.target.parentNode.childElementCount - previousDist;
@@ -668,7 +686,7 @@ $(function() {
 
     
     $(window).on("click touchstart", function(e) {
-        if ($("#curriculumContainer").is(":visible") && (!$(e.target).is("#buttonsLeft *, #buttonsRight *, #curriculumContainer *") || $(e.target).is(".exitButton"))) {
+        if ($("#curriculumContainer").is(":visible") && ($(e.target).is("#leftover") || $(e.target).is(".exitButton"))) {
             $("#leftover, #curriculumContainer").fadeOut("slow");
             $(document.body).css({overflow: "unset"});
         }
