@@ -4,49 +4,47 @@ $(function() {
     var projects = [
         {
             "name": "José María Rivera Alonso",
-            "url": "buttonProfile",
-            "descriptionSpa": "¡Bienvenid@ a mi página web!<br>"+
-                            " "+
-                            " "+
-                            " .",
-            "descriptionEng": ""+
-                            " "+
-                            " "+
-                            " ."
+            "url": "curriculum",
+            "descriptionSpa": "¡Bienvenid@ a mi página web!<br>Mi nombre es José María Rivera Alonso y esta es la página" +
+                            " principal de mi servidor.<br>Desde aquí puede acceder a mis proyectos personales, además" +
+                            " de visualizar mi curriculum.<br>¡Espero que disfrute!",
+            "descriptionEng": "Welcome to my web page!<br>My name is José María Rivera Alonso and this is the main page of" +
+                            " my server.<br>From here you can access my personal projects, as well as view my curriculum." +
+                            "<br>I hope you enjoy!"
         },
         {
             "name": "Printers Discovery",
             "url": "printersDiscovery",
-            "descriptionSpa": "Aplicación con el objetivo de analizar la red local en búsqueda de prototipos de impresoras,"+
-                            " capturando y almacenando su información.<br>A través de la interfaz, los usuarios"+
-                            " pueden modificar la información de las impresoras detectadas y reservarlas para poder"+
+            "descriptionSpa": "Aplicación con el objetivo de analizar la red local en búsqueda de prototipos de impresoras," +
+                            " capturando y almacenando su información.<br>A través de la interfaz, los usuarios" +
+                            " pueden modificar la información de las impresoras detectadas y reservarlas para poder" +
                             " utilizarlas y trabajar libremente con ellas durante un periodo de tiempo.",
-            "descriptionEng": "Application with the aim of analyzing the local network in search of prototypes of printers"+
-                            " capturing and storing their information.<br>Through the interface, users can modify the"+
-                            " information of the detected printers and reserve them to be able to use and work freely"+
+            "descriptionEng": "Application with the aim of analyzing the local network in search of prototypes of printers" +
+                            " capturing and storing their information.<br>Through the interface, users can modify the" +
+                            " information of the detected printers and reserve them to be able to use and work freely" +
                             " with them for a period of time."
         },
         {
             "name": "Memoriizu",
             "url": "memoriizu",
-            "descriptionSpa": "Aplicación para el estudio de idiomas enfocada en que los usuarios añadan los idiomas y el contenido"+
-                            " que desean estudiar, además del periodo en el que desean que se reparta dicho contenido.<br> A"+
-                            " diario se genera una sesión con el contenido que los usuarios deben completar para ese día,"+
+            "descriptionSpa": "Aplicación para el estudio de idiomas enfocada en que los usuarios añadan los idiomas y el contenido" +
+                            " que desean estudiar, además del periodo en el que desean que se reparta dicho contenido.<br>A" +
+                            " diario se genera una sesión con el contenido que los usuarios deben completar para ese día," +
                             " haciendo hincapié en los fallos cometidos en sesiones anteriores.",
-            "descriptionEng": "Application for languages study focused on users adding the languages and content they wish"+
-                            " to study, in addition to the period in which they want that content to be distributed.<br>A"+
-                            " session is generated daily with the content that users should complete for that day, emphasizing"+
+            "descriptionEng": "Application for languages study focused on users adding the languages and content they wish" +
+                            " to study, in addition to the period in which they want that content to be distributed.<br>A" +
+                            " session is generated daily with the content that users should complete for that day, emphasizing" +
                             " the mistakes made in previous sessions."
         },
         {
             "name": "3D Preview",
             "url": "3dpreview",
-            "descriptionSpa": "Previsualizador de objetos 3D que permite a los usuarios interactuar y llevar a cabo ciertas"+
-                            " operaciones básicas sobre los objetos cargados, posibilitando su análisis en detalle.<br>Además,"+
-                            " la aplicación almacena la geometría extraída y procesada de los objetos, de modo que éstos"+
+            "descriptionSpa": "Previsualizador de objetos 3D que permite a los usuarios interactuar y llevar a cabo ciertas" +
+                            " operaciones básicas sobre los objetos cargados, posibilitando su análisis en detalle.<br>Además," +
+                            " la aplicación almacena la geometría extraída y procesada de los objetos, de modo que éstos" +
                             " puedan ser facilmente cargados de nuevo.",
-            "descriptionEng": "3D object previewer that allows users to interact and carry out certain basic operations on loaded"+
-                            " objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and"+
+            "descriptionEng": "3D object previewer that allows users to interact and carry out certain basic operations on loaded" +
+                            " objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and" +
                             " processed geometry of the objects, so that they can be easily loaded again."
         }
     ];
@@ -75,7 +73,7 @@ $(function() {
 
     for (let i=0, specialCVId="", device=""; i<projects.length; i++) {
         device = (isMobile.any()) ? " mobile" : "";
-        specialCVId = (projects[i].url === "buttonProfile") ? " id='projectCurriculum'" : "";
+        specialCVId = (projects[i].url === "curriculum") ? " id='projectCurriculum'" : "";
 
         $("<div class='project"+device+"'>"+
                 "<a" + specialCVId + " href='http://"+serverAddress+"/"+projects[i].url+"'>"+
