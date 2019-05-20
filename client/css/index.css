@@ -81,15 +81,15 @@ button {
 #buttonsRight .langSelector:last-child img {border-bottom-left-radius: 5px;}
 #buttonsRight .langSelector.current img {filter: none;}
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 390px) {
     #buttonsRight {position: absolute;}
 }
 
-@media screen and (max-width: 435px) {
-    #buttonsLeft {position: absolute;}
+@media screen and (max-width: 450px) {
+    #buttonsLeft {display: none;}
 }
 
-@media screen and (max-width: 440px) and (min-width: 380px) {
+@media screen and (max-width: 450px) and (min-width: 390px) {
     #buttonsRight {display: grid;}
 }
 
