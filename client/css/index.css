@@ -81,6 +81,18 @@ button {
 #buttonsRight .langSelector:last-child img {border-bottom-left-radius: 5px;}
 #buttonsRight .langSelector.current img {filter: none;}
 
+@media screen and (max-width: 365px) {
+    #buttonsRight {display: none;}
+}
+
+@media screen and (max-width: 410px) {
+    #buttonsLeft {display: none;}
+}
+
+@media screen and (max-width: 430px) {
+    #buttonsRight {display: grid;}
+}
+
 
 /* Language
     ========================================================================== */
