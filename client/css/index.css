@@ -86,7 +86,7 @@ button {
 }
 
 @media screen and (max-width: 450px) {
-    #buttonsLeft {display: absolute;}
+    #buttonsLeft {display: none;}
 }
 
 @media screen and (max-width: 450px) and (min-width: 390px) {
