@@ -89,7 +89,7 @@ button {
     #buttonsLeft {display: none;}
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 430px) and (min-width: 365px) {
     #buttonsRight {display: grid;}
 }
 
