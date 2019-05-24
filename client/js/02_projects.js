@@ -37,8 +37,8 @@ $(function() {
                             " the mistakes made in previous sessions."
         },
         {
-            "name": "3D Preview",
-            "url": "3dpreview",
+            "name": "3D Previewer",
+            "url": "3dpreviewer",
             "descriptionSpa": "Previsualizador de objetos 3D que permite a los usuarios interactuar y llevar a cabo ciertas" +
                             " operaciones básicas sobre los objetos cargados, posibilitando su análisis en detalle.<br>Además," +
                             " la aplicación almacena la geometría extraída y procesada de los objetos, de modo que éstos" +
