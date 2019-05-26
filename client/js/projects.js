@@ -26,14 +26,14 @@ const projects = [
     {
         "name": "Memoriizu",
         "url": "memoriizu",
-        "descriptionSpa": "Aplicación para el estudio de idiomas enfocada en que los usuarios añadan los idiomas y el contenido" +
+        "descriptionSpa": "Aplicación enfocada en el aprendizaje de idiomas, en la que los usuarios añaden el contenido" +
                         " que desean estudiar, además del periodo en el que desean que se reparta dicho contenido.<br>A" +
                         " diario se genera una sesión con el contenido que los usuarios deben completar para ese día," +
                         " haciendo hincapié en los fallos cometidos en sesiones anteriores.",
-        "descriptionEng": "Application for languages learning focused on users adding the languages and content they wish" +
-                        " to study, in addition to the period in which they want that content to be distributed.<br>A" +
-                        " session is generated daily with the content that users should complete for that day, emphasizing" +
-                        " the mistakes made in previous sessions."
+        "descriptionEng": "Application focused on languages learning, in which users add the content they want to study," +
+                        " in addition to the period in which they want the content to be distributed.<br>A session is" +
+                        " generated daily with the content that users should complete for that day, emphasizing the mistakes" +
+                        " made in previous sessions."
     },
     {
         "name": "3D Previewer",
@@ -42,7 +42,7 @@ const projects = [
                         " operaciones básicas sobre los objetos cargados, posibilitando su análisis en detalle.<br>Además," +
                         " la aplicación almacena la geometría extraída y procesada de los objetos, de modo que éstos" +
                         " puedan ser facilmente cargados de nuevo.",
-        "descriptionEng": "3D object previewer that allows users to interact and carry out certain basic operations on loaded" +
+        "descriptionEng": "3D objects previewer that allows users to interact and carry out certain basic operations on loaded" +
                         " objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and" +
                         " processed geometry of the objects, so that they can be easily loaded again."
     }
