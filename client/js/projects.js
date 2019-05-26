@@ -18,7 +18,7 @@ const projects = [
                         " capturando y almacenando su información.<br>A través de la interfaz, los usuarios" +
                         " pueden modificar la información de las impresoras detectadas y reservarlas para poder" +
                         " utilizarlas y trabajar libremente con ellas durante un periodo de tiempo.",
-        "descriptionEng": "Application with the aim of analyzing the local network in search of prototypes of printers" +
+        "descriptionEng": "Application with the aim of analyzing the local network in search of prototypes of printers," +
                         " capturing and storing their information.<br>Through the interface, users can modify the" +
                         " information of the detected printers and reserve them to be able to use and work freely" +
                         " with them for a period of time."
