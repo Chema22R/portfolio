@@ -30,7 +30,7 @@ const projects = [
                         " que desean estudiar, además del periodo en el que desean que se reparta dicho contenido.<br>A" +
                         " diario se genera una sesión con el contenido que los usuarios deben completar para ese día," +
                         " haciendo hincapié en los fallos cometidos en sesiones anteriores.",
-        "descriptionEng": "Application focused on languages learning, in which users add the content they want to study," +
+        "descriptionEng": "Application focused on language learning, in which users add the content they want to study," +
                         " in addition to the period in which they want the content to be distributed.<br>A session is" +
                         " generated daily with the content that users should complete for that day, emphasizing the mistakes" +
                         " made in previous sessions."
