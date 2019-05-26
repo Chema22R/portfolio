@@ -32,8 +32,8 @@ const projects = [
                         " haciendo hincapié en los fallos cometidos en sesiones anteriores.",
         "descriptionEng": "Application focused on language learning, in which users add the content they want to study," +
                         " in addition to the period in which they want the content to be distributed.<br>A session is" +
-                        " generated daily with the content that users should complete for that day, emphasizing the mistakes" +
-                        " made in previous sessions."
+                        " generated daily with the content that users should complete for that day, emphasizing the failures" +
+                        " comitted in previous sessions."
     },
     {
         "name": "3D Previewer",
