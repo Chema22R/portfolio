@@ -141,7 +141,7 @@
     height: 50px;
     margin: auto;
 
-    color: #777;
+    color: #555;
     font-size: 50px;
 }
 
@@ -205,7 +205,7 @@
 .section.social a {
     margin: 12px;
     font-size: 40px;
-    color: #777;
+    color: #333;
 }
 
 .section.social a:hover {opacity: 0.6;}

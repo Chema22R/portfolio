@@ -3,6 +3,7 @@
 const curriculum = [
     {
         title: "spanish",
+        github: "https://github.com/Chema22R",
         linkedin: "https://www.linkedin.com/in/chema22r",
         driveCv: "https://drive.google.com/file/d/1teqoDzJVKS2bTjNJdnl1XK3kQHTC5iBb/view?usp=sharing",
         personal: {
@@ -142,6 +143,7 @@ const curriculum = [
     },
     {
         title: "english",
+        github: "https://github.com/Chema22R",
         linkedin: "https://www.linkedin.com/in/chema22r",
         driveCv: "https://drive.google.com/file/d/1bKwHEJ-dqufh7fZ1n2RjhQo9E__pSg88/view?usp=sharing",
         personal: {
@@ -325,6 +327,9 @@ $(function() {
 
         for (var i=0; i<curriculum.length; i++) {
             codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-lkdn icon" href="' + curriculum[i].linkedin + '" target="_blank" rel="external"></a>';
+            $('#curriculumData > .section.social').append(codeHTML);
+
+            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gthb icon" href="' + curriculum[i].github + '" target="_blank" rel="external"></a>';
             $('#curriculumData > .section.social').append(codeHTML);
 
             codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gml icon" href="mailto:' + curriculum[i].personal.email + '" rel="external"></a>';
