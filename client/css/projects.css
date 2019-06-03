@@ -94,6 +94,8 @@
     background: linear-gradient(to bottom, rgba(100,100,100,1) 0%, rgba(128,128,128,0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#646464', endColorstr='#808080', GradientType=0);
     
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform: perspective(600px) rotateY(180deg);
     -ms-transform: perspective(600px) rotateY(180deg);
@@ -102,6 +104,8 @@
 }
 
 .project.mobile figure .projectBack {
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
     backface-visibility: visible;
     -webkit-transform: perspective(600px) rotateY(0deg);
     -ms-transform: perspective(600px) rotateY(0deg);
