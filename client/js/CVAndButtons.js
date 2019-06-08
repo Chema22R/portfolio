@@ -12,7 +12,7 @@ const curriculum = [
             email: "chema22r@gmail.com",
             phone: "(+34) 697946985",
             country: {
-                image: "images/spain.png",
+                img: "img/spain.png",
                 name: "España"
             },
             birthday: "28/09/1995"
@@ -152,7 +152,7 @@ const curriculum = [
             email: "chema22r@gmail.com",
             phone: "(+34) 697946985",
             country: {
-                image: "images/spain.png",
+                img: "img/spain.png",
                 name: "Spain"
             },
             birthday: "28/09/1995"
@@ -343,7 +343,7 @@ $(function() {
                             '<h3>' + curriculum[i].personal.role + '</h3>' +
                             '<p>' + curriculum[i].personal.email + ' | ' + curriculum[i].personal.phone + '</p>' +
                             '<p class="country">' +
-                                '<img src="' + curriculum[i].personal.country.image + '" alt="' + curriculum[i].personal.country.name + '">' +
+                                '<img src="' + curriculum[i].personal.country.img + '" alt="' + curriculum[i].personal.country.name + '">' +
                                 curriculum[i].personal.country.name + ' | ' + curriculum[i].personal.birthday +
                             '</p>' +
                         '</div>';

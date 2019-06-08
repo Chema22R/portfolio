@@ -77,7 +77,7 @@ $(function() {
         $("<div class='project"+device+"'>"+
                 "<a" + specialCVId + " href='http://"+serverAddress+"/"+projects[i].url+"'>"+
                     "<figure>"+
-                        "<img class='projectFront' src='images/"+projects[i].url+".png' alt='" + projects[i].name + "'>"+
+                        "<img class='projectFront' src='img/"+projects[i].url+".png' alt='" + projects[i].name + "'>"+
                         "<figcaption class='projectBack'>"+
                             "<h2>"+projects[i].name+"</h2>"+
                             "<hr>"+
