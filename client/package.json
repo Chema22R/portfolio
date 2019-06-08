@@ -1,0 +1,22 @@
+{
+  "name": "personal-web-server_client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chema22R/personal-web-server.git"
+  },
+  "author": "Jose Maria Rivera Alonso (https://github.com/Chema22R)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chema22R/personal-web-server/issues"
+  },
+  "homepage": "https://github.com/Chema22R/personal-web-server#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
