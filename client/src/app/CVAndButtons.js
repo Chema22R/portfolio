@@ -1,5 +1,7 @@
 "use strict";
 
+const sliderSpeedMult = 2;
+
 const curriculum = [
     {
         title: "spanish",
@@ -281,10 +283,219 @@ const curriculum = [
         }
     }
 ];
-const sliderSpeedMult = 2;
 
 var blockSlider = false;
 var sliderSpeed, slideHeight, slideLeft;
+
+
+generateSlides();
+generateSlideCounter();
+
+function generateSlides() {
+    var codeHTML, slides;
+
+    codeHTML =  "<div class='slide training courses'></div>" +
+                "<div class='slide workExp'></div>" +
+                "<div class='slide langs awards'></div>";
+
+    $("#slidesContainer").append(codeHTML);
+
+
+    slides = $("#slidesContainer > .slide");
+    $(slides[0]).addClass("current");
+    $(slides[1]).addClass("next");
+    $(slides[slides.length-1]).addClass("previous");
+
+
+    for (var i=0; i<curriculum.length; i++) {
+        codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-lkdn icon" href="' + curriculum[i].linkedin + '" target="_blank" rel="external"></a>';
+        $('#curriculumData > .section.social').append(codeHTML);
+
+        codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gthb icon" href="' + curriculum[i].github + '" target="_blank" rel="external"></a>';
+        $('#curriculumData > .section.social').append(codeHTML);
+
+        codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gml icon" href="mailto:' + curriculum[i].personal.email + '" rel="external"></a>';
+        $('#curriculumData > .section.social').append(codeHTML);
+
+        codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-cv icon" href="' + curriculum[i].driveCv + '" target="_blank" rel="external"></a>';
+        $('#curriculumData > .section.social').append(codeHTML);
+
+        codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
+                        '<h2>' + curriculum[i].personal.name + '</h2>' +
+                        '<h3>' + curriculum[i].personal.role + '</h3>' +
+                        '<p>' + curriculum[i].personal.email + ' | ' + curriculum[i].personal.phone + '</p>' +
+                        '<p class="country">' +
+                            '<img src="' + curriculum[i].personal.country.image + '" alt="' + curriculum[i].personal.country.name + '">' +
+                            curriculum[i].personal.country.name + ' | ' + curriculum[i].personal.birthday +
+                        '</p>' +
+                    '</div>';
+
+        $('#curriculumData > .section.basic').append(codeHTML);   // end basic or personal info
+
+
+        codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
+                        '<h2>' + curriculum[i].training.title + '</h2>';
+
+        for (var j=0; j<curriculum[i].training.list.length; j++) {
+            codeHTML += '<h3 class="bold nbsp">' + curriculum[i].training.list[j].title + '</h3>' +
+                        '<h3 class="size01 nbsp lineBreak">' + curriculum[i].training.list[j].period + '</h3>' +
+                        '<h3 class="size02 floatR lineBreak">' + curriculum[i].training.list[j].level + '</h3>' +
+                        '<p>' + curriculum[i].training.list[j].location + '</p>';
+        }
+
+        codeHTML += '<br></div>';
+
+        $('#slidesContainer > .slide.training').append(codeHTML);   // end training info
+
+
+        codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
+                        '<h2>' + curriculum[i].courses.title + '</h2>';
+
+        for (var j=0; j<curriculum[i].courses.list.length; j++) {
+            codeHTML += '<h3 class="size01 bold nbsp">' + curriculum[i].courses.list[j].title + '</h3>' +
+                        '<h3 class="size02 nbsp lineBreak">(' + curriculum[i].courses.list[j].period + ')</h3>' +
+                        '<h3 class="size02 floatR lineBreak">' + curriculum[i].courses.list[j].duration + '</h3>' +
+                        '<p>' + curriculum[i].courses.list[j].location + '</p>';
+        }
+
+        codeHTML += '</div>';
+
+        $('#slidesContainer > .slide.courses').append(codeHTML);    // end courses info
+
+
+        codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
+                        '<h2>' + curriculum[i].workExp.title + '</h2>';
+
+        for (var j=0; j<curriculum[i].workExp.list.length; j++) {
+            codeHTML += '<h3 class="bold nbsp">' + curriculum[i].workExp.list[j].title + '</h3>' +
+                        '<h3 class="size01 nbsp lineBreak">' + curriculum[i].workExp.list[j].location + '</h3>' +
+                        '<h3 class="size01 floatR lineBreak">' + curriculum[i].workExp.list[j].period + '</h3>' +
+                        '<p>' + curriculum[i].workExp.list[j].description + '</p>';
+        }
+
+        codeHTML += '</div>';
+
+        $('#slidesContainer > .slide.workExp').append(codeHTML);    // end work experience info
+
+
+        codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
+                        '<h2>' + curriculum[i].langs.title + '</h2>' +
+                        '<h3 class="size01 bold nbsp">' + curriculum[i].langs.motherTongue.title + '</h3>' +
+                        '<h3 class="size01">' + curriculum[i].langs.motherTongue.val + '</h3>' +
+                        '<br>' +
+                        '<h3 class="size01 bold nbsp alignTop">' + curriculum[i].langs.other.title + '</h3>' +
+                        '<h3 class="size01">' + curriculum[i].langs.other.val + '</h3>' +
+                        '<br><br>' +
+                    '</div>';
+
+        $('#slidesContainer > .slide.langs').append(codeHTML);    // end languages info
+
+
+        codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
+                        '<h2>' + curriculum[i].awards.title + '</h2>';
+
+        for (var j=0; j<curriculum[i].awards.list.length; j++) {
+            codeHTML += '<h3 class="size01 bold nbsp">' + curriculum[i].awards.list[j].title + '</h3>' +
+                        '<h3 class="size01 floatR lineBreak">' + curriculum[i].awards.list[j].period + '</h3>' +
+                        '<p>' + curriculum[i].awards.list[j].description + '</p>';
+        }
+
+        codeHTML += '</div>';
+
+        $('#slidesContainer > .slide.awards').append(codeHTML);    // end awards info
+    }
+}
+
+function generateSlideCounter() {
+    var code = "";
+
+    for (var i=0; i<$(".section.slides > div > .slide").length; i++) {
+        code += "<button></button>";
+    }
+
+    $(code).appendTo(".section.slideCounter");
+    $(".section.slideCounter button").first().addClass("current");
+}
+
+function recursiveSlidePrevious(distance) {
+    slideHeight = $(".section.slides .slide.previous").height() + 40;
+
+    if ($(".section.slideCounter button.current").prev().length > 0) {
+        $(".section.slideCounter button.current").removeClass("current").prev().addClass("current");
+    } else {
+        $(".section.slideCounter button").removeClass("current").last().addClass("current");
+    }
+
+    $(".section.slides .slide.previous").fadeIn(0);
+
+    $(".section.slides").animate({
+        height: slideHeight
+    }, sliderSpeed);
+
+    $(".section.slides .slide.current").animate({
+        left: "+=" + slideLeft
+    }, sliderSpeed);
+
+    $(".section.slides .slide.previous").animate({
+        left: "+=" + slideLeft
+    }, sliderSpeed, function() {
+        $(".section.slides .slide.current").fadeOut(0);
+
+        $(".section.slides .slide.next").removeClass("next").addClass("static");
+        $(".section.slides .slide.current").removeClass("current").addClass("next");
+        $(".section.slides .slide.previous").removeClass("previous").addClass("current");
+
+        if ($(".section.slides .slide.current").prev().length > 0) {
+            $(".section.slides .slide.current").prev().removeClass("static").addClass("previous");
+        } else {
+            $(".section.slides .slide.static").last().removeClass("static").addClass("previous");
+        }
+
+        $(".section.slides .slide.previous").css("left", -slideLeft);
+        
+        if (--distance > 0) {recursiveSlidePrevious(distance)}
+    });
+}
+
+function recursiveSlideNext(distance) {
+    slideHeight = $(".section.slides .slide.next").height() + 40;
+
+    if ($(".section.slideCounter button.current").next().length > 0) {
+        $(".section.slideCounter button.current").removeClass("current").next().addClass("current");
+    } else {
+        $(".section.slideCounter button").removeClass("current").first().addClass("current");
+    }
+
+    $(".section.slides .slide.next").fadeIn(0);
+
+    $(".section.slides").animate({
+        height: slideHeight
+    }, sliderSpeed);
+    
+    $(".section.slides .slide.current").animate({
+        left: "-=" + slideLeft
+    }, sliderSpeed);
+
+    $(".section.slides .slide.next").animate({
+        left: "-=" + slideLeft
+    }, sliderSpeed, function() {
+        $(".section.slides .slide.current").fadeOut(0);
+
+        $(".section.slides .slide.previous").removeClass("previous").addClass("static");
+        $(".section.slides .slide.current").removeClass("current").addClass("previous");
+        $(".section.slides .slide.next").removeClass("next").addClass("current");
+
+        if ($(".section.slides .slide.current").next().length > 0) {
+            $(".section.slides .slide.current").next().removeClass("static").addClass("next");
+        } else {
+            $(".section.slides .slide.static").first().removeClass("static").addClass("next");
+        }
+
+        $(".section.slides .slide.static, .section.slides .slide.next").css("left", slideLeft);
+        
+        if (--distance > 0) {recursiveSlideNext(distance)}
+    });
+}
 
 function organizeSlides() {
     slideHeight = $(".section.slides .slide.current").height() + 40;
@@ -305,138 +516,68 @@ function organizeSlides() {
     $(".section.slides").css("height", slideHeight);
 }
 
-$(function() {
-    generateSlides();
-    generateSlideCounter();
 
-    function generateSlides() {
-        var codeHTML, slides;
+/* Triggers
+========================================================================== */
 
-        codeHTML =  "<div class='slide training courses'></div>" +
-                    "<div class='slide workExp'></div>" +
-                    "<div class='slide langs awards'></div>";
+$("#projectCurriculum").click(function(e) {
+    e.preventDefault();
 
-        $("#slidesContainer").append(codeHTML);
+    $("#leftover, #curriculumContainer").fadeIn("slow");
+    $(document.body).css({overflow: "hidden"});
 
+    organizeSlides();
 
-        slides = $("#slidesContainer > .slide");
-        $(slides[0]).addClass("current");
-        $(slides[1]).addClass("next");
-        $(slides[slides.length-1]).addClass("previous");
+    $("#curriculumData").scrollTop(0);
+});
 
+$("#buttonProfile").click(function(e) {
+    e.preventDefault();
 
-        for (var i=0; i<curriculum.length; i++) {
-            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-lkdn icon" href="' + curriculum[i].linkedin + '" target="_blank" rel="external"></a>';
-            $('#curriculumData > .section.social').append(codeHTML);
+    $("#leftover, #curriculumContainer").fadeIn("slow");
+    $(document.body).css({overflow: "hidden"});
 
-            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gthb icon" href="' + curriculum[i].github + '" target="_blank" rel="external"></a>';
-            $('#curriculumData > .section.social').append(codeHTML);
+    organizeSlides();
 
-            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-gml icon" href="mailto:' + curriculum[i].personal.email + '" rel="external"></a>';
-            $('#curriculumData > .section.social').append(codeHTML);
+    $("#curriculumData").scrollTop(0);
+});
 
-            codeHTML =  '<a class="' + curriculum[i].title + 'Content icon-cv icon" href="' + curriculum[i].driveCv + '" target="_blank" rel="external"></a>';
-            $('#curriculumData > .section.social').append(codeHTML);
+$("#buttonsRight .langSelector").click(function(e) {
+    e.preventDefault();
 
-            codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
-                            '<h2>' + curriculum[i].personal.name + '</h2>' +
-                            '<h3>' + curriculum[i].personal.role + '</h3>' +
-                            '<p>' + curriculum[i].personal.email + ' | ' + curriculum[i].personal.phone + '</p>' +
-                            '<p class="country">' +
-                                '<img src="' + curriculum[i].personal.country.image + '" alt="' + curriculum[i].personal.country.name + '">' +
-                                curriculum[i].personal.country.name + ' | ' + curriculum[i].personal.birthday +
-                            '</p>' +
-                        '</div>';
+    if (!blockSlider) {
+        let lang = (e.target.id) ? e.target.id : e.target.parentElement.id; // to make crossbrowser the id capture
+        blockSlider = true;
 
-            $('#curriculumData > .section.basic').append(codeHTML);   // end basic or personal info
+        $("#buttonsRight .langSelector.current").removeClass("current");
+        $("#" + lang).addClass("current");
 
 
-            codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
-                            '<h2>' + curriculum[i].training.title + '</h2>';
-
-            for (var j=0; j<curriculum[i].training.list.length; j++) {
-                codeHTML += '<h3 class="bold nbsp">' + curriculum[i].training.list[j].title + '</h3>' +
-                            '<h3 class="size01 nbsp lineBreak">' + curriculum[i].training.list[j].period + '</h3>' +
-                            '<h3 class="size02 floatR lineBreak">' + curriculum[i].training.list[j].level + '</h3>' +
-                            '<p>' + curriculum[i].training.list[j].location + '</p>';
+        for (var i=0; i<$("#buttonsRight .langSelector").length; i++) { // fade out all elements of all languages, except the elements of current language
+            if ($("#buttonsRight .langSelector")[i].id != lang) {
+                $("." + $("#buttonsRight .langSelector")[i].id).fadeOut(0);
             }
-
-            codeHTML += '<br></div>';
-
-            $('#slidesContainer > .slide.training').append(codeHTML);   // end training info
-
-
-            codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
-                            '<h2>' + curriculum[i].courses.title + '</h2>';
-
-            for (var j=0; j<curriculum[i].courses.list.length; j++) {
-                codeHTML += '<h3 class="size01 bold nbsp">' + curriculum[i].courses.list[j].title + '</h3>' +
-                            '<h3 class="size02 nbsp lineBreak">(' + curriculum[i].courses.list[j].period + ')</h3>' +
-                            '<h3 class="size02 floatR lineBreak">' + curriculum[i].courses.list[j].duration + '</h3>' +
-                            '<p>' + curriculum[i].courses.list[j].location + '</p>';
-            }
-
-            codeHTML += '</div>';
-
-            $('#slidesContainer > .slide.courses').append(codeHTML);    // end courses info
-
-
-            codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
-                            '<h2>' + curriculum[i].workExp.title + '</h2>';
-
-            for (var j=0; j<curriculum[i].workExp.list.length; j++) {
-                codeHTML += '<h3 class="bold nbsp">' + curriculum[i].workExp.list[j].title + '</h3>' +
-                            '<h3 class="size01 nbsp lineBreak">' + curriculum[i].workExp.list[j].location + '</h3>' +
-                            '<h3 class="size01 floatR lineBreak">' + curriculum[i].workExp.list[j].period + '</h3>' +
-                            '<p>' + curriculum[i].workExp.list[j].description + '</p>';
-            }
-
-            codeHTML += '</div>';
-
-            $('#slidesContainer > .slide.workExp').append(codeHTML);    // end work experience info
-
-
-            codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
-                            '<h2>' + curriculum[i].langs.title + '</h2>' +
-                            '<h3 class="size01 bold nbsp">' + curriculum[i].langs.motherTongue.title + '</h3>' +
-                            '<h3 class="size01">' + curriculum[i].langs.motherTongue.val + '</h3>' +
-                            '<br>' +
-                            '<h3 class="size01 bold nbsp alignTop">' + curriculum[i].langs.other.title + '</h3>' +
-                            '<h3 class="size01">' + curriculum[i].langs.other.val + '</h3>' +
-                            '<br><br>' +
-                        '</div>';
-
-            $('#slidesContainer > .slide.langs').append(codeHTML);    // end languages info
-
-
-            codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
-                            '<h2>' + curriculum[i].awards.title + '</h2>';
-
-            for (var j=0; j<curriculum[i].awards.list.length; j++) {
-                codeHTML += '<h3 class="size01 bold nbsp">' + curriculum[i].awards.list[j].title + '</h3>' +
-                            '<h3 class="size01 floatR lineBreak">' + curriculum[i].awards.list[j].period + '</h3>' +
-                            '<p>' + curriculum[i].awards.list[j].description + '</p>';
-            }
-
-            codeHTML += '</div>';
-
-            $('#slidesContainer > .slide.awards').append(codeHTML);    // end awards info
-        }
-    }
-
-    function generateSlideCounter() {
-        var code = "";
-
-        for (var i=0; i<$(".section.slides > div > .slide").length; i++) {
-            code += "<button></button>";
         }
 
-        $(code).appendTo(".section.slideCounter");
-        $(".section.slideCounter button").first().addClass("current");
-    }
+        $("." + lang).fadeIn("slow");   // fade in all element of current language
 
-    function recursiveSlidePrevious(distance) {
+
+        $(".section.slides").animate({  // special: resize the current slide height
+            height: $(".section.slides .slide.current").height() + 40
+        }, "slow", function() {
+            blockSlider = false;
+        });
+    }
+});
+
+$(".section.slides .previowsArrow").click(function(e) {    // previows slide
+    e.preventDefault();
+
+    if (!blockSlider) {
+        blockSlider = true;
+        sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
         slideHeight = $(".section.slides .slide.previous").height() + 40;
+        slideLeft = $(".section.slides").width() + 20;
 
         if ($(".section.slideCounter button.current").prev().length > 0) {
             $(".section.slideCounter button.current").removeClass("current").prev().addClass("current");
@@ -446,9 +587,13 @@ $(function() {
 
         $(".section.slides .slide.previous").fadeIn(0);
 
+        $("#curriculumData").animate({
+            scrollTop: 0
+        }, sliderSpeed);
+
         $(".section.slides").animate({
             height: slideHeight
-        }, sliderSpeed);
+        }, sliderSpeed+100);
 
         $(".section.slides .slide.current").animate({
             left: "+=" + slideLeft
@@ -470,13 +615,19 @@ $(function() {
             }
     
             $(".section.slides .slide.previous").css("left", -slideLeft);
-            
-            if (--distance > 0) {recursiveSlidePrevious(distance)}
+            blockSlider = false;
         });
     }
+});
 
-    function recursiveSlideNext(distance) {
+$(".section.slides .nextArrow").click(function(e) {    // next slide
+    e.preventDefault();
+
+    if (!blockSlider) {
+        blockSlider = true;
+        sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
         slideHeight = $(".section.slides .slide.next").height() + 40;
+        slideLeft = $(".section.slides").width() + 20;
 
         if ($(".section.slideCounter button.current").next().length > 0) {
             $(".section.slideCounter button.current").removeClass("current").next().addClass("current");
@@ -486,9 +637,13 @@ $(function() {
 
         $(".section.slides .slide.next").fadeIn(0);
 
+        $("#curriculumData").animate({
+            scrollTop: 0
+        }, sliderSpeed);
+
         $(".section.slides").animate({
             height: slideHeight
-        }, sliderSpeed);
+        }, sliderSpeed+100);
         
         $(".section.slides .slide.current").animate({
             left: "-=" + slideLeft
@@ -510,210 +665,65 @@ $(function() {
             }
     
             $(".section.slides .slide.static, .section.slides .slide.next").css("left", slideLeft);
-            
-            if (--distance > 0) {recursiveSlideNext(distance)}
+            blockSlider = false;
         });
     }
-
-
-    /* Triggers
-    ========================================================================== */
-
-    $("#buttonProfile").click(function(e) {
-        e.preventDefault();
-
-        $("#leftover, #curriculumContainer").fadeIn("slow");
-        $(document.body).css({overflow: "hidden"});
-
-        organizeSlides();
-
-        $("#curriculumData").scrollTop(0);
-    });
-
-    $("#buttonsRight .langSelector").click(function(e) {
-        e.preventDefault();
-
-        if (!blockSlider) {
-            let lang = (e.target.id) ? e.target.id : e.target.parentElement.id; // to make crossbrowser the id capture
-            blockSlider = true;
-
-            $("#buttonsRight .langSelector.current").removeClass("current");
-            $("#" + lang).addClass("current");
-
-
-            for (var i=0; i<$("#buttonsRight .langSelector").length; i++) { // fade out all elements of all languages, except the elements of current language
-                if ($("#buttonsRight .langSelector")[i].id != lang) {
-                    $("." + $("#buttonsRight .langSelector")[i].id).fadeOut(0);
-                }
-            }
-
-            $("." + lang).fadeIn("slow");   // fade in all element of current language
-
-
-            $(".section.slides").animate({  // special: resize the current slide height
-                height: $(".section.slides .slide.current").height() + 40
-            }, "slow", function() {
-                blockSlider = false;
-            });
-        }
-    });
-
-    $(".section.slides .previowsArrow").click(function(e) {    // previows slide
-        e.preventDefault();
-
-        if (!blockSlider) {
-            blockSlider = true;
-            sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
-            slideHeight = $(".section.slides .slide.previous").height() + 40;
-            slideLeft = $(".section.slides").width() + 20;
-
-            if ($(".section.slideCounter button.current").prev().length > 0) {
-                $(".section.slideCounter button.current").removeClass("current").prev().addClass("current");
-            } else {
-                $(".section.slideCounter button").removeClass("current").last().addClass("current");
-            }
-
-            $(".section.slides .slide.previous").fadeIn(0);
-
-            $("#curriculumData").animate({
-                scrollTop: 0
-            }, sliderSpeed);
-
-            $(".section.slides").animate({
-                height: slideHeight
-            }, sliderSpeed+100);
-
-            $(".section.slides .slide.current").animate({
-                left: "+=" + slideLeft
-            }, sliderSpeed);
-        
-            $(".section.slides .slide.previous").animate({
-                left: "+=" + slideLeft
-            }, sliderSpeed, function() {
-                $(".section.slides .slide.current").fadeOut(0);
-
-                $(".section.slides .slide.next").removeClass("next").addClass("static");
-                $(".section.slides .slide.current").removeClass("current").addClass("next");
-                $(".section.slides .slide.previous").removeClass("previous").addClass("current");
-
-                if ($(".section.slides .slide.current").prev().length > 0) {
-                    $(".section.slides .slide.current").prev().removeClass("static").addClass("previous");
-                } else {
-                    $(".section.slides .slide.static").last().removeClass("static").addClass("previous");
-                }
-        
-                $(".section.slides .slide.previous").css("left", -slideLeft);
-                blockSlider = false;
-            });
-        }
-    });
-
-    $(".section.slides .nextArrow").click(function(e) {    // next slide
-        e.preventDefault();
-
-        if (!blockSlider) {
-            blockSlider = true;
-            sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
-            slideHeight = $(".section.slides .slide.next").height() + 40;
-            slideLeft = $(".section.slides").width() + 20;
-
-            if ($(".section.slideCounter button.current").next().length > 0) {
-                $(".section.slideCounter button.current").removeClass("current").next().addClass("current");
-            } else {
-                $(".section.slideCounter button").removeClass("current").first().addClass("current");
-            }
-
-            $(".section.slides .slide.next").fadeIn(0);
-
-            $("#curriculumData").animate({
-                scrollTop: 0
-            }, sliderSpeed);
-
-            $(".section.slides").animate({
-                height: slideHeight
-            }, sliderSpeed+100);
-            
-            $(".section.slides .slide.current").animate({
-                left: "-=" + slideLeft
-            }, sliderSpeed);
-        
-            $(".section.slides .slide.next").animate({
-                left: "-=" + slideLeft
-            }, sliderSpeed, function() {
-                $(".section.slides .slide.current").fadeOut(0);
-
-                $(".section.slides .slide.previous").removeClass("previous").addClass("static");
-                $(".section.slides .slide.current").removeClass("current").addClass("previous");
-                $(".section.slides .slide.next").removeClass("next").addClass("current");
-        
-                if ($(".section.slides .slide.current").next().length > 0) {
-                    $(".section.slides .slide.current").next().removeClass("static").addClass("next");
-                } else {
-                    $(".section.slides .slide.static").first().removeClass("static").addClass("next");
-                }
-        
-                $(".section.slides .slide.static, .section.slides .slide.next").css("left", slideLeft);
-                blockSlider = false;
-            });
-        }
-    });
-
-    $(".section.slideCounter button").click(function(e) {
-        e.preventDefault();
-
-        if (!blockSlider && !e.target.classList.contains("current")) {
-            blockSlider = true;
-
-            var pointer;
-            var previousDist = 0;
-            var nextDist = 0;
-
-            pointer = e.target
-            while (!pointer.classList.contains("current")) {
-                previousDist++;
-                pointer = (!pointer.previousSibling) ? pointer.parentNode.lastChild : pointer.previousSibling;
-            }
-
-            pointer = e.target
-            while (!pointer.classList.contains("current")) {
-                nextDist++;
-                pointer = (!pointer.nextSibling) ? pointer.parentNode.firstChild : pointer.nextSibling;
-            }
-            
-            previousDist = e.target.parentNode.childElementCount - previousDist;
-            nextDist = e.target.parentNode.childElementCount - nextDist;
-
-
-            sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
-            slideLeft = $(".section.slides").width() + 20;
-
-            $("#curriculumData").animate({
-                scrollTop: 0
-            }, sliderSpeed);
-
-            if (nextDist > previousDist) {
-                recursiveSlidePrevious(previousDist);
-
-                setTimeout(function() {
-                    blockSlider = false;
-                }, sliderSpeed * previousDist + 20);
-            } else {
-                recursiveSlideNext(nextDist);
-
-                setTimeout(function() {
-                    blockSlider = false;
-                }, sliderSpeed * nextDist + 20);
-            }
-        }
-    });
-
-    
-    $(window).on("click touchstart", function(e) {
-        if ($("#curriculumContainer").is(":visible") && ($(e.target).is("#leftover") || $(e.target).is(".exitButton"))) {
-            $("#leftover, #curriculumContainer").fadeOut("slow");
-            $(document.body).css({overflow: "unset"});
-        }
-    });
-
-    $(window).on("resize", function() {organizeSlides();});   // reorganize the slides
 });
+
+$(".section.slideCounter button").click(function(e) {
+    e.preventDefault();
+
+    if (!blockSlider && !e.target.classList.contains("current")) {
+        blockSlider = true;
+
+        var pointer;
+        var previousDist = 0;
+        var nextDist = 0;
+
+        pointer = e.target
+        while (!pointer.classList.contains("current")) {
+            previousDist++;
+            pointer = (!pointer.previousSibling) ? pointer.parentNode.lastChild : pointer.previousSibling;
+        }
+
+        pointer = e.target
+        while (!pointer.classList.contains("current")) {
+            nextDist++;
+            pointer = (!pointer.nextSibling) ? pointer.parentNode.firstChild : pointer.nextSibling;
+        }
+        
+        previousDist = e.target.parentNode.childElementCount - previousDist;
+        nextDist = e.target.parentNode.childElementCount - nextDist;
+
+
+        sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
+        slideLeft = $(".section.slides").width() + 20;
+
+        $("#curriculumData").animate({
+            scrollTop: 0
+        }, sliderSpeed);
+
+        if (nextDist > previousDist) {
+            recursiveSlidePrevious(previousDist);
+
+            setTimeout(function() {
+                blockSlider = false;
+            }, sliderSpeed * previousDist + 20);
+        } else {
+            recursiveSlideNext(nextDist);
+
+            setTimeout(function() {
+                blockSlider = false;
+            }, sliderSpeed * nextDist + 20);
+        }
+    }
+});
+
+$(window).on("click touchstart", function(e) {
+    if ($("#curriculumContainer").is(":visible") && ($(e.target).is("#leftover") || $(e.target).is(".exitButton"))) {
+        $("#leftover, #curriculumContainer").fadeOut("slow");
+        $(document.body).css({overflow: "unset"});
+    }
+});
+
+$(window).on("resize", function() {organizeSlides();});   // reorganize the slides
