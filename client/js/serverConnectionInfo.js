@@ -1,1 +1,0 @@
-var serverAddress="chema22r.duckdns.org";

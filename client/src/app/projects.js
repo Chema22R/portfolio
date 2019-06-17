@@ -69,67 +69,50 @@ const isMobile = {    // allows to detect mobile devices
     }
 };
 
-$(function() {
-    for (let i=0, specialCVId="", device=""; i<projects.length; i++) {
-        device = (isMobile.any()) ? " mobile" : "";
-        specialCVId = (projects[i].url === "curriculum") ? " id='projectCurriculum'" : "";
 
-        $("<div class='project"+device+"'>"+
-                "<a" + specialCVId + " href='http://"+serverAddress+"/"+projects[i].url+"'>"+
-                    "<figure>"+
-                        "<img class='projectFront' src='img/"+projects[i].url+".png' alt='" + projects[i].name + "'>"+
-                        "<figcaption class='projectBack'>"+
-                            "<h2>"+projects[i].name+"</h2>"+
-                            "<hr>"+
-                            "<div class='description spanishContent scroll'>"+
-                                "<p>"+projects[i].descriptionSpa+"</p>"+
-                            "</div>"+
-                            "<div class='description englishContent scroll'>"+
-                                "<p>"+projects[i].descriptionEng+"</p>"+
-                            "</div>"+
-                            "<p class='ellipsis'>. . .</p>"+
-                        "</figcaption>"+
-                    "</figure>"+
-                "</a>"+
-            "</div>"
-        ).appendTo("#proyectsContainer");
-    }
+for (let i=0, specialCVId="", device=""; i<projects.length; i++) {
+    device = (isMobile.any()) ? " mobile" : "";
+    specialCVId = (projects[i].url === "curriculum") ? " id='projectCurriculum'" : "";
 
+    $("<div class='project"+device+"'>"+
+            "<a" + specialCVId + " href='http://"+window.serverAddress+"/"+projects[i].url+"'>"+
+                "<figure>"+
+                    "<img class='projectFront' src='images/"+projects[i].url+".png' alt='" + projects[i].name + "'>"+
+                    "<figcaption class='projectBack'>"+
+                        "<h2>"+projects[i].name+"</h2>"+
+                        "<hr>"+
+                        "<div class='description spanishContent scroll'>"+
+                            "<p>"+projects[i].descriptionSpa+"</p>"+
+                        "</div>"+
+                        "<div class='description englishContent scroll'>"+
+                            "<p>"+projects[i].descriptionEng+"</p>"+
+                        "</div>"+
+                        "<p class='ellipsis'>. . .</p>"+
+                    "</figcaption>"+
+                "</figure>"+
+            "</a>"+
+        "</div>"
+    ).appendTo("#proyectsContainer");
+}
 
-    /* Triggers
-    ========================================================================== */
+if (!isMobile.any()) {
+    $(".project").on("mouseenter", function(e) {
+        var currentDescr = $(this).find(".description:visible")[0];
 
-    $("#projectCurriculum").click(function(e) {
-        e.preventDefault();
+        currentDescr.scrollTop = 0; // to set the scroll to the beginning
 
-        $("#leftover, #curriculumContainer").fadeIn("slow");
-        $(document.body).css({overflow: "hidden"});
-
-        organizeSlides();
-
-        $("#curriculumData").scrollTop(0);
+        if (currentDescr.offsetHeight + currentDescr.scrollTop >= currentDescr.scrollHeight - 7) {
+            $(this).find("p.ellipsis").fadeOut(0);
+        } else {
+            $(this).find("p.ellipsis").fadeIn(0);
+        }
     });
 
-
-    if (!isMobile.any()) {
-        $(".project").on("mouseenter", function(e) {
-            var currentDescr = $(this).find(".description:visible")[0];
-
-            currentDescr.scrollTop = 0; // to set the scroll to the beginning
-
-            if (currentDescr.offsetHeight + currentDescr.scrollTop >= currentDescr.scrollHeight - 7) {
-                $(this).find("p.ellipsis").fadeOut(0);
-            } else {
-                $(this).find("p.ellipsis").fadeIn(0);
-            }
-        });
-
-        $(".project figure .projectBack .description").on("scroll", function(e) {
-            if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 7) {
-                $(this).siblings(".ellipsis").fadeOut(0);
-            } else {
-                $(this).siblings(".ellipsis").fadeIn(0);
-            }
-        });
-    }
-});
+    $(".project figure .projectBack .description").on("scroll", function(e) {
+        if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight - 7) {
+            $(this).siblings(".ellipsis").fadeOut(0);
+        } else {
+            $(this).siblings(".ellipsis").fadeIn(0);
+        }
+    });
+}
