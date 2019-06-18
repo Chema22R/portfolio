@@ -1,5 +1,5 @@
 # Personal Web Server
-This application is the front page of my personal server, in which users can access my personal projects as well as view my curriculum.
+This application is the front page of my personal server, in which users can access my personal projects, as well as view my curriculum.
 
 ## Setup and Run
 1. Download the source code
