@@ -5,5 +5,3 @@ import "./assets/style/curriculum.css";
 
 import "./app/projects";
 import "./app/CVAndButtons";
-
-window.serverAddress = "localhost";

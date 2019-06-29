@@ -1,16 +1,15 @@
 const path = require("path");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = {
-    mode: "production",
-    entry: "./src/index.js",
-    output: {
-        filename: "bundle.js",
-        path: path.resolve(__dirname, "dist")
+    entry: {
+        index: "./src/index.js"
     },
-    devServer: {
-        contentBase: "./dist"
+    output: {
+        filename: "[name].bundle.js",
+        path: path.resolve(__dirname, "dist")
     },
     module: {
         rules: [
@@ -24,11 +23,14 @@ module.exports = {
         ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+            hash: true
+        }),
         new CopyWebpackPlugin([
             {from: "./src/assets/favicons", to: "favicons"},
             {from: "./src/assets/icons", to: "icons"},
-            {from: "./src/assets/images", to: "images"},
-            {from: "./src/index.html", to: "index.html"}
+            {from: "./src/assets/images", to: "images"}
         ]),
         new webpack.ProvidePlugin({
             $: "jquery",
