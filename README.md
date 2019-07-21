@@ -15,11 +15,16 @@ Check out a real example of the application from [here](http://chema22r.duckdns.
 |- /client
     |- /src
         |- /app
+            |- ...
         |- /assets
             |- /favicons
+                |- ...
             |- /icons
+                |- ...
             |- /images
+                |- ...
             |- /style
+                |- ...
         |- index.html
         |- index.js
     |- package.json
