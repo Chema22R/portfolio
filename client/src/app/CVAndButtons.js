@@ -19,7 +19,7 @@ const curriculum = [
             },
             birthday: "28/09/1995"
         },
-        training: {
+        education: {
             title: "Formación",
             list: [
                 {
@@ -159,8 +159,8 @@ const curriculum = [
             },
             birthday: "28/09/1995"
         },
-        training: {
-            title: "Training",
+        education: {
+            title: "Education",
             list: [
                 {
                     title: "Master’s Degree in Computer Engineering",
@@ -228,7 +228,7 @@ const curriculum = [
             list: [
                 {
                     title: "Software engineer",
-                    location: "León (Spain)",
+                    location: "HP SCDS, León (Spain)",
                     period: "07/2018 - present",
                     description: "Creation of a 3D print previewer using HTML5/JS technologies: This project constitutes the" +
                                 " company practices and the final project of the Bachelor's Degree in Computer Engineering." +
@@ -294,7 +294,7 @@ generateSlideCounter();
 function generateSlides() {
     var codeHTML, slides;
 
-    codeHTML =  "<div class='slide training courses'></div>" +
+    codeHTML =  "<div class='slide education courses'></div>" +
                 "<div class='slide workExp'></div>" +
                 "<div class='slide langs awards'></div>";
 
@@ -334,18 +334,18 @@ function generateSlides() {
 
 
         codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
-                        '<h2>' + curriculum[i].training.title + '</h2>';
+                        '<h2>' + curriculum[i].education.title + '</h2>';
 
-        for (var j=0; j<curriculum[i].training.list.length; j++) {
-            codeHTML += '<h3 class="bold nbsp">' + curriculum[i].training.list[j].title + '</h3>' +
-                        '<h3 class="size01 nbsp lineBreak">' + curriculum[i].training.list[j].period + '</h3>' +
-                        '<h3 class="size02 floatR lineBreak">' + curriculum[i].training.list[j].level + '</h3>' +
-                        '<p>' + curriculum[i].training.list[j].location + '</p>';
+        for (var j=0; j<curriculum[i].education.list.length; j++) {
+            codeHTML += '<h3 class="bold nbsp">' + curriculum[i].education.list[j].title + '</h3>' +
+                        '<h3 class="size01 nbsp lineBreak">' + curriculum[i].education.list[j].period + '</h3>' +
+                        '<h3 class="size02 floatR lineBreak">' + curriculum[i].education.list[j].level + '</h3>' +
+                        '<p>' + curriculum[i].education.list[j].location + '</p>';
         }
 
         codeHTML += '<br></div>';
 
-        $('#slidesContainer > .slide.training').append(codeHTML);   // end training info
+        $('#slidesContainer > .slide.education').append(codeHTML);   // end education info
 
 
         codeHTML =  '<div class="' + curriculum[i].title + 'Content">' +
