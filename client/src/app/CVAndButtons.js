@@ -7,7 +7,7 @@ const curriculum = [
         title: "spanish",
         github: "https://github.com/Chema22R",
         linkedin: "https://www.linkedin.com/in/chema22r",
-        driveCv: "https://drive.google.com/file/d/1teqoDzJVKS2bTjNJdnl1XK3kQHTC5iBb/view?usp=sharing",
+        driveCv: "https://drive.google.com/open?id=0ByKmpfrEM8ERX00yU3VFdDZzMU0",
         personal: {
             name: "José María Rivera Alonso",
             role: "Desarrollador Full-stack",
@@ -88,7 +88,7 @@ const curriculum = [
             list: [
                 {
                     title: "Ingeniero de software",
-                    location: "León (España)",
+                    location: "HP SCDS, León (España)",
                     period: "07/2018 - presente",
                     description: "Creación de un previsualizador de impresión 3D utilizando tecnologías HTML5/JS: Este" +
                                 " proyecto constituye las prácticas de empresa y el proyecto final del Grado en Ingeniería" +
@@ -147,7 +147,7 @@ const curriculum = [
         title: "english",
         github: "https://github.com/Chema22R",
         linkedin: "https://www.linkedin.com/in/chema22r",
-        driveCv: "https://drive.google.com/file/d/1bKwHEJ-dqufh7fZ1n2RjhQo9E__pSg88/view?usp=sharing",
+        driveCv: "https://drive.google.com/open?id=0ByKmpfrEM8ERX00yU3VFdDZzMU0",
         personal: {
             name: "José María Rivera Alonso",
             role: "Full-stack Developer",
