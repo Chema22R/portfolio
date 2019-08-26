@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4d60dcc4-33a1-45ec-b417-013a1a0933e5/deploy-status)](https://app.netlify.com/sites/chema22r/deploys)
-[![dependencies Status](https://david-dm.org/chema22r/project-intro/status.svg)](https://david-dm.org/chema22r/project-intro)
-[![devDependencies Status](https://david-dm.org/chema22r/project-intro/dev-status.svg)](https://david-dm.org/chema22r/project-intro?type=dev)
+[![dependencies Status](https://david-dm.org/chema22r/personal-web-server/status.svg)](https://david-dm.org/chema22r/personal-web-server)
+[![devDependencies Status](https://david-dm.org/chema22r/personal-web-server/dev-status.svg)](https://david-dm.org/chema22r/personal-web-server?type=dev)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Chema22R/personal-web-server.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Chema22R/personal-web-server/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Chema22R/personal-web-server.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Chema22R/personal-web-server/context:javascript)
 
