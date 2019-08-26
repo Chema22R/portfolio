@@ -9,7 +9,7 @@ module.exports = merge(common, {
     plugins: [
         new CleanWebpackPlugin(),
         new webpack.DefinePlugin({
-            SERVER_URL: JSON.stringify("http://chema22r.duckdns.org")
+            SERVER_URL: JSON.stringify(process.env.SERVER_URL || "https://<projectName>.netlify.com")
         })
     ]
 });

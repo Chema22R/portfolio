@@ -13,7 +13,7 @@ const projects = [
     },
     {
         "name": "Printers Discovery",
-        "url": "printersDiscovery",
+        "url": "printersdiscovery",
         "descriptionSpa": "Aplicación con el objetivo de analizar la red local en búsqueda de prototipos de impresoras," +
                         " capturando y almacenando su información.<br>A través de la interfaz, los usuarios" +
                         " pueden modificar la información de las impresoras detectadas y reservarlas para poder" +
@@ -75,7 +75,7 @@ for (let i=0, specialCVId="", device=""; i<projects.length; i++) {
     specialCVId = (projects[i].url === "curriculum") ? " id='projectCurriculum'" : "";
 
     $("<div class='project"+device+"'>"+
-            "<a" + specialCVId + " href='"+SERVER_URL+"/"+projects[i].url+"'>"+
+            "<a" + specialCVId + " href='" + SERVER_URL.replace("<projectName>", projects[i].url) + "'>"+
                 "<figure>"+
                     "<img class='projectFront' src='images/"+projects[i].url+".png' alt='" + projects[i].name + "'>"+
                     "<figcaption class='projectBack'>"+
