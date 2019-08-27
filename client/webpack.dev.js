@@ -10,7 +10,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new webpack.DefinePlugin({
-            PROJECTS_URL: JSON.stringify(process.env.PROJECTS_URL || "http://localhost/<projectName>")
+            PROJECTS_URL: JSON.stringify(process.env.URL || "")
         })
     ]
 });

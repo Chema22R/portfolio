@@ -75,7 +75,7 @@ for (let i=0, specialCVId="", device=""; i<projects.length; i++) {
     specialCVId = (projects[i].url === "curriculum") ? " id='projectCurriculum'" : "";
 
     $("<div class='project"+device+"'>"+
-            "<a" + specialCVId + " href='" + PROJECTS_URL.replace("<projectName>", projects[i].url) + "'>"+
+            "<a" + specialCVId + " href='" + PROJECTS_URL.replace(/\:\/\//, `://${projects[i].url}.`) + "'>"+
                 "<figure>"+
                     "<img class='projectFront' src='images/"+projects[i].url+".png' alt='" + projects[i].name + "'>"+
                     "<figcaption class='projectBack'>"+
