@@ -39,5 +39,6 @@ Check out a real example of the application from [here](http://chema22r.duckdns.
     |- webpack.prod.js
 |- .gitignore
 |- LICENSE
+|- package.json
 |- README.md
 ```
