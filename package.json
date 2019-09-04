@@ -4,8 +4,9 @@
     "description": "Application to give a personal presentation of the own projects and the curriculum",
     "scripts": {
         "build": "npm run build --prefix client",
-        "build:dev": "concurrently 'npm run build:dev --prefix client' 'npm run build:dev --prefix server'",
-        "i": "[ -d node_modules ] && (concurrently 'npm i' 'npm i --prefix client') || (npm i && npm i --prefix client)",
+        "build-dev": "npm run build-dev --prefix client",
+        "clean": "rm -r client/dist",
+        "i": "npm i && npm i --prefix client",
         "start": "npm start --prefix client",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
