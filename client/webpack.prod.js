@@ -9,7 +9,7 @@ module.exports = merge(common, {
     plugins: [
         new CleanWebpackPlugin(),
         new webpack.DefinePlugin({
-            PROJECTS_URL: JSON.stringify(process.env.URL || "https://netlify.com/")
+            DATA_URL: JSON.stringify(process.env.DATA_URL || "https://api.github.com/gists/09a7621fddbd018bc830fb3f5cd1fadb")
         })
     ]
 });

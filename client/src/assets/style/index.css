@@ -97,7 +97,7 @@ button {
 /* Language
     ========================================================================== */
 
-.spanishContent {display: none;}
+.es-ES {display: none;}
 
 
 /* Z-index guide
@@ -105,7 +105,7 @@ button {
 
 buttonsLeft             1
 leftover                2
-curriculumContainer          3
+curriculumContainer     3
 buttonsRight            4
 previowsArrow           4
 nextArrow               4
