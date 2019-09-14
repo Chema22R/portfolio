@@ -16,19 +16,21 @@
 
 #curriculumContainer .exitButton {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: -46px;
 
-    padding: 18px 20px 5px 5px;
+    padding: 12px;
+    border-radius: 30px;
 
+    font-size: 12px;
     color: #888;
-    cursor: pointer;
+    background: #fafafa;
 
+    cursor: pointer;
     z-index: 5;
 }
 
 #curriculumContainer .exitButton:hover {
-    border-top-right-radius: 8px;
     color: #e00;
 }
 
@@ -223,4 +225,13 @@
 @media screen and (max-width: 700px) {
     .section.slides .slide h3.floatR {float: none;}
     .section.slides .slide h3.lineBreak {margin-top: 3px;}
+}
+
+@media screen and (max-width: 915px) {
+    #curriculumContainer .exitButton {
+        top: 0;
+        right: 0;
+        margin: 6px 8px 0 0;
+        font-size: 16px;
+    }
 }
