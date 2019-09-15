@@ -130,6 +130,14 @@
     background: #fff;
 }
 
+.project figure .projectBack hr.left,
+.project figure .projectBack hr.right {
+    display: inline-block;
+    width: calc(50% - 20px);
+}
+
+.project figure .projectBack hr.right {float: right;}
+
 .project figure .projectBack .description {
     position: relative;
     width: 275px;
@@ -159,4 +167,30 @@
     font-weight: bold;
 
     overflow: visible;
+}
+
+.icon-success, .icon-loading, .icon-error {
+    position: absolute;
+    margin: -7px 12px 0 12px;
+    font-size: 16px;
+}
+
+.icon-success {
+    display: none;
+    color: #0c0;
+}
+
+.icon-loading {
+    color: #cc0;
+    animation: spin 2s linear infinite;
+}
+
+.icon-error {
+    display: none;
+    color: #f00;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
 }

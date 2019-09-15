@@ -30,10 +30,10 @@ fetch(DATA_URL)
 function addProjects(projects, langs) {
     let device = (isMobile.any()) ? " mobile" : "";
 
-    for (let i=0, specialCVId, codeHTML; i<projects.length; i++) {
-        specialCVId = (projects[i].id === "curriculum") ? " id='projectCurriculum'" : "";
-
-        codeHTML =  "<div class='project" + device + "'><a" + specialCVId + " href='" + projects[i].url + "'><figure>" +
+    for (let i=0, codeHTML; i<projects.length; i++) {
+        codeHTML =  "<div class='project" + device + "'>" +
+                    "<a" + ((projects[i].id === "curriculum") ? " id='projectCurriculum'" : "") + " href='" + projects[i].url + "'>" +
+                    "<figure>" +
                     "<img class='projectFront' src='images/" + projects[i].id + ".png' alt='" + projects[i].title["en-US"] + "'>" +
                     "<figcaption class='projectBack'>";
 
@@ -41,7 +41,15 @@ function addProjects(projects, langs) {
             codeHTML += "<h2 class='" + langs[j] + "'>" + projects[i].title[langs[j]] + "</h2>";
         }
 
-        codeHTML += "<hr>";
+        if (projects[i].statusCheckUrl) {
+            codeHTML += "<hr class='left'>";
+            codeHTML +=  "<span class='" + projects[i].id + " icon-success icon' title='API Status: good'></span>" +
+                        "<span class='" + projects[i].id + " icon-loading icon' title='API Status: loading'></span>" +
+                        "<span class='" + projects[i].id + " icon-error icon' title='API Status: failing'></span>";
+            codeHTML += "<hr class='right'>";
+        } else {
+            codeHTML += "<hr>";
+        }
 
         for (let j=0; j<langs.length; j++) {
             codeHTML += "<div class='description " + langs[j] + " scroll'><p>" + projects[i].description[langs[j]] + "</p></div>";
@@ -50,6 +58,15 @@ function addProjects(projects, langs) {
         codeHTML += "<p class='ellipsis'>. . .</p></figcaption></figure></a></div>";
 
         $(codeHTML).appendTo("#proyectsContainer");
+
+
+        if (projects[i].statusCheckUrl) {
+            fetch(projects[i].statusCheckUrl)
+            .then(res => {
+                document.getElementsByClassName(projects[i].id + " icon-loading")[0].style.display = "none";
+                document.getElementsByClassName((res.ok) ? (projects[i].id + " icon-success") : (projects[i].id + " icon-error"))[0].style.display = "unset";
+            });
+        }
     }
 
     loadHandlers();
