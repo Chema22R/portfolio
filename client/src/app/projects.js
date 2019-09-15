@@ -37,17 +37,19 @@ function addProjects(projects, langs) {
                     "<img class='projectFront' src='images/" + projects[i].id + ".png' alt='" + projects[i].title["en-US"] + "'>" +
                     "<figcaption class='projectBack'>";
 
-        if (projects[i].statusCheckUrl) {
-            codeHTML +=  "<span class='" + projects[i].id + " icon-success icon' title='API Status: good'></span>" +
-                        "<span class='" + projects[i].id + " icon-loading icon' title='API Status: loading'></span>" +
-                        "<span class='" + projects[i].id + " icon-error icon' title='API Status: failing'></span>";
-        }
-
         for (let j=0; j<langs.length; j++) {
             codeHTML += "<h2 class='" + langs[j] + "'>" + projects[i].title[langs[j]] + "</h2>";
         }
 
-        codeHTML += "<hr>";
+        if (projects[i].statusCheckUrl) {
+            codeHTML += "<hr class='left'>";
+            codeHTML +=  "<span class='" + projects[i].id + " icon-success icon' title='API Status: good'></span>" +
+                        "<span class='" + projects[i].id + " icon-loading icon' title='API Status: loading'></span>" +
+                        "<span class='" + projects[i].id + " icon-error icon' title='API Status: failing'></span>";
+            codeHTML += "<hr class='right'>";
+        } else {
+            codeHTML += "<hr>";
+        }
 
         for (let j=0; j<langs.length; j++) {
             codeHTML += "<div class='description " + langs[j] + " scroll'><p>" + projects[i].description[langs[j]] + "</p></div>";
