@@ -35,18 +35,18 @@ function addProjects(projects, langs) {
                     "<a href='" + projects[i].url + "'>" +
                     "<figure>" +
                     "<img class='projectFront' src='images/" + projects[i].id + ".png' alt='" + projects[i].title["en-US"] + "'>" +
-                    "<figcaption class='" + projects[i].id + " projectBack'>";
+                    "<figcaption class='projectBack'>";
 
         for (let j=0; j<langs.length; j++) {
             codeHTML += "<h2 class='" + langs[j] + "'>" + projects[i].title[langs[j]] + "</h2>";
         }
 
         if (projects[i].statusCheckUrl) {
-            codeHTML += "<hr class='left'>";
-            codeHTML += "<span class='" + projects[i].id + " icon-success icon' title='API Status: Good'></span>" +
+            codeHTML += "<hr class='left'>" +
+                        "<span class='" + projects[i].id + " icon-success icon' title='API Status: Good'></span>" +
                         "<span class='" + projects[i].id + " icon-loading icon' title='API Status: Pending'></span>" +
-                        "<span class='" + projects[i].id + " icon-error icon' title='API Status: Failing'></span>";
-            codeHTML += "<hr class='right'>";
+                        "<span class='" + projects[i].id + " icon-error icon' title='API Status: Failing'></span>" +
+                        "<hr class='right'>";
         } else {
             codeHTML += "<hr>";
         }
