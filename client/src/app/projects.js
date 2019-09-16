@@ -35,7 +35,7 @@ function addProjects(projects, langs) {
                     "<a" + ((projects[i].id === "curriculum") ? " id='projectCurriculum'" : "") + " href='" + projects[i].url + "'>" +
                     "<figure>" +
                     "<img class='projectFront' src='images/" + projects[i].id + ".png' alt='" + projects[i].title["en-US"] + "'>" +
-                    "<figcaption class='projectBack'>";
+                    "<figcaption class='" + projects[i].id + " projectBack'>";
 
         for (let j=0; j<langs.length; j++) {
             codeHTML += "<h2 class='" + langs[j] + "'>" + projects[i].title[langs[j]] + "</h2>";
@@ -43,7 +43,7 @@ function addProjects(projects, langs) {
 
         if (projects[i].statusCheckUrl) {
             codeHTML += "<hr class='left'>";
-            codeHTML +=  "<span class='" + projects[i].id + " icon-success icon' title='API Status: good'></span>" +
+            codeHTML += "<span class='" + projects[i].id + " icon-success icon' title='API Status: good'></span>" +
                         "<span class='" + projects[i].id + " icon-loading icon' title='API Status: loading'></span>" +
                         "<span class='" + projects[i].id + " icon-error icon' title='API Status: failing'></span>";
             codeHTML += "<hr class='right'>";
