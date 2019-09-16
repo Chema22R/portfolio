@@ -421,13 +421,13 @@ function loadHandlers() {
             let previousDist = 0;
             let nextDist = 0;
     
-            pointer = e.target
+            pointer = e.target;
             while (!pointer.classList.contains("current")) {
                 previousDist++;
                 pointer = (!pointer.previousSibling) ? pointer.parentNode.lastChild : pointer.previousSibling;
             }
     
-            pointer = e.target
+            pointer = e.target;
             while (!pointer.classList.contains("current")) {
                 nextDist++;
                 pointer = (!pointer.nextSibling) ? pointer.parentNode.firstChild : pointer.nextSibling;
