@@ -1,4 +1,4 @@
-#proyectsContainer {
+#projectsContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -169,23 +169,25 @@
     overflow: visible;
 }
 
-.icon-success, .icon-loading, .icon-error {
+.project figure .projectBack .icon-success,
+.project figure .projectBack .icon-loading,
+.project figure .projectBack .icon-error {
     position: absolute;
     margin: -7px 12px 0 12px;
     font-size: 16px;
 }
 
-.icon-success {
+.project figure .projectBack .icon-success {
     display: none;
     color: #0c0;
 }
 
-.icon-loading {
+.project figure .projectBack .icon-loading {
     color: #cc0;
     animation: spin 2s linear infinite;
 }
 
-.icon-error {
+.project figure .projectBack .icon-error {
     display: none;
     color: #f00;
 }
@@ -193,4 +195,30 @@
 @keyframes spin {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
+}
+
+.project figure .projectBack .icon-gthb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 8px 18px 32px;
+
+    border-top-right-radius: 8px;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+
+    color: #fff;
+    background-color: rgba(255,255,255,.15);
+
+    transition: padding .5s, background-color .5s;
+    -moz-transition: padding .5s, background-color .5s;
+    -webkit-transition: padding .5s, background-color .5s;
+}
+
+.project figure .projectBack .icon-gthb:hover {
+    padding: 8px 8px 32px 32px;
+    background-color: rgba(255,255,255,.2);
+    transition: padding .5s, background-color .5s;
+    -moz-transition: padding .5s, background-color .5s;
+    -webkit-transition: padding .5s, background-color .5s;
 }
