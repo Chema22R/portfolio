@@ -31,8 +31,8 @@ function addProjects(projects, langs) {
     let device = (isMobile.any()) ? " mobile" : "";
 
     for (let i=0, codeHTML; i<projects.length; i++) {
-        codeHTML =  "<div class='project" + device + "'>" +
-                    "<a" + ((projects[i].id === "curriculum") ? " id='projectCurriculum'" : "") + " href='" + projects[i].url + "'>" +
+        codeHTML =  "<div id='project-" + projects[i].id + "' class='project" + device + "'>" +
+                    "<a href='" + projects[i].url + "'>" +
                     "<figure>" +
                     "<img class='projectFront' src='images/" + projects[i].id + ".png' alt='" + projects[i].title["en-US"] + "'>" +
                     "<figcaption class='projectBack'>";
@@ -42,11 +42,11 @@ function addProjects(projects, langs) {
         }
 
         if (projects[i].statusCheckUrl) {
-            codeHTML += "<hr class='left'>";
-            codeHTML +=  "<span class='" + projects[i].id + " icon-success icon' title='API Status: good'></span>" +
-                        "<span class='" + projects[i].id + " icon-loading icon' title='API Status: loading'></span>" +
-                        "<span class='" + projects[i].id + " icon-error icon' title='API Status: failing'></span>";
-            codeHTML += "<hr class='right'>";
+            codeHTML += "<hr class='left'>" +
+                        "<span class='" + projects[i].id + " icon-success icon' title='API Status: Good'></span>" +
+                        "<span class='" + projects[i].id + " icon-loading icon' title='API Status: Pending'></span>" +
+                        "<span class='" + projects[i].id + " icon-error icon' title='API Status: Failing'></span>" +
+                        "<hr class='right'>";
         } else {
             codeHTML += "<hr>";
         }
@@ -57,7 +57,12 @@ function addProjects(projects, langs) {
 
         codeHTML += "<p class='ellipsis'>. . .</p></figcaption></figure></a></div>";
 
-        $(codeHTML).appendTo("#proyectsContainer");
+        $(codeHTML).appendTo("#projectsContainer");
+
+
+        if (projects[i].github) {
+            $("<a class='icon-gthb icon' href='" + projects[i].github + "' target='_blank' rel='external'></a>").appendTo("#project-" + projects[i].id + " figcaption");
+        }
 
 
         if (projects[i].statusCheckUrl) {
@@ -73,7 +78,7 @@ function addProjects(projects, langs) {
 }
 
 function loadHandlers() {
-    $("#projectCurriculum").on("click", function(e) {
+    $("#project-curriculum > a").on("click", function(e) {
         e.preventDefault();
         $("#buttonProfile").trigger("click");
     });
