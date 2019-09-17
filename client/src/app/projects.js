@@ -70,6 +70,10 @@ function addProjects(projects, langs) {
             .then(res => {
                 document.getElementsByClassName(projects[i].id + " icon-loading")[0].style.display = "none";
                 document.getElementsByClassName((res.ok) ? (projects[i].id + " icon-success") : (projects[i].id + " icon-error"))[0].style.display = "unset";
+            })
+            .catch(reason => {
+                document.getElementsByClassName(projects[i].id + " icon-loading")[0].style.display = "none";
+                document.getElementsByClassName(projects[i].id + " icon-error")[0].style.display = "unset";
             });
         }
     }
