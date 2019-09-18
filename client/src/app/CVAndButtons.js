@@ -1,35 +1,13 @@
 'use strict';
 
-const isMobile = {  // allows to detect mobile devices
-    Android: () => {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: () => {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: () => {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: () => {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: () => {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: () => {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
 const sliderSpeedMult = 2;
 var blockSlider = false;
 var sliderSpeed, slideHeight, slideLeft;
 
 
-fetch(DATA_URL)
-.then(res => res.json())
-.then(res => generateSlides(JSON.parse(res.files['personal-web-server_curriculum.json'].content), JSON.parse(res.files["personal-web-server_langs.json"].content)));
+window.information.getLanguagesCurriculum(generateSlides);
 
-function generateSlides(curriculum, langs) {
+function generateSlides(langs, curriculum) {
     let codeHTML, slides;
 
     codeHTML =  '<div class="slide workExp"></div><div class="slide education courses"></div><div class="slide langs awards"></div>';
@@ -231,7 +209,7 @@ function recursiveSlideNext(distance) {
 }
 
 function organizeSlides() {
-    if (!isMobile.any()) {
+    if (!window.isMobile.any()) {
         slideHeight = $(".section.slides .slide.current").height() + 40;
         slideLeft = $(".section.slides").width() + 20;
 
