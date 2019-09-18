@@ -1,25 +1,5 @@
 'use strict';
 
-const isMobile = {  // allows to detect mobile devices
-    Android: () => {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: () => {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: () => {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: () => {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: () => {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: () => {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
 const sliderSpeedMult = 2;
 var blockSlider = false;
 var sliderSpeed, slideHeight, slideLeft;
@@ -231,7 +211,7 @@ function recursiveSlideNext(distance) {
 }
 
 function organizeSlides() {
-    if (!isMobile.any()) {
+    if (!window.isMobile.any()) {
         slideHeight = $(".section.slides .slide.current").height() + 40;
         slideLeft = $(".section.slides").width() + 20;
 

@@ -1,34 +1,12 @@
 "use strict";
 
-const isMobile = {  // allows to detect mobile devices
-    Android: () => {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: () => {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: () => {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: () => {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: () => {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: () => {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
-
-
 fetch(DATA_URL)
 .then(res => res.json())
 .then(res => addProjects(JSON.parse(res.files["personal-web-server_projects.json"].content), JSON.parse(res.files["personal-web-server_langs.json"].content)));
 
 
 function addProjects(projects, langs) {
-    let device = (isMobile.any()) ? " mobile" : "";
+    let device = (window.isMobile.any()) ? " mobile" : "";
 
     for (let i=0, codeHTML; i<projects.length; i++) {
         codeHTML =  "<div id='project-" + projects[i].id + "' class='project" + device + "'>" +
@@ -87,7 +65,7 @@ function loadHandlers() {
         $("#buttonProfile").trigger("click");
     });
 
-    if (!isMobile.any()) {
+    if (!window.isMobile.any()) {
         $(".project").on("mouseenter", function(e) {
             var currentDescr = $(this).find(".description:visible")[0];
 
