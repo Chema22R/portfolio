@@ -1,11 +1,8 @@
 "use strict";
 
-fetch(DATA_URL)
-.then(res => res.json())
-.then(res => addProjects(JSON.parse(res.files["personal-web-server_projects.json"].content), JSON.parse(res.files["personal-web-server_langs.json"].content)));
+window.information.getLanguagesProjects(addProjects);
 
-
-function addProjects(projects, langs) {
+function addProjects(langs, projects) {
     let device = (window.isMobile.any()) ? " mobile" : "";
 
     for (let i=0, codeHTML; i<projects.length; i++) {

@@ -5,11 +5,9 @@ var blockSlider = false;
 var sliderSpeed, slideHeight, slideLeft;
 
 
-fetch(DATA_URL)
-.then(res => res.json())
-.then(res => generateSlides(JSON.parse(res.files['personal-web-server_curriculum.json'].content), JSON.parse(res.files["personal-web-server_langs.json"].content)));
+window.information.getLanguagesCurriculum(generateSlides);
 
-function generateSlides(curriculum, langs) {
+function generateSlides(langs, curriculum) {
     let codeHTML, slides;
 
     codeHTML =  '<div class="slide workExp"></div><div class="slide education courses"></div><div class="slide langs awards"></div>';
