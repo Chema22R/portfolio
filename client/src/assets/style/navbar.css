@@ -1,0 +1,33 @@
+.navbar .left,
+.navbar .right {
+    position: fixed;
+    top: 0;
+}
+
+.navbar .left {
+    left: 0;
+    margin: 10px 0 0 15px;
+    padding: 5px 0;
+
+    font-size: 40px;
+    z-index: 1;
+}
+
+.navbar .right {
+    right: 0;
+    margin: 15px 20px 0 0;
+    z-index: 3;
+}
+
+.navbar button {color: #555;}
+.navbar button:hover {color: #777;}
+
+.navbar .right button {
+    float: right;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 450px) {
+    .navbar .left,
+    .navbar .right {position: absolute;}
+}

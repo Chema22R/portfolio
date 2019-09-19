@@ -1,6 +1,6 @@
 import "./assets/style/normalize.css";
 import "./assets/style/index.css";
-import "./assets/style/localization.css";
+import "./assets/style/navbar.css";
 import "./assets/style/projects.css";
 import "./assets/style/curriculum.css";
 

@@ -239,7 +239,7 @@ function organizeSlides() {
 /* Triggers
 ========================================================================== */
 
-$("#buttonProfile").click(function(e) {
+$("#profileButton").click(function(e) {
     e.preventDefault();
 
     $("#leftover, #curriculumContainer").fadeIn("slow");
