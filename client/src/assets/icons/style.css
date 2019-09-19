@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?uaysye');
-  src:  url('fonts/icomoon.eot?uaysye#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?uaysye') format('truetype'),
-    url('fonts/icomoon.woff?uaysye') format('woff'),
-    url('fonts/icomoon.svg?uaysye#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?zf3dbn');
+  src:  url('fonts/icomoon.eot?zf3dbn#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?zf3dbn') format('truetype'),
+    url('fonts/icomoon.woff?zf3dbn') format('woff'),
+    url('fonts/icomoon.svg?zf3dbn#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-langs:before {
+  content: "\e908";
+}
 .icon-success:before {
   content: "\e903";
 }
@@ -47,7 +50,7 @@
   content: "\78";
 }
 .icon-cv:before {
-  content: "\63";
+  content: "\e910";
 }
 .icon-lkdn:before {
   content: "\e902";
@@ -58,8 +61,8 @@
   color: #d14836;
 }
 .icon-left:before {
-  content: "\2329";
+  content: "\e909";
 }
 .icon-right:before {
-  content: "\232a";
+  content: "\e911";
 }
