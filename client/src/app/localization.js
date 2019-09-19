@@ -12,6 +12,7 @@ function addLanguages(langs) {
     }
     $(codeHTML).appendTo("#languagesList");
 
+    document.getElementById("languagesButton").addEventListener("click", langsButtonClickHandler, false);
     for (let i=0; i<langs.length; i++) {
         document.getElementById(langs[i]).addEventListener("click", event => langsListClickHandler(event, langs[i], langs), false);
     }
@@ -19,13 +20,21 @@ function addLanguages(langs) {
     setTimeout(() => setPreferredLanguage(langs), 10);
 }
 
-function langsListClickHandler(e, currentLang, langs) {
-    e.preventDefault();
+function langsButtonClickHandler() {
+    if (document.getElementById("languagesButton").style.marginRight === "55px") {
+        document.getElementById("languagesButton").style.marginRight = "0";
+        document.getElementById("languagesList").style.right = "-110px";
+    } else {
+        document.getElementById("languagesButton").style.marginRight = "55px";
+        document.getElementById("languagesList").style.right = "-20px";
+    }
+}
 
+function langsListClickHandler(event, currentLang, langs) {
     if (window.blockSlider) {return;}
     window.blockSlider = true;
 
-    $(e.target).parent().prepend(e.target); // move the option selected to the top of the list
+    $(event.target).parent().prepend(event.target); // move the option selected to the top of the list
     document.getElementById("languagesButton").title = window.langsNames[currentLang.substring(0, currentLang.indexOf("-"))];
 
     for (let i=0; i<langs.length; i++) {

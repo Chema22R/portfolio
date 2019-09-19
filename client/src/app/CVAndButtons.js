@@ -250,13 +250,6 @@ $("#profileButton").click(function(e) {
     $("#curriculumData").scrollTop(0);
 });
 
-$(window).on("click touchstart", function(e) {
-    if ($("#curriculumContainer").is(":visible") && ($(e.target).is("#leftover") || $(e.target).is(".exitButton"))) {
-        $("#leftover, #curriculumContainer").fadeOut("slow");
-        $(document.body).css({overflow: "unset"});
-    }
-});
-
 $(window).on("resize", function() {organizeSlides();});   // reorganize the slides
 
 function loadHandlers() {
