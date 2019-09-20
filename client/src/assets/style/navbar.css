@@ -36,10 +36,13 @@
 /* Languages List
     ========================================================================== */
 
+.navbar .right button {transition: margin-right .5s;}
+
 .navbar .right ul {
     position: absolute;
     right: -110px;
 
+    transition: right .5s;
     cursor: pointer;
 
     list-style-type: none;
@@ -73,3 +76,13 @@
 }
 
 .navbar .right ul li:hover {background-color: #e0e2e1;}
+
+
+#languagesSelector:hover #languagesButton {
+    margin-right: 55px;
+    transition: margin-right .5s;
+}
+#languagesSelector:hover #languagesList {
+    right: -20px;
+    transition: right .5s;
+}

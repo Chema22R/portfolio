@@ -252,6 +252,13 @@ $("#profileButton").click(function(e) {
 
 $(window).on("resize", function() {organizeSlides();});   // reorganize the slides
 
+$(window).on("click touchstart", function(e) {
+    if ($("#curriculumContainer").is(":visible") && ($(e.target).is("#leftover") || $(e.target).is(".exitButton"))) {
+        $("#leftover, #curriculumContainer").fadeOut("slow");
+        $(document.body).css({overflow: "unset"});
+    }
+});
+
 function loadHandlers() {
     $(".section.slides .previowsArrow").click(function(e) {    // previows slide
         e.preventDefault();

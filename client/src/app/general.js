@@ -72,15 +72,3 @@ window.langsNames = {
     "en": "English",
     "es": "Español"
 };
-
-$(window).on("click touchstart", function(e) {
-    if ($("#curriculumContainer").is(":visible") && ($(e.target).is("#leftover") || $(e.target).is(".exitButton"))) {
-        $("#leftover, #curriculumContainer").fadeOut("slow");
-        $(document.body).css({overflow: "unset"});
-    }
-
-    if (document.getElementById("languagesButton").style.marginRight === "55px" && !$(e.target).is("#languagesSelector *")) {
-        document.getElementById("languagesButton").style.marginRight = "0";
-        document.getElementById("languagesList").style.right = "-110px";
-    }
-});

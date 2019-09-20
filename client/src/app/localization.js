@@ -12,22 +12,11 @@ function addLanguages(langs) {
     }
     $(codeHTML).appendTo("#languagesList");
 
-    document.getElementById("languagesButton").addEventListener("click", langsButtonClickHandler, false);
     for (let i=0; i<langs.length; i++) {
         document.getElementById(langs[i]).addEventListener("click", event => langsListClickHandler(event, langs[i], langs), false);
     }
 
     setTimeout(() => setPreferredLanguage(langs), 10);
-}
-
-function langsButtonClickHandler() {
-    if (document.getElementById("languagesButton").style.marginRight === "55px") {
-        document.getElementById("languagesButton").style.marginRight = "0";
-        document.getElementById("languagesList").style.right = "-110px";
-    } else {
-        document.getElementById("languagesButton").style.marginRight = "55px";
-        document.getElementById("languagesList").style.right = "-20px";
-    }
 }
 
 function langsListClickHandler(event, currentLang, langs) {
