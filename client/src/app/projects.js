@@ -59,7 +59,7 @@ function addProjects(langs, projects) {
 function loadHandlers() {
     $("#project-curriculum > a").on("click", function(e) {
         e.preventDefault();
-        $("#profileButton").trigger("click");
+        $("#curriculumButton").trigger("click");
     });
 
     if (!window.isMobile.any()) {

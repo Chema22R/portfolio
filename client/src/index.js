@@ -7,4 +7,4 @@ import "./assets/style/curriculum.css";
 import "./app/general";
 import "./app/localization";
 import "./app/projects";
-import "./app/CVAndButtons";
+import "./app/curriculum";
