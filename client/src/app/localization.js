@@ -6,37 +6,13 @@ function addLanguages(langs) {
     let codeHTML = "";
 
     for (let i=0; i<langs.length; i++) {
-        codeHTML += "<li id='" + langs[i] + "'>" +
+        codeHTML += "<li id='" + langs[i] + "' onclick='window.langsListClickHandler(this, " + JSON.stringify(langs) + ")'>" +
                         window.langsNames[langs[i].substring(0, langs[i].indexOf("-"))] +
                     "</li>";
     }
     $(codeHTML).appendTo("#languagesList");
 
-    for (let i=0; i<langs.length; i++) {
-        document.getElementById(langs[i]).addEventListener("click", event => langsListClickHandler(event, langs[i], langs), false);
-    }
-
     setTimeout(() => setPreferredLanguage(langs), 10);
-}
-
-function langsListClickHandler(event, currentLang, langs) {
-    if (window.blockSlider) {return;}
-    window.blockSlider = true;
-
-    $(event.target).parent().prepend(event.target); // move the option selected to the top of the list
-    document.getElementById("languagesButton").title = window.langsNames[currentLang.substring(0, currentLang.indexOf("-"))];
-
-    for (let i=0; i<langs.length; i++) {
-        if (langs[i] !== currentLang) {
-            $("." + langs[i]).fadeOut(0);
-        }
-    }
-
-    $("." + currentLang).fadeIn("slow");
-
-    $(".section.slides").animate({  // resize the current slide height
-        height: $(".section.slides .slide.current").height() + 40
-    }, "slow", () => window.blockSlider = false);
 }
 
 function setPreferredLanguage(langs) {
@@ -55,3 +31,27 @@ function setPreferredLanguage(langs) {
         }
     }
 }
+
+window.langsListClickHandler = (currentLang, langs) => {
+    if (window.blockSlider) {return;}
+    window.blockSlider = true;
+
+    $(currentLang).parent().prepend(currentLang); // move the option selected to the top of the list
+    document.getElementById("languagesButton").title = window.langsNames[currentLang.id.substring(0, currentLang.id.indexOf("-"))];
+
+    for (let i=0; i<langs.length; i++) {
+        if (langs[i] !== currentLang.id) {
+            $("." + langs[i]).fadeOut(0);
+        }
+    }
+
+    $("." + currentLang.id).fadeIn("slow");
+
+    if (!window.isMobile.any()) {
+        $(".section.slides").animate({  // resize the current slide height
+            height: $(".section.slides .slide.current").height() + 40
+        }, "slow", () => window.blockSlider = false);
+    } else {
+        window.blockSlider = false;
+    }
+};
