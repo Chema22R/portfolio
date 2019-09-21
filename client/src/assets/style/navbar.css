@@ -44,7 +44,7 @@
 
 .navbar .right ul {
     position: absolute;
-    right: -110px;
+    right: -120px;
     transition: right .5s;
     -moz-transition: right .5s;
     -webkit-transition: right .5s;
@@ -58,7 +58,7 @@
 }
 
 .navbar .right ul li {
-    width: 90px;
+    width: 100px;
     padding-left: 10px;
 
     border-left: 1px solid #95989A;
@@ -70,13 +70,17 @@
 
 .navbar .right ul li:first-child {
     margin-top: -5px;
+    padding-left: 8px;
 
+    cursor: default;
     border-top: 1px solid #95989A;
     border-bottom: 1px solid #95989A;
+    border-left: 3px solid #95989A;
     border-top-left-radius: 4px;
-    line-height: 40px;
 
-    background-color: #e0e2e1;
+    line-height: 40px;
+    font-weight: bold;
+    color: #333;
 }
 
 .navbar .right ul li:last-child {
@@ -85,8 +89,7 @@
 }
 
 .navbar .right ul li:not(:first-child):hover {
-    padding-left: 8px;
-    border-left: 3px solid #95989A;
+    background-color: #e0e2e1;
 }
 
 
@@ -98,7 +101,7 @@
     -webkit-transition: margin-right .5s;
 }
 #languagesSelector:hover #languagesList {
-    right: -20px;
+    right: -30px;
     transition: right .5s;
     -moz-transition: right .5s;
     -webkit-transition: right .5s;
