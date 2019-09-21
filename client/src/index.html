@@ -20,17 +20,13 @@
 	<body>
 		<div id="leftover"></div>
 
-		<div id="buttonsLeft">
-			<button id="buttonProfile" class="icon-profile icon" title="Curriculum"></button>
-		</div>
+		<div class="navbar">
+			<button id="curriculumButton" class="left icon-profile icon" title="Curriculum"></button>
 
-		<div id="buttonsRight">
-			<button id="en-US" class="langSelector current" title="English">
-				<img src="images/en-US.png" alt="English language">
-			</button>
-			<button id="es-ES" class="langSelector" title="Español">
-				<img src="images/es-ES.png" alt="Spanish language">
-			</button>
+			<div id="languagesSelector" class="right">
+				<button id="languagesButton" class="icon-langs icon" title="Language"></button>
+				<ul id="languagesList"></ul>
+			</div>
 		</div>
 
 		<div id="projectsContainer"></div>

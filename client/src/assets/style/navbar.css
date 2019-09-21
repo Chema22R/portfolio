@@ -1,0 +1,105 @@
+.navbar .left,
+.navbar .right {
+    position: fixed;
+    top: 0;
+}
+
+.navbar .left {
+    left: 0;
+    margin: 10px 0 0 15px;
+    padding: 5px 0;
+
+    font-size: 40px;
+    z-index: 1;
+}
+
+.navbar .right {
+    right: 0;
+    margin: 15px 20px 0 0;
+    z-index: 3;
+}
+
+.navbar button {color: #555;}
+.navbar button:hover {color: #777;}
+
+.navbar .right button {
+    float: right;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 450px) {
+    .navbar .left,
+    .navbar .right {position: absolute;}
+}
+
+
+/* Languages List
+    ========================================================================== */
+
+.navbar .right button {
+    transition: margin-right .5s;
+    -moz-transition: margin-right .5s;
+    -webkit-transition: margin-right .5s;
+}
+
+.navbar .right ul {
+    position: absolute;
+    right: -110px;
+    transition: right .5s;
+    -moz-transition: right .5s;
+    -webkit-transition: right .5s;
+
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
+
+    list-style-type: none;
+    background-color: #f0f2f1;
+}
+
+.navbar .right ul li {
+    width: 90px;
+    padding-left: 10px;
+
+    border-left: 1px solid #95989A;
+    line-height: 30px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.navbar .right ul li:first-child {
+    margin-top: -5px;
+
+    border-top: 1px solid #95989A;
+    border-bottom: 1px solid #95989A;
+    border-top-left-radius: 4px;
+    line-height: 40px;
+
+    background-color: #e0e2e1;
+}
+
+.navbar .right ul li:last-child {
+    border-bottom: 1px solid #95989A;
+    border-bottom-left-radius: 4px;
+}
+
+.navbar .right ul li:not(:first-child):hover {
+    padding-left: 8px;
+    border-left: 3px solid #95989A;
+}
+
+
+
+#languagesSelector:hover #languagesButton {
+    margin-right: 55px;
+    transition: margin-right .5s;
+    -moz-transition: margin-right .5s;
+    -webkit-transition: margin-right .5s;
+}
+#languagesSelector:hover #languagesList {
+    right: -20px;
+    transition: right .5s;
+    -moz-transition: right .5s;
+    -webkit-transition: right .5s;
+}

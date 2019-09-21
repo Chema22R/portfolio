@@ -42,7 +42,11 @@ class Information {
     }
 }
 
+
 window.information = new Information();
+window.blockSlider = false;
+window.preferredLanguage = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage;
+
 window.isMobile = {
     Android: () => {
         return navigator.userAgent.match(/Android/i);
@@ -62,4 +66,9 @@ window.isMobile = {
     any: () => {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
+};
+
+window.langsNames = {
+    "en": "English",
+    "es": "Español"
 };

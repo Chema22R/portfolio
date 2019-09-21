@@ -1,7 +1,6 @@
 'use strict';
 
 const sliderSpeedMult = 2;
-var blockSlider = false;
 var sliderSpeed, slideHeight, slideLeft;
 
 
@@ -68,7 +67,7 @@ function generateSlides(langs, curriculum) {
                         '<p class="padding-left">' + curriculum.education.list[j].other[langs[i]] + '</p>';
         }
 
-        codeHTML += '<br></div>';
+        codeHTML += '</div>';
 
         $('#slidesContainer > .slide.education').append(codeHTML);   // end education info
 
@@ -227,9 +226,9 @@ function organizeSlides() {
         $(".section.slides .slide.previous").css("left", -slideLeft);
         $(".section.slides").css("height", slideHeight);
     } else {
-        $(".slide.workExp").css("padding", "20px 30px 8px 30px");
-        $(".slide.education.courses").css("padding", "8px 30px 8px 30px");
-        $(".slide.langs").css("padding", "8px 30px 20px 30px");
+        $(".slide.workExp").css("padding", "20px 30px 10px 30px");
+        $(".slide.education.courses").css("padding", "10px 30px 10px 30px");
+        $(".slide.langs").css("padding", "10px 30px 20px 30px");
         $(".previowsArrow").css("display", "none");
         $(".nextArrow").css("display", "none");
         $(".section.slideCounter").css("display", "none");
@@ -240,7 +239,7 @@ function organizeSlides() {
 /* Triggers
 ========================================================================== */
 
-$("#buttonProfile").click(function(e) {
+$("#curriculumButton").click(function(e) {
     e.preventDefault();
 
     $("#leftover, #curriculumContainer").fadeIn("slow");
@@ -251,33 +250,7 @@ $("#buttonProfile").click(function(e) {
     $("#curriculumData").scrollTop(0);
 });
 
-$("#buttonsRight .langSelector").click(function(e) {
-    e.preventDefault();
-
-    if (!blockSlider) {
-        let lang = (e.target.id) ? e.target.id : e.target.parentElement.id; // to make crossbrowser the id capture
-        blockSlider = true;
-
-        $("#buttonsRight .langSelector.current").removeClass("current");
-        $("#" + lang).addClass("current");
-
-
-        for (var i=0; i<$("#buttonsRight .langSelector").length; i++) { // fade out all elements of all languages, except the elements of current language
-            if ($("#buttonsRight .langSelector")[i].id != lang) {
-                $("." + $("#buttonsRight .langSelector")[i].id).fadeOut(0);
-            }
-        }
-
-        $("." + lang).fadeIn("slow");   // fade in all element of current language
-
-
-        $(".section.slides").animate({  // special: resize the current slide height
-            height: $(".section.slides .slide.current").height() + 40
-        }, "slow", function() {
-            blockSlider = false;
-        });
-    }
-});
+$(window).on("resize", function() {organizeSlides();});   // reorganize the slides
 
 $(window).on("click touchstart", function(e) {
     if ($("#curriculumContainer").is(":visible") && ($(e.target).is("#leftover") || $(e.target).is(".exitButton"))) {
@@ -286,14 +259,12 @@ $(window).on("click touchstart", function(e) {
     }
 });
 
-$(window).on("resize", function() {organizeSlides();});   // reorganize the slides
-
 function loadHandlers() {
     $(".section.slides .previowsArrow").click(function(e) {    // previows slide
         e.preventDefault();
     
-        if (!blockSlider) {
-            blockSlider = true;
+        if (!window.blockSlider) {
+            window.blockSlider = true;
             sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
             slideHeight = $(".section.slides .slide.previous").height() + 40;
             slideLeft = $(".section.slides").width() + 20;
@@ -334,7 +305,7 @@ function loadHandlers() {
                 }
         
                 $(".section.slides .slide.previous").css("left", -slideLeft);
-                blockSlider = false;
+                window.blockSlider = false;
             });
         }
     });
@@ -342,8 +313,8 @@ function loadHandlers() {
     $(".section.slides .nextArrow").click(function(e) {    // next slide
         e.preventDefault();
     
-        if (!blockSlider) {
-            blockSlider = true;
+        if (!window.blockSlider) {
+            window.blockSlider = true;
             sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
             slideHeight = $(".section.slides .slide.next").height() + 40;
             slideLeft = $(".section.slides").width() + 20;
@@ -384,7 +355,7 @@ function loadHandlers() {
                 }
         
                 $(".section.slides .slide.static, .section.slides .slide.next").css("left", slideLeft);
-                blockSlider = false;
+                window.blockSlider = false;
             });
         }
     });
@@ -392,8 +363,8 @@ function loadHandlers() {
     $(".section.slideCounter button").click(function(e) {
         e.preventDefault();
     
-        if (!blockSlider && !e.target.classList.contains("current")) {
-            blockSlider = true;
+        if (!window.blockSlider && !e.target.classList.contains("current")) {
+            window.blockSlider = true;
     
             let pointer;
             let previousDist = 0;
@@ -426,13 +397,13 @@ function loadHandlers() {
                 recursiveSlidePrevious(previousDist);
     
                 setTimeout(function() {
-                    blockSlider = false;
+                    window.blockSlider = false;
                 }, sliderSpeed * previousDist + 20);
             } else {
                 recursiveSlideNext(nextDist);
     
                 setTimeout(function() {
-                    blockSlider = false;
+                    window.blockSlider = false;
                 }, sliderSpeed * nextDist + 20);
             }
         }
