@@ -67,7 +67,7 @@ function generateSlides(langs, curriculum) {
                         '<p class="padding-left">' + curriculum.education.list[j].other[langs[i]] + '</p>';
         }
 
-        codeHTML += '<br></div>';
+        codeHTML += '</div>';
 
         $('#slidesContainer > .slide.education').append(codeHTML);   // end education info
 
@@ -226,9 +226,9 @@ function organizeSlides() {
         $(".section.slides .slide.previous").css("left", -slideLeft);
         $(".section.slides").css("height", slideHeight);
     } else {
-        $(".slide.workExp").css("padding", "20px 30px 8px 30px");
-        $(".slide.education.courses").css("padding", "8px 30px 8px 30px");
-        $(".slide.langs").css("padding", "8px 30px 20px 30px");
+        $(".slide.workExp").css("padding", "20px 30px 10px 30px");
+        $(".slide.education.courses").css("padding", "10px 30px 10px 30px");
+        $(".slide.langs").css("padding", "10px 30px 20px 30px");
         $(".previowsArrow").css("display", "none");
         $(".nextArrow").css("display", "none");
         $(".section.slideCounter").css("display", "none");

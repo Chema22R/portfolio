@@ -84,7 +84,11 @@
     border-bottom-left-radius: 4px;
 }
 
-.navbar .right ul li:hover {background-color: #e0e2e1;}
+.navbar .right ul li:not(:first-child):hover {
+    padding-left: 8px;
+    border-left: 3px solid #95989A;
+}
+
 
 
 #languagesSelector:hover #languagesButton {
