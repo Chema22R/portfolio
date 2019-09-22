@@ -70,17 +70,17 @@
 
 .navbar .right ul li:first-child {
     margin-top: -5px;
-    padding-left: 8px;
 
     cursor: default;
     border-top: 1px solid #95989A;
     border-bottom: 1px solid #95989A;
-    border-left: 3px solid #95989A;
     border-top-left-radius: 4px;
 
     line-height: 40px;
     font-weight: bold;
     color: #333;
+
+    background-color: #e0e2e1;
 }
 
 .navbar .right ul li:last-child {
@@ -88,9 +88,7 @@
     border-bottom-left-radius: 4px;
 }
 
-.navbar .right ul li:not(:first-child):hover {
-    background-color: #e0e2e1;
-}
+.navbar .right ul li:not(:first-child):hover {background-color: #e0e2e1;}
 
 
 
