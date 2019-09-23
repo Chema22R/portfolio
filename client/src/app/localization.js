@@ -33,9 +33,6 @@ function setPreferredLanguage(langs) {
 }
 
 window.langsListClickHandler = (currentLang, langs) => {
-    if (window.blockSlider) {return;}
-    window.blockSlider = true;
-
     $(currentLang).parent().prepend(currentLang); // move the option selected to the top of the list
     document.getElementById("languagesButton").title = window.langsNames[currentLang.id.substring(0, currentLang.id.indexOf("-"))];
 
@@ -46,12 +43,4 @@ window.langsListClickHandler = (currentLang, langs) => {
     }
 
     $("." + currentLang.id).fadeIn("slow");
-
-    if (!window.isMobile.any()) {
-        $(".section.slides").animate({  // resize the current slide height
-            height: $(".section.slides .slide.current").height() + 40
-        }, "slow", () => window.blockSlider = false);
-    } else {
-        window.blockSlider = false;
-    }
 };

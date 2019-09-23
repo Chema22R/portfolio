@@ -44,7 +44,6 @@ class Information {
 
 
 window.information = new Information();
-window.blockSlider = false;
 window.preferredLanguage = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage;
 
 window.isMobile = {
