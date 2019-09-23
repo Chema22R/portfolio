@@ -162,7 +162,7 @@ function recursiveSlidePrevious(distance) {
         }
 
         $(".section.slides .slide.previous").css("left", -slideLeft);
-        
+
         if (--distance > 0) {recursiveSlidePrevious(distance)}
     });
 }
@@ -181,7 +181,7 @@ function recursiveSlideNext(distance) {
     $(".section.slides").animate({
         height: slideHeight
     }, sliderSpeed);
-    
+
     $(".section.slides .slide.current").animate({
         left: "-=" + slideLeft
     }, sliderSpeed);
@@ -202,7 +202,7 @@ function recursiveSlideNext(distance) {
         }
 
         $(".section.slides .slide.static, .section.slides .slide.next").css("left", slideLeft);
-        
+
         if (--distance > 0) {recursiveSlideNext(distance)}
     });
 }
@@ -262,98 +262,98 @@ $(window).on("click touchstart", function(e) {
 function loadHandlers() {
     $(".section.slides .previowsArrow").click(function(e) {    // previows slide
         e.preventDefault();
-    
+
         if (!window.blockSlider) {
             window.blockSlider = true;
             sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
             slideHeight = $(".section.slides .slide.previous").height() + 40;
             slideLeft = $(".section.slides").width() + 20;
-    
+
             if ($(".section.slideCounter button.current").prev().length > 0) {
                 $(".section.slideCounter button.current").removeClass("current").prev().addClass("current");
             } else {
                 $(".section.slideCounter button").removeClass("current").last().addClass("current");
             }
-    
+
             $(".section.slides .slide.previous").fadeIn(0);
-    
+
             $("#curriculumData").animate({
                 scrollTop: 0
             }, sliderSpeed);
-    
+
             $(".section.slides").animate({
                 height: slideHeight
             }, sliderSpeed+100);
-    
+
             $(".section.slides .slide.current").animate({
                 left: "+=" + slideLeft
             }, sliderSpeed);
-        
+
             $(".section.slides .slide.previous").animate({
                 left: "+=" + slideLeft
             }, sliderSpeed, function() {
                 $(".section.slides .slide.current").fadeOut(0);
-    
+
                 $(".section.slides .slide.next").removeClass("next").addClass("static");
                 $(".section.slides .slide.current").removeClass("current").addClass("next");
                 $(".section.slides .slide.previous").removeClass("previous").addClass("current");
-    
+
                 if ($(".section.slides .slide.current").prev().length > 0) {
                     $(".section.slides .slide.current").prev().removeClass("static").addClass("previous");
                 } else {
                     $(".section.slides .slide.static").last().removeClass("static").addClass("previous");
                 }
-        
+
                 $(".section.slides .slide.previous").css("left", -slideLeft);
                 window.blockSlider = false;
             });
         }
     });
-    
+
     $(".section.slides .nextArrow").click(function(e) {    // next slide
         e.preventDefault();
-    
+
         if (!window.blockSlider) {
             window.blockSlider = true;
             sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
             slideHeight = $(".section.slides .slide.next").height() + 40;
             slideLeft = $(".section.slides").width() + 20;
-    
+
             if ($(".section.slideCounter button.current").next().length > 0) {
                 $(".section.slideCounter button.current").removeClass("current").next().addClass("current");
             } else {
                 $(".section.slideCounter button").removeClass("current").first().addClass("current");
             }
-    
+
             $(".section.slides .slide.next").fadeIn(0);
-    
+
             $("#curriculumData").animate({
                 scrollTop: 0
             }, sliderSpeed);
-    
+
             $(".section.slides").animate({
                 height: slideHeight
             }, sliderSpeed+100);
-            
+
             $(".section.slides .slide.current").animate({
                 left: "-=" + slideLeft
             }, sliderSpeed);
-        
+
             $(".section.slides .slide.next").animate({
                 left: "-=" + slideLeft
             }, sliderSpeed, function() {
                 $(".section.slides .slide.current").fadeOut(0);
-    
+
                 $(".section.slides .slide.previous").removeClass("previous").addClass("static");
                 $(".section.slides .slide.current").removeClass("current").addClass("previous");
                 $(".section.slides .slide.next").removeClass("next").addClass("current");
-        
+
                 if ($(".section.slides .slide.current").next().length > 0) {
                     $(".section.slides .slide.current").next().removeClass("static").addClass("next");
                 } else {
                     $(".section.slides .slide.static").first().removeClass("static").addClass("next");
                 }
-        
+
                 $(".section.slides .slide.static, .section.slides .slide.next").css("left", slideLeft);
                 window.blockSlider = false;
             });
@@ -362,46 +362,46 @@ function loadHandlers() {
 
     $(".section.slideCounter button").click(function(e) {
         e.preventDefault();
-    
+
         if (!window.blockSlider && !e.target.classList.contains("current")) {
             window.blockSlider = true;
-    
+
             let pointer;
             let previousDist = 0;
             let nextDist = 0;
-    
+
             pointer = e.target;
             while (!pointer.classList.contains("current")) {
                 previousDist++;
                 pointer = (!pointer.previousSibling) ? pointer.parentNode.lastChild : pointer.previousSibling;
             }
-    
+
             pointer = e.target;
             while (!pointer.classList.contains("current")) {
                 nextDist++;
                 pointer = (!pointer.nextSibling) ? pointer.parentNode.firstChild : pointer.nextSibling;
             }
-    
+
             previousDist = e.target.parentNode.childElementCount - previousDist;
             nextDist = e.target.parentNode.childElementCount - nextDist;
-    
-    
+
+            
             sliderSpeed = $(".section.slides").width() * sliderSpeedMult;
             slideLeft = $(".section.slides").width() + 20;
-    
+
             $("#curriculumData").animate({
                 scrollTop: 0
             }, sliderSpeed);
-    
+
             if (nextDist > previousDist) {
                 recursiveSlidePrevious(previousDist);
-    
+
                 setTimeout(function() {
                     window.blockSlider = false;
                 }, sliderSpeed * previousDist + 20);
             } else {
                 recursiveSlideNext(nextDist);
-    
+
                 setTimeout(function() {
                     window.blockSlider = false;
                 }, sliderSpeed * nextDist + 20);
