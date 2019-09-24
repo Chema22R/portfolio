@@ -8,3 +8,5 @@ import "./app/general";
 import "./app/localization";
 import "./app/projects";
 import "./app/curriculum";
+
+document.body.style.opacity = "1";
