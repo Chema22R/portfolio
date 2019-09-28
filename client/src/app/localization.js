@@ -24,13 +24,17 @@ function setPreferredLanguage(langs, attempts) {
         for (let i=0; i<langs.length; i++) {
             style.innerHTML += "." + langs[i] + " {display: none;}";
         }
-        document.head.appendChild(style);
+        document.head.appendChild(style);   // this adds the css rules to set display to none for each language
 
 
         for (let i=0; i<langs.length; i++) {
             if (langs[i] === window.preferredLanguage || langs[i].substring(0, langs[i].indexOf("-")) === window.preferredLanguage) {
                 $("#" + langs[i]).trigger("click");
                 break;
+            } else if (i === langs.length - 1) {
+                $("#" + langs[0]).trigger("click");
+                console.warn(`Preferred language could not be setted. Browser language (${window.preferredLanguage}) does not match with ` +
+                `any of the given ones (${langs}). ${langs[0]} was setted as default value.`);
             }
         }
     } else if (attempts > 0) {
