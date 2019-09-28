@@ -27,16 +27,12 @@
     font-size: 30px;
 }
 
-@media screen and (max-width: 450px) {
-    .navbar .left,
-    .navbar .right {position: absolute;}
-}
-
 
 /* Languages List
     ========================================================================== */
 
 .navbar .right button {
+    margin-right: 0;
     transition: margin-right .5s;
     -moz-transition: margin-right .5s;
     -webkit-transition: margin-right .5s;
@@ -92,15 +88,25 @@
 
 
 
-#languagesSelector:hover #languagesButton {
+.navbar .right:hover button {
     margin-right: 55px;
     transition: margin-right .5s;
     -moz-transition: margin-right .5s;
     -webkit-transition: margin-right .5s;
 }
-#languagesSelector:hover #languagesList {
+
+.navbar .right:hover ul {
     right: -30px;
     transition: right .5s;
     -moz-transition: right .5s;
     -webkit-transition: right .5s;
+}
+
+
+@media screen and (max-width: 420px) {
+    .navbar .left,
+    .navbar .right {position: absolute;}
+    .navbar .right ul {position: fixed;}
+    .navbar .right:hover button {margin-right: 0;}
+    .navbar .right:hover ul {right: -10px;}
 }
