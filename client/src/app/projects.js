@@ -53,6 +53,7 @@ function addProjects(langs, projects) {
         }
     }
 
+    window.projectsCodeGen = true;
     loadHandlers();
 }
 

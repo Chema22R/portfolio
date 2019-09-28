@@ -100,6 +100,8 @@ function generateSlides(langs, curriculum) {
                 '<a class="content icon-cv icon" href="' + curriculum.driveCv + '" target="_blank" rel="external"></a>';
 
     $('#curriculumData > .section.social').append(codeHTML);
+
+    window.curriculumCodeGen = true;
 }
 
 

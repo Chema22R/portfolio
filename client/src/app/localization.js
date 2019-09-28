@@ -1,5 +1,7 @@
 "use strict";
 
+const attemptsSetLang = 20;
+
 window.information.getLanguages(addLanguages);
 
 function addLanguages(langs) {
@@ -12,22 +14,33 @@ function addLanguages(langs) {
     }
     $(codeHTML).appendTo("#languagesList");
 
-    setTimeout(() => setPreferredLanguage(langs), 10);
+    setPreferredLanguage(langs, attemptsSetLang);
 }
 
-function setPreferredLanguage(langs) {
-    let style = document.createElement("style");
-    style.innerHTML = "";
-    for (let i=0; i<langs.length; i++) {
-        style.innerHTML += "." + langs[i] + " {display: none;}";
-    }
-    document.head.appendChild(style);
+function setPreferredLanguage(langs, attempts) {
+    if (window.curriculumCodeGen && window.projectsCodeGen) {
+        let style = document.createElement("style");
+        style.innerHTML = "";
+        for (let i=0; i<langs.length; i++) {
+            style.innerHTML += "." + langs[i] + " {display: none;}";
+        }
+        document.head.appendChild(style);
 
 
-    for (let i=0; i<langs.length; i++) {
-        if (langs[i] === window.preferredLanguage || langs[i].substring(0, langs[i].indexOf("-")) === window.preferredLanguage) {
-            $("#" + langs[i]).trigger("click");
-            break;
+        for (let i=0; i<langs.length; i++) {
+            if (langs[i] === window.preferredLanguage || langs[i].substring(0, langs[i].indexOf("-")) === window.preferredLanguage) {
+                $("#" + langs[i]).trigger("click");
+                break;
+            }
+        }
+    } else if (attempts > 0) {
+        setTimeout(() => setPreferredLanguage(langs, --attempts), 20 * (attemptsSetLang - attempts));
+    } else {
+        if (langs[0]) {
+            $("#" + langs[0]).trigger("click")
+            console.warn(`Preferred language could not be setted. Attempted ${attemptsSetLang} times. ${langs[0]} was setted as default value.`);
+        } else {
+            console.warn(`Preferred language could not be setted. Attempted ${attemptsSetLang} times. No language could be setted as default value.`);
         }
     }
 }
