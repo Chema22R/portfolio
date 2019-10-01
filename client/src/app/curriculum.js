@@ -24,7 +24,7 @@ function generateSlides(langs, curriculum) {
 
         for (let j=0; j<curriculum.education.list.length; j++) {
             codeHTML += '<h3 class="bold nbsp">' + curriculum.education.list[j].title[langs[i]] + '</h3>' +
-                        '<h3 class="size01 nbsp lineBreak">' + curriculum.education.list[j].period + '</h3>' +
+                        '<h3 class="size01 nbsp lineBreak">' + curriculum.education.list[j].period[langs[i]] + '</h3>' +
                         '<h3 class="size02 floatR lineBreak">' + curriculum.education.list[j].level[langs[i]] + '</h3>' +
                         '<p>' + curriculum.education.list[j].location[langs[i]] + '</p>' +
                         '<p class="padding-left">' + curriculum.education.list[j].other[langs[i]] + '</p>';

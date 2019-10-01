@@ -41,7 +41,7 @@ function setPreferredLanguage(langs, attempts) {
         setTimeout(() => setPreferredLanguage(langs, --attempts), 20 * (attemptsSetLang - attempts));
     } else {
         if (langs[0]) {
-            $("#" + langs[0]).trigger("click")
+            $("#" + langs[0]).trigger("click");
             console.warn(`Preferred language could not be setted. Attempted ${attemptsSetLang} times. ${langs[0]} was setted as default value.`);
         } else {
             console.warn(`Preferred language could not be setted. Attempted ${attemptsSetLang} times. No language could be setted as default value.`);
