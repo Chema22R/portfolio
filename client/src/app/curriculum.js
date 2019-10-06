@@ -10,10 +10,7 @@ function generateSlides(langs, curriculum) {
                         '<h2>' + curriculum.personal.name[langs[i]] + '</h2>' +
                         '<h3>' + curriculum.personal.role[langs[i]] + '</h3>' +
                         '<p>' + curriculum.personal.email + ' | ' + curriculum.personal.phone + '</p>' +
-                        '<p class="country">' +
-                            '<img src="images/country.png" alt="' + curriculum.personal.country[langs[i]] + '">' +
-                            curriculum.personal.country[langs[i]] + ' | ' + curriculum.personal.birthday[langs[i]] +
-                        '</p>' +
+                        '<p class="country">' + curriculum.personal.country[langs[i]] + ' | ' + curriculum.personal.birthday[langs[i]] + '</p>' +
                     '</div>';
 
         $('#curriculumData > .section.basic').append(codeHTML);   // end basic or personal info
