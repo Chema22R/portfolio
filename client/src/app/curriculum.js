@@ -9,7 +9,7 @@ function generateSlides(langs, curriculum) {
         codeHTML =  '<div class="' + langs[i] + ' content">' +
                         '<h2>' + curriculum.personal.name[langs[i]] + '</h2>' +
                         '<h3>' + curriculum.personal.role[langs[i]] + '</h3>' +
-                        '<p>' + curriculum.personal.email + ' | ' + curriculum.personal.phone + '</p>' +
+                        '<p>' + curriculum.personal.email + ' | ' + curriculum.personal.phone[langs[i]] + '</p>' +
                         '<p class="country">' + curriculum.personal.country[langs[i]] + ' | ' + curriculum.personal.birthday[langs[i]] + '</p>' +
                     '</div>';
 
