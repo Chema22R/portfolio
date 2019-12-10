@@ -28,7 +28,7 @@ addProjects([
     {
         "id": "3dpreviewer",
         "title": "3D Previewer",
-        "description": "3D objects previewer that allows users to interact and carry out certain basic operations over loaded objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and processed geometry of the objects, so that they can be easily loaded again.",
+        "description": "3D objects previewer that allows users to interact and carry out certain basic operations on loaded objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and processed geometry of the objects, so that they can be easily loaded again.",
         "url": "https://3dpreviewer.chema22r.com",
         "statusCheckUrl": "https://previewer3d.herokuapp.com/checkStatus",
         "github": "https://github.com/Chema22R/3d-previewer"
