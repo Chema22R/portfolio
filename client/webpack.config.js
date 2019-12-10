@@ -34,9 +34,6 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        }),
-        new webpack.DefinePlugin({
-            DATA_URL: JSON.stringify(process.env.DATA_URL || "https://api.github.com/gists/09a7621fddbd018bc830fb3f5cd1fadb")
         })
     ]
 };

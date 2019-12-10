@@ -1,6 +1,135 @@
 'use strict';
 
-window.information.getCurriculum(generateSlides);
+generateSlides({
+    "linkedin": "https://www.linkedin.com/in/chema22r",
+    "github": "https://github.com/chema22r",
+    "codepen": "https://codepen.io/chema22r",
+    "driveCv": "https://drive.google.com/open?id=1RUk3L3vTVGkCuFAHPWSnhbKCKuqJtD2e",
+    "personal": {
+        "name": "José María Rivera Alonso",
+        "role": "Full-stack Developer",
+        "email": "chema22r@gmail.com",
+        "phone": "+1 (236) 512-2202",
+        "country": "Vancouver, BC, Canada",
+        "birthday": "09/28/1995"
+    },
+    "workExp": {
+        "title": "Work Experience",
+        "list": [
+            {
+                "title": "Software Engineer",
+                "location": "HP SCDS, León (Spain)",
+                "period": "Jul 2018 - Oct 2019",
+                "description": "<b><i>Smart Tracker:</i></b> Full-stack development in an agile environment (DevOps), in charge of improving the Smart Tracker project. Main technologies touched: AngularJS, Node.js, MongoDB.<br><b><i>Network printers prototypes management:</i></b> This project constitutes the company practices and the final project of the Master's Degree in Computer Engineering.<br><b><i>Creation of a 3D print previewer using HTML5/JS technologies:</i></b> This project constitutes the company practices and the final project of the Bachelor's Degree in Computer Engineering. It was awarded as the best project of the XII Technology Observatory of HP."
+            },
+            {
+                "title": "Private Tutor",
+                "location": "",
+                "period": "Sep 2015 - Oct 2019",
+                "description": "Private tutor for students of Engineering and technical education.<br>Subjects taught: Java, C and web development."
+            },
+            {
+                "title": "3D Modeler",
+                "location": "University of León, León (Spain)",
+                "period": "Sep 2015 - Jun 2018",
+                "description": "Research project to develop low-cost prostheses for animals with amputated limbs, through the use of scanning, modelling and 3D printing. In charge of all the tasks described above."
+            },
+            {
+                "title": "Guest Professor",
+                "location": "University of León, León (Spain)",
+                "period": "Sep 2016",
+                "description": "Professor at the University of León during the university extension course Unity 3D. In charge of the classes related to Autodesk Maya and 3D modelling."
+            }
+        ]
+    },
+    "education": {
+        "title": "Education",
+        "list": [
+            {
+                "title": "Master’s Degree in Computer Engineering",
+                "period": "(2017 - 2019)",
+                "level": "EQF 7",
+                "location": "University of León, León (Spain)",
+                "other": "Activities and groups: Delegation team, as delegate of first and second course"
+            },
+            {
+                "title": "Bachelor’s Degree in Computer Engineering",
+                "period": "(2013 - 2017)",
+                "level": "EQF 6",
+                "location": "University of León, León (Spain)",
+                "other": "Activities and groups: Delegation team, as delegate of first course"
+            }
+        ]
+    },
+    "courses": {
+        "title": "Courses",
+        "list": [
+            {
+                "title": "Social Entrepreneurship",
+                "period": "2017",
+                "duration": "30 hours",
+                "location": "Miríada X"
+            },
+            {
+                "title": "Agile Entrepreneur workshop. Lean Startup on the online channel",
+                "period": "2017",
+                "duration": "20 hours",
+                "location": "General Foundation of the University of León and the company, FGULEM"
+            },
+            {
+                "title": "Basic Digital Marketing course",
+                "period": "2016",
+                "duration": "40 hours",
+                "location": "Actívate program, Google"
+            },
+            {
+                "title": "Web design with HTML5 and CSS3",
+                "period": "2015",
+                "duration": "120 hours",
+                "location": "Seis Cocos Technical School"
+            },
+            {
+                "title": "Unity 3D",
+                "period": "2015",
+                "duration": "40 hours",
+                "location": "University of Leon"
+            },
+            {
+                "title": "Web development with Joomla",
+                "period": "2015",
+                "duration": "",
+                "location": "Cowabi Web Solutions"
+            },
+            {
+                "title": "C programming",
+                "period": "2014",
+                "duration": "40 hours",
+                "location": "University of Leon"
+            }
+        ]
+    },
+    "langs": {
+        "title": "Languages",
+        "motherTongue": {
+            "title": "Mother tongue",
+            "val": "Spanish"
+        },
+        "other": {
+            "title": "Other languages",
+            "val": "English (B2 level)<br>Japanese (A1/A2 level)"
+        }
+    },
+    "awards": {
+        "title": "Honours and Awards",
+        "list": [
+            {
+                "title": "Best project of the XII Technology Observatory of HP",
+                "period": "2017",
+                "description": "Winner of the XII Technology Observatory of HP, for the development of a 3D print previewer using HTML5/JS technologies."
+            }
+        ]
+    }
+});
 
 function generateSlides(curriculum) {
     let codeHTML;
@@ -80,8 +209,6 @@ function generateSlides(curriculum) {
                 '<a class="content icon-cv icon" href="' + curriculum.driveCv + '" target="_blank" rel="external"></a>';
 
     $('#curriculumData > .section.social').append(codeHTML);
-
-    window.curriculumCodeGen = true;
 }
 
 

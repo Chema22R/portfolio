@@ -1,38 +1,5 @@
 "use strict";
 
-class Information {
-    constructor() {
-        if (!Information.instance) {
-            Information.instance = this;
-            this.languages = null;
-            this.projects = null;
-            this.curriculum = null;
-
-            fetch(DATA_URL)
-            .then(res => res.json())
-            .then(res => {
-                this.projects = JSON.parse(res.files["personal-web-server_projects.json"].content);
-                this.curriculum = JSON.parse(res.files['personal-web-server_curriculum.json'].content);
-            })
-            .catch(reason => console.error(reason));
-        }
-
-        return Information.instance;
-    }
-
-    getProjects(callback) {
-        (this.projects) ? callback(this.projects) : setTimeout(() => this.getProjects(callback), 500);
-    }
-
-    getCurriculum(callback) {
-        (this.curriculum) ? callback(this.curriculum) : setTimeout(() => this.getCurriculum(callback), 500);
-    }
-}
-
-
-window.information = new Information();
-window.curriculumCodeGen = false;
-window.projectsCodeGen = false;
 window.preferredLanguage = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage;
 
 window.isMobile = {

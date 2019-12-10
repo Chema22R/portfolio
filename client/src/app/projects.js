@@ -1,6 +1,39 @@
 "use strict";
 
-window.information.getProjects(addProjects);
+addProjects([
+    {
+        "id": "curriculum",
+        "title": "About me",
+        "description": "Welcome to my web page!<br>My name is José María, I am a full-stack developer and this is the main page of my server.<br>From here you can access some of my personal projects, as well as view my curriculum.<br>I hope you enjoy!",
+        "url": "",
+        "statusCheckUrl": null,
+        "github": null
+    },
+    {
+        "id": "printersdiscovery",
+        "title": "Printers Discovery",
+        "description": "Application with the aim of analyzing the local network in search of prototypes of printers, capturing and storing their information.<br>Through the interface, users can modify the information of the detected printers and reserve them to be able to use and work freely with them for a period of time.",
+        "url": "https://printersdiscovery.chema22r.com",
+        "statusCheckUrl": "https://printersdiscovery.herokuapp.com/general/checkStatus",
+        "github": "https://github.com/Chema22R/printers-discovery"
+    },
+    {
+        "id": "memoriizu",
+        "title": "Memoriizu",
+        "description": "Application focused on language learning, in which users add the content they want to study, in addition to the period in which they want the content to be distributed.<br>A session is generated daily with the content that users should complete for that day, emphasizing the failures comitted in previous sessions.",
+        "url": "https://memoriizu.chema22r.com",
+        "statusCheckUrl": null,
+        "github": null
+    },
+    {
+        "id": "3dpreviewer",
+        "title": "3D Previewer",
+        "description": "3D objects previewer that allows users to interact and carry out certain basic operations over loaded objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and processed geometry of the objects, so that they can be easily loaded again.",
+        "url": "https://3dpreviewer.chema22r.com",
+        "statusCheckUrl": "https://previewer3d.herokuapp.com/checkStatus",
+        "github": "https://github.com/Chema22R/3d-previewer"
+    }
+]);
 
 function addProjects(projects) {
     let device = (window.isMobile.any()) ? " mobile" : "";
@@ -48,7 +81,6 @@ function addProjects(projects) {
         }
     }
 
-    window.projectsCodeGen = true;
     loadHandlers();
 }
 
