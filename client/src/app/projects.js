@@ -12,7 +12,7 @@ addProjects([
     {
         "id": "printersdiscovery",
         "title": "Printers Discovery",
-        "description": "Application with the aim of analyzing the local network in search of prototypes of printers, capturing and storing their information.<br>Through the interface, users can modify the information of the detected printers and reserve them to be able to use and work freely with them for a period of time.",
+        "description": "Application with the aim of analyze the local network in search of prototypes of printers, capturing and storing their information.<br>Through the interface, users can modify the information of the detected printers and reserve them to work freely for a period of time.",
         "url": "https://printersdiscovery.chema22r.com",
         "statusCheckUrl": "https://printersdiscovery.herokuapp.com/general/checkStatus",
         "github": "https://github.com/Chema22R/printers-discovery"
