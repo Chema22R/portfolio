@@ -1,20 +1,18 @@
 "use strict";
 
-window.information.getLanguagesProjects(addProjects);
+window.information.getProjects(addProjects);
 
-function addProjects(langs, projects) {
+function addProjects(projects) {
     let device = (window.isMobile.any()) ? " mobile" : "";
 
     for (let i=0, codeHTML; i<projects.length; i++) {
         codeHTML =  "<div id='project-" + projects[i].id + "' class='project" + device + "'>" +
                     "<a href='" + projects[i].url + "'>" +
                     "<figure>" +
-                    "<img class='projectFront' src='images/" + projects[i].id + ".png' alt='" + projects[i].title["en-US"] + "'>" +
+                    "<img class='projectFront' src='images/" + projects[i].id + ".png' alt='" + projects[i].title + "'>" +
                     "<figcaption class='projectBack'>";
 
-        for (let j=0; j<langs.length; j++) {
-            codeHTML += "<h2 class='" + langs[j] + "'>" + projects[i].title[langs[j]] + "</h2>";
-        }
+        codeHTML += "<h2>" + projects[i].title + "</h2>";
 
         if (projects[i].statusCheckUrl) {
             codeHTML += "<hr class='left'>" +
@@ -26,10 +24,7 @@ function addProjects(langs, projects) {
             codeHTML += "<hr>";
         }
 
-        for (let j=0; j<langs.length; j++) {
-            codeHTML += "<div class='description " + langs[j] + " scroll'><p>" + projects[i].description[langs[j]] + "</p></div>";
-        }
-
+        codeHTML += "<div class='description scroll'><p>" + projects[i].description + "</p></div>";
         codeHTML += "<p class='ellipsis'>. . .</p></figcaption></figure></a></div>";
 
         $(codeHTML).appendTo("#projectsContainer");

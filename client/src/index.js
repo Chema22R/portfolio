@@ -5,7 +5,6 @@ import "./assets/style/projects.css";
 import "./assets/style/curriculum.css";
 
 import "./app/general";
-import "./app/localization";
 import "./app/projects";
 import "./app/curriculum";
 
