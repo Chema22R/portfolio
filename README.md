@@ -15,7 +15,7 @@ Check out a real example of the application from [here](https://chema22r.com).
     - `npm run build-dev` (development)
 4. The build code can be found in `./client/dist`
 
-## Directories Structure
+## Directory Structure
 ```
 |- /client
     |- /src
