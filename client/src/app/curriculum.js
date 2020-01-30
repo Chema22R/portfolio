@@ -7,11 +7,11 @@ generateSlides({
     "driveCv": "https://drive.google.com/open?id=1RUk3L3vTVGkCuFAHPWSnhbKCKuqJtD2e",
     "personal": {
         "name": "José María Rivera Alonso",
-        "role": "Full-stack Developer",
+        "role": "Full Stack Developer",
         "email": "chema22r@gmail.com",
         "phone": "+1 (236) 512-2202",
-        "country": "Vancouver, BC, Canada",
-        "birthday": "09/28/1995"
+        "country": "Vancouver BC, Canada",
+        "birthday": "28/09/1995"
     },
     "workExp": {
         "title": "Work Experience",
@@ -20,13 +20,13 @@ generateSlides({
                 "title": "Software Engineer",
                 "location": "HP SCDS, León (Spain)",
                 "period": "Jul 2018 - Oct 2019",
-                "description": "<b><i>Smart Tracker:</i></b> Full-stack development in an agile environment (DevOps), in charge of improving the Smart Tracker project. Main technologies touched: AngularJS, Node.js, MongoDB.<br><b><i>Network printers prototypes management:</i></b> This project constitutes the company practices and the final project of the Master's Degree in Computer Engineering.<br><b><i>Creation of a 3D print previewer using HTML5/JS technologies:</i></b> This project constitutes the company practices and the final project of the Bachelor's Degree in Computer Engineering. It was awarded as the best project of the XII Technology Observatory of HP."
+                "description": "Full Stack role in an agile environment (DevOps), in charge of improving and continue the development of the Smart Tracker project.<br>Main technologies touched: AngularJS, Node.js, MongoDB."
             },
             {
                 "title": "Private Tutor",
                 "location": "",
                 "period": "Sep 2015 - Oct 2019",
-                "description": "Private tutor for students of Engineering and technical education.<br>Subjects taught: Java, C and web development."
+                "description": "Private tutor for students of engineering and technical education.<br>Subjects taught: Java, C and web development."
             },
             {
                 "title": "3D Modeler",
@@ -116,7 +116,7 @@ generateSlides({
         },
         "other": {
             "title": "Other languages",
-            "val": "English (B2 level)<br>Japanese (A1/A2 level)"
+            "val": "English (C1 level)<br>Japanese (A1/A2 level)"
         }
     },
     "awards": {
