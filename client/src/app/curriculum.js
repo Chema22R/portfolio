@@ -182,7 +182,7 @@ function generateSlides(curriculum) {
                     '<br>' +
                     '<h3 class="size01 bold nbsp alignTop">' + curriculum.langs.other.title + '</h3>' +
                     '<h3 class="size01">' + curriculum.langs.other.val + '</h3>' +
-                    '<br><br>' +
+                    '<br>' +
                 '</div>';
 
     $('#dataContainer > .slide.langs').append(codeHTML);    // end languages info
