@@ -47,15 +47,15 @@ generateSlides({
         "list": [
             {
                 "title": "Master’s Degree in Computer Engineering",
-                "period": "(2017 - 2019)",
-                "level": "EQF 7",
+                "period": "2017 - 2019",
+                "level": "",
                 "location": "University of León, León (Spain)",
                 "other": "Activities and groups: Delegation team, as delegate of first and second course"
             },
             {
                 "title": "Bachelor’s Degree in Computer Engineering",
-                "period": "(2013 - 2017)",
-                "level": "EQF 6",
+                "period": "2013 - 2017",
+                "level": "",
                 "location": "University of León, León (Spain)",
                 "other": "Activities and groups: Delegation team, as delegate of first course"
             }
@@ -116,7 +116,7 @@ generateSlides({
         },
         "other": {
             "title": "Other languages",
-            "val": "English (C1 level)<br>Japanese (A1/A2 level)"
+            "val": "English (C1)<br>Japanese (A2/A1)"
         }
     },
     "awards": {
@@ -149,8 +149,8 @@ function generateSlides(curriculum) {
 
     for (let j=0; j<curriculum.education.list.length; j++) {
         codeHTML += '<h3 class="bold nbsp">' + curriculum.education.list[j].title + '</h3>' +
-                    '<h3 class="size01 nbsp lineBreak">' + curriculum.education.list[j].period + '</h3>' +
-                    '<h3 class="size02 floatR lineBreak">' + curriculum.education.list[j].level + '</h3>' +
+                    '<h3 class="size01 nbsp lineBreak">' + curriculum.education.list[j].level + '</h3>' +
+                    '<h3 class="size01 floatR lineBreak">' + curriculum.education.list[j].period + '</h3>' +
                     '<p>' + curriculum.education.list[j].location + '</p>' +
                     '<p class="padding-left">' + curriculum.education.list[j].other + '</p>';
     }
