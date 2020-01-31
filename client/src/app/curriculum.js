@@ -20,7 +20,7 @@ generateSlides({
                 "title": "Software Engineer",
                 "location": "HP SCDS, León (Spain)",
                 "period": "Jul 2018 - Oct 2019",
-                "description": "Full Stack role in an agile environment (DevOps), in charge of improving and continue the development of the Smart Tracker project.<br>Main technologies touched: AngularJS, Node.js, MongoDB."
+                "description": "Full stack role in an agile environment (DevOps), in charge of improving and continue the development of the Smart Tracker project.<br>Main technologies touched: AngularJS, Node.js, MongoDB."
             },
             {
                 "title": "Private Tutor",
