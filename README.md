@@ -17,6 +17,8 @@ Check out a real example of the application from [here](https://chema22r.com).
 
 ## Directory Structure
 ```
+|- /.github
+    |- ...
 |- /client
     |- /src
         |- /app
@@ -32,12 +34,15 @@ Check out a real example of the application from [here](https://chema22r.com).
                 |- ...
         |- index.html
         |- index.js
+    |- package-lock.json
     |- package.json
     |- webpack.config.js
     |- webpack.dev.js
     |- webpack.prod.js
+|- _config.yml
 |- .gitignore
 |- LICENSE
+|- package-lock.json
 |- package.json
 |- README.md
 ```
