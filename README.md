@@ -18,6 +18,8 @@ Check out a real example of the application from [here](https://chema22r.com).
 
 ## Directory Structure
 ```
+|- /.dependabot
+    |- ...
 |- /.github
     |- ...
 |- /client
