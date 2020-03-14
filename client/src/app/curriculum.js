@@ -215,14 +215,6 @@ function generateSlides(curriculum) {
 /* Triggers
 ========================================================================== */
 
-$("#curriculumButton").click(function(e) {
-    e.preventDefault();
-
-    $("#leftover, #curriculumContainer").fadeIn("slow");
-    $(document.body).css({overflow: "hidden"});
-    $("#curriculumData").scrollTop(0);
-});
-
 $(window).on("click touchstart", function(e) {
     if ($("#curriculumContainer").is(":visible") && ($(e.target).is("#leftover") || $(e.target).is(".exitButton"))) {
         $("#leftover, #curriculumContainer").fadeOut("slow");
