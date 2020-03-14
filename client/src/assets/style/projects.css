@@ -4,6 +4,7 @@
     flex-wrap: wrap;
 
     max-width: 1460px;
+    min-width: 0;
     padding: 50px;
     margin: auto;
 
