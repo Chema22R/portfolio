@@ -6,7 +6,10 @@
     box-sizing: border-box;
 }
 
+html, body {height: 100%;}
+
 body {
+    display: flex;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f0f2f1;
@@ -17,9 +20,17 @@ a {text-decoration: none;}
 button {
     background: transparent;
     outline: none;
-    
+
     border: none;
     cursor: pointer;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 #leftover {
