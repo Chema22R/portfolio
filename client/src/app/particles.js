@@ -1,20 +1,20 @@
 particlesJS("particles-js", {
     "particles": {
         "number": {
-            "value": 80,
+            "value": 350,
             "density": {
                 "enable": true,
                 "value_area": 800
             }
         },
         "color": {
-            "value": "#ffffff"
+            "value": "#000"
         },
         "shape": {
             "type": "circle",
             "stroke": {
                 "width": 0,
-                "color": "#303030"
+                "color": "#000000"
             },
             "polygon": {
                 "nb_sides": 5
@@ -26,35 +26,35 @@ particlesJS("particles-js", {
             }
         },
         "opacity": {
-            "value": 0.5,
-            "random": true,
+            "value": .5,
+            "random": false,
             "anim": {
                 "enable": true,
-                "speed": 1,
-                "opacity_min": 0.1,
+                "speed": .25,
+                "opacity_min": 0,
                 "sync": false
             }
         },
         "size": {
-            "value": 3,
+            "value": 2,
             "random": true,
             "anim": {
                 "enable": true,
-                "speed": 1,
-                "size_min": 0.1,
+                "speed": 2,
+                "size_min": 0,
                 "sync": false
             }
         },
         "line_linked": {
-            "enable": true,
+            "enable": false,
             "distance": 150,
-            "color": "#000",
-            "opacity": 0.5,
-            "width": 2
+            "color": "#ffffff",
+            "opacity": .4,
+            "width": 1
         },
         "move": {
             "enable": true,
-            "speed": .25,
+            "speed": .2,
             "direction": "none",
             "random": true,
             "straight": false,
@@ -71,8 +71,8 @@ particlesJS("particles-js", {
         "detect_on": "canvas",
         "events": {
             "onhover": {
-                "enable": false,
-                "mode": "repulse"
+                "enable": true,
+                "mode": "bubble"
             },
             "onclick": {
                 "enable": true,
@@ -88,15 +88,15 @@ particlesJS("particles-js", {
                 }
             },
             "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
+                "distance": 200,
+                "size": 1,
+                "duration": 3,
+                "opacity": 1,
                 "speed": 3
             },
             "repulse": {
-                "distance": 80,
-                "duration": 0.4
+                "distance": 200,
+                "duration": .4
             },
             "push": {
                 "particles_nb": 4
