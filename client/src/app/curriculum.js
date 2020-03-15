@@ -10,8 +10,7 @@ generateSlides({
         "role": "Full Stack Developer",
         "email": "chema22r@gmail.com",
         "phone": "+1 (236) 512-2202",
-        "country": "Vancouver BC, Canada",
-        "birthday": "28/09/1995"
+        "country": "Vancouver BC, Canada"
     },
     "workExp": {
         "title": "Work Experience",
@@ -137,9 +136,14 @@ function generateSlides(curriculum) {
     codeHTML =  '<div class="content">' +
                     '<h2>' + curriculum.personal.name + '</h2>' +
                     '<h3>' + curriculum.personal.role + '</h3>' +
-                    '<p>' + curriculum.personal.email + ' | ' + curriculum.personal.phone + '</p>' +
-                    '<p class="country">' + curriculum.personal.country + ' | ' + curriculum.personal.birthday + '</p>' +
-                '</div>';
+                    '<p>' + curriculum.personal.email + '&nbsp;&nbsp;|&nbsp;&nbsp;' + curriculum.personal.phone + '</p>' +
+                    '<p class="country">' + curriculum.personal.country + '</p>' +
+                '</div>' +
+                '<a class="content icon-lkdn icon" href="' + curriculum.linkedin + '" target="_blank" rel="external"></a>' +
+                '<a class="content icon-gthb icon" href="' + curriculum.github + '" target="_blank" rel="external"></a>' +
+                '<a class="content icon-cdpn icon" href="' + curriculum.codepen + '" target="_blank" rel="external"></a>' +
+                '<a class="content icon-gml icon" href="mailto:' + curriculum.personal.email + '" rel="external"></a>' +
+                '<a class="content icon-cv icon" href="' + curriculum.driveCv + '" target="_blank" rel="external"></a>';
 
     $('#curriculumData > .section.basic').append(codeHTML);   // end basic or personal info
 

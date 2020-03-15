@@ -125,8 +125,14 @@
 
 
 
-/* Social Section
+/* Social Buttons
     ========================================================================== */
+
+.section.basic a {
+    margin: 6px;
+    font-size: 20px;
+    color: #333;
+}
 
 .section.social a {
     margin: 12px;
@@ -134,6 +140,7 @@
     color: #333;
 }
 
+.section.basic a:hover,
 .section.social a:hover {opacity: 0.6;}
 
 

@@ -224,3 +224,49 @@
     -moz-transition: padding .5s, background-color .5s;
     -webkit-transition: padding .5s, background-color .5s;
 }
+
+
+/* Help Bubble */
+
+#helpBubble {
+    position: absolute;
+    top: -60px;
+    left: -50px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#helpBubble > img {height: 50px;}
+
+#helpBubble > p {
+    padding: 5px 12px;
+
+    border-radius: 8px;
+
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+
+    background-color: #888;
+}
+
+#helpBubble > p::after {
+	content: '';
+	position: absolute;
+	bottom: 8px;
+    left: 40px;
+
+    height: 10px;
+	width: 10px;
+
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
+
+    background-color: #888;
+}
+
+@media screen and (max-width: 400px) {
+    #helpBubble {left: unset}
+}

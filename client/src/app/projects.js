@@ -40,6 +40,7 @@ function addProjects(projects) {
 
     for (let i=0, codeHTML; i<projects.length; i++) {
         codeHTML =  "<div id='project-" + projects[i].id + "' class='project" + device + "'>" +
+                    (projects[i].id === "curriculum" ? "<a id='helpBubble' href='" + projects[i].url + "'><img src='images/me.png'><p>Click on this card to<br>know more about me!</p></a>" : "") +
                     "<a href='" + projects[i].url + "'>" +
                     "<figure>" +
                     "<img class='projectFront' src='images/" + projects[i].id + ".png' alt='" + projects[i].title + "'>" +
