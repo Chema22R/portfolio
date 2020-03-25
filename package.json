@@ -21,6 +21,6 @@
     },
     "homepage": "https://github.com/Chema22R/personal-web-server#readme",
     "dependencies": {
-        "concurrently": "^5.0.1"
+        "concurrently": "^5.1.0"
     }
 }
