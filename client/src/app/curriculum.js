@@ -6,7 +6,7 @@ generateSlides({
     "codepen": "https://codepen.io/chema22r",
     "driveCv": "https://drive.google.com/open?id=1RUk3L3vTVGkCuFAHPWSnhbKCKuqJtD2e",
     "personal": {
-        "name": "José María Rivera Alonso",
+        "name": "Jose Maria Rivera Alonso",
         "role": "Full Stack Developer",
         "email": "chema22r@gmail.com",
         "phone": "+1 (236) 512-2202",
@@ -19,7 +19,7 @@ generateSlides({
                 "title": "Software Engineer",
                 "location": "HP SCDS, León (Spain)",
                 "period": "Jul 2018 - Oct 2019",
-                "description": "Full stack role in an agile environment (DevOps), in charge of improving and continue the development of the Smart Tracker project.<br>Main technologies touched: AngularJS, Node.js, MongoDB."
+                "description": "Full Stack role in an agile environment (DevOps), in charge of improving and continue the development of the Smart Tracker project.<br>Main technologies touched: AngularJS, Node.js, MongoDB."
             },
             {
                 "title": "Private Tutor",
