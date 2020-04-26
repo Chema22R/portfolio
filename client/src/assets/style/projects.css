@@ -38,7 +38,10 @@
 }
 
 
-.project a {display: inline-block;}
+.project a {
+    display: inline-block;
+    outline: none;
+}
 
 .project figure {
     position: relative;
