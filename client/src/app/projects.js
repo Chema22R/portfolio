@@ -13,8 +13,8 @@ addProjects([
         "id": "printersdiscovery",
         "title": "Printers Discovery",
         "description": "Application with the aim of analyze the local network in search of prototypes of printers, capturing and storing their information.<br>Through the interface, users can modify the information of the detected printers and reserve them to work freely for a period of time.",
-        "url": "https://printersdiscovery.chema22r.com",
-        "statusCheckUrl": "https://printersdiscovery.herokuapp.com/general/checkStatus",
+        "url": "https://printers-discovery.chema22r.com",
+        "statusCheckUrl": "https://printers-discovery.herokuapp.com/general/checkStatus",
         "github": "https://github.com/Chema22R/printers-discovery"
     },
     {
@@ -29,8 +29,8 @@ addProjects([
         "id": "3dpreviewer",
         "title": "3D Previewer",
         "description": "3D objects previewer that allows users to interact and carry out certain basic operations on loaded objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and processed geometry of the objects, so that they can be easily loaded again.",
-        "url": "https://3dpreviewer.chema22r.com",
-        "statusCheckUrl": "https://previewer3d.herokuapp.com/checkStatus",
+        "url": "https://3d-previewer.chema22r.com",
+        "statusCheckUrl": "https://previewer-3d.herokuapp.com/checkStatus",
         "github": "https://github.com/Chema22R/3d-previewer"
     }
 ]);
