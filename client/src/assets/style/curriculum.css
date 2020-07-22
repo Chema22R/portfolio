@@ -36,7 +36,6 @@
 
 #curriculumData {
     height: 100%;
-    padding: 10px 0;
 
     text-align: center;
     color: #444;
@@ -47,6 +46,8 @@
 }
 
 .section {margin: 20px 0;}
+.section:first-of-type { margin-top: 30px; }
+.section:last-of-type { margin-bottom: 30px; }
 
 .section h2,
 .section h3,
@@ -148,12 +149,7 @@
 /* Special Behaviours
     ========================================================================== */
 
-@media screen and (max-width: 700px) {
-    .section.data .slide h3.floatR {float: none;}
-    .section.data .slide h3.lineBreak {margin-top: 3px;}
-}
-
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 856px) {
     #curriculumContainer .exitButton {
         top: 0;
         right: 0;
@@ -161,4 +157,28 @@
         font-size: 16px;
         background: unset;
     }
+
+    #curriculumContainer {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #curriculumData { overflow: unset; }
+}
+
+@media screen and (max-width: 700px) {
+    .section.data .slide h3.floatR {float: none;}
+    .section.data .slide h3.lineBreak {margin-top: 3px;}
+}
+
+@media screen and (max-width: 350px) {
+    #curriculumContainer { overflow: auto; }
+
+    #curriculumContainer .exitButton {
+        right: unset;
+        left: 310px;
+        margin: 0;
+    }
+
+    #curriculumData { min-width: 350px; }
 }
