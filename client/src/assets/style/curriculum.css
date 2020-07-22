@@ -47,7 +47,10 @@
 
 .section {margin: 20px 0;}
 .section:first-of-type { margin-top: 30px; }
-.section:last-of-type { margin-bottom: 30px; }
+.section:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
 
 .section h2,
 .section h3,
