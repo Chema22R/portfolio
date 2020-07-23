@@ -17,10 +17,10 @@
 #curriculumContainer .exitButton {
     position: absolute;
     top: 10px;
-    right: -46px;
+    right: -48px;
 
     padding: 12px;
-    border-radius: 30px;
+    border-radius: 24px;
 
     font-size: 12px;
     color: #888;
@@ -62,19 +62,13 @@
     ========================================================================== */
 
 .section.basic * {margin: 10px auto;}
-.section.basic h3 {font-weight: normal;}
-.section.basic p {font-size: 0.9em;}
-
-.section.basic .country {
-    display: inline-flex;
-    margin: 0;
-    line-height: 22px;
+.section.basic div {margin-bottom: 12px;}
+.section.basic h2 {font-size: 24px;}
+.section.basic h3 {
+    font-size: 19px;
+    font-weight: normal;
 }
-
-.section.basic .country img {
-    height: 20px;
-    margin: 0 4px 0 0;
-}
+.section.basic p {font-size: 14px;}
 
 
 
@@ -86,7 +80,7 @@
     border-top: 1px solid #bbb;
     border-bottom: 1px solid #bbb;
 
-    font-size: 0.9em;
+    font-size: 14px;
     text-align: justify;
 }
 
@@ -111,21 +105,12 @@
 
 .section.data .slide h3.nbsp {margin-right: 8px;}
 .section.data .slide h3.bold {font-weight: bold;}
-.section.data .slide h3.size01 {font-size: 1em;}
-.section.data .slide h3.size02 {font-size: 0.9em;}
+.section.data .slide h3.size01 {font-size: 14px;}
 .section.data .slide h3.floatR {float: right;}
 .section.data .slide h3.alignTop {vertical-align: top;}
-
-.section.data .slide p {
-    margin-left: 1px;
-    line-height: 24px;
-}
-
-.section.data .slide p.padding-left {
-    padding-left: 15px;
-}
-
-.section.data .slide div.lessImportant h3 {font-size: 1em;}
+.section.data .slide p {line-height: 24px;}
+.section.data .slide p.padding-left {padding-left: 16px;}
+.section.data .slide div.lessImportant h3 {font-size: 16px;}
 
 
 
@@ -140,7 +125,7 @@
 
 .section.social a {
     margin: 12px;
-    font-size: 40px;
+    font-size: 35px;
     color: #333;
 }
 
@@ -152,7 +137,7 @@
 /* Special Behaviours
     ========================================================================== */
 
-@media screen and (max-width: 856px) {
+@media screen and (max-width: 860px) {
     #curriculumContainer .exitButton {
         top: 0;
         right: 0;
@@ -169,7 +154,7 @@
     #curriculumData { overflow: unset; }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .section.data .slide h3.floatR {float: none;}
     .section.data .slide h3.lineBreak {margin-top: 3px;}
 }

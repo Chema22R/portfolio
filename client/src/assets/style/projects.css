@@ -118,16 +118,18 @@
 }
 
 .project figure .projectBack h2 {
-    margin-bottom: 20px;
-
     font-size: 24px;
     font-weight: normal;
     text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .project figure .projectBack hr {
     height: 2px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     border: none;
 
     opacity: .8;
@@ -177,7 +179,7 @@
 .project figure .projectBack .icon-loading,
 .project figure .projectBack .icon-error {
     position: absolute;
-    margin: -7px 12px 0 12px;
+    margin: 12px 12px 0 12px;
     font-size: 16px;
 }
 
@@ -212,6 +214,7 @@
     -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
 
     color: #fff;
+    font-size: 16px;
     background-color: rgba(255,255,255,.15);
 
     transition: padding .5s, background-color .5s;
