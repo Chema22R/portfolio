@@ -89,6 +89,8 @@ function loadHandlers() {
     $("#project-curriculum > a").on("click", function(e) {
         e.preventDefault();
 
+        $("#project-curriculum").css({transform: "perspective(600px) rotateY(0deg)"});
+
         $("#leftover, #curriculumContainer").fadeIn("slow");
         $(document.body).css({overflow: "hidden"});
         $("#curriculumData").scrollTop(0);
