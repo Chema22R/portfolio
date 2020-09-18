@@ -4,7 +4,7 @@ addProjects([
     {
         "id": "curriculum",
         "title": "About me",
-        "description": "Welcome to my web page!<br>My name is Jose Maria, I am a Full Stack developer and this is the main page of my server.<br>From here you can access some of my personal projects, as well as view my resume, simply by clicking on the cards.<br>I hope you enjoy!",
+        "description": "Welcome to my web page!<br>My name is Jose Maria, I am a web developer and this is the main page of my server.<br>From here you can access some of my personal projects, as well as view my resume, simply by clicking on the cards.<br>I hope you enjoy!",
         "url": "",
         "statusCheckUrl": null,
         "github": null
