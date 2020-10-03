@@ -10,7 +10,7 @@ generateSlides({
         "role": "Full Stack Developer",
         "email": "chema22r@gmail.com",
         "phone": "+34 697 946 985",
-        "country": "León, Spain"
+        "country": "A Coruña, Spain"
     },
     "workExp": {
         "title": "Work Experience",
