@@ -4,7 +4,7 @@ generateSlides({
     "linkedin": "https://www.linkedin.com/in/chema22r",
     "github": "https://github.com/chema22r",
     "codepen": "https://codepen.io/chema22r",
-    "driveCv": "https://drive.google.com/open?id=1RUk3L3vTVGkCuFAHPWSnhbKCKuqJtD2e",
+    "driveCv": "https://www.icloud.com/iclouddrive/0NVAWMHmTupeKfSqEfiYCcArg#CV",
     "personal": {
         "name": "Jose Maria Rivera Alonso",
         "role": "Full Stack Developer",
