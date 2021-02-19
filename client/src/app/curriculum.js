@@ -10,11 +10,23 @@ generateSlides({
         "role": "Full Stack Developer",
         "email": "chema22r@gmail.com",
         "phone": "+34 697 946 985",
-        "country": "A Coruña, Spain"
+        "country": "Vigo, Spain"
     },
     "workExp": {
         "title": "Work Experience",
         "list": [
+            {
+                "title": "Backend Developer",
+                "location": "BizAway, Vigo (Spain)",
+                "period": "Jan 2021 - Present",
+                "description": ""
+            },
+            {
+                "title": "Frontend Developer",
+                "location": "Omega CRM, (Spain, remote)",
+                "period": "Nov 2020 - Jan 2021",
+                "description": ""
+            },
             {
                 "title": "Full Stack Developer",
                 "location": "WorkSafeBC, Vancouver (Canada)",
