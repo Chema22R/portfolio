@@ -3,7 +3,7 @@
 generateSlides({
     "linkedin": "https://www.linkedin.com/in/chema22r",
     "github": "https://github.com/chema22r",
-    "npm": "https://www.npmjs.com/settings/chema22r/packages",
+    "npm": "https://www.npmjs.com/~chema22r",
     "codepen": "https://codepen.io/chema22r",
     "driveCv": "https://drive.google.com/drive/folders/14_t2L92eh98rlP80SueieMA6bYGxA4pA",
     "personal": {
@@ -20,7 +20,7 @@ generateSlides({
                 "title": "Backend Developer",
                 "location": "BizAway, Vigo (Spain)",
                 "period": "Jan 2021 - Present",
-                "description": ""
+                "description": "Main technologies: Node.js, MongoDB and Docker."
             },
             {
                 "title": "Frontend Developer",
