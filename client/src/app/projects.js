@@ -23,7 +23,7 @@ addProjects([
         "description": "Application focused on language learning, in which users add the content they want to study, in addition to the period in which they want the content to be distributed.<br>A session is generated daily with the content that users should complete for that day, emphasizing the failures committed in previous sessions.",
         "url": "https://memoriizu.chema22r.com",
         "statusCheckUrl": "https://memoriizu.herokuapp.com/checkStatus",
-        "github": null
+        "github": "https://github.com/Chema22R/memoriizu"
     },
     {
         "id": "3dpreviewer",
