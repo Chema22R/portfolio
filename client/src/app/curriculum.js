@@ -17,15 +17,15 @@ generateSlides({
         "title": "Work Experience",
         "list": [
             {
-                "title": "Backend Developer",
-                "location": "BizAway, Vigo (Spain)",
-                "period": "Jan 2021 - Present",
-                "description": "Main technologies: Node.js, MongoDB and Docker."
+                "title": "Full Stack Developer",
+                "location": "Sesamy (Spain, remote)",
+                "period": "Jul 2021 - Present",
+                "description": ""
             },
             {
-                "title": "Frontend Developer",
-                "location": "Omega CRM, (Spain, remote)",
-                "period": "Nov 2020 - Jan 2021",
+                "title": "Backend Developer",
+                "location": "BizAway, Vigo (Spain)",
+                "period": "Jan 2021 - Jul 2021",
                 "description": ""
             },
             {
@@ -68,14 +68,14 @@ generateSlides({
                 "period": "2017 - 2019",
                 "level": "",
                 "location": "University of León, León (Spain)",
-                "other": "Activities and Societies: Delegation team​, as delegate of first and second course​.​"
+                "other": "Activities and Societies: Delegation team, as delegate of first and second course."
             },
             {
                 "title": "Bachelor’s Degree in Computer Engineering",
                 "period": "2013 - 2017",
                 "level": "",
                 "location": "University of León, León (Spain)",
-                "other": "Activities and Societies: Delegation team​, as delegate of first course​.​"
+                "other": "Activities and Societies: Delegation team, as delegate of first course."
             }
         ]
     },
