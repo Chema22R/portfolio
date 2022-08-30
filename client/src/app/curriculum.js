@@ -10,8 +10,7 @@ generateSlides({
         "name": "Jose Maria Rivera Alonso",
         "role": "Full Stack Developer",
         "email": "chema22r@gmail.com",
-        "phone": "+34 697 946 985",
-        "country": "Vigo, Spain"
+        "country": "Spain"
     },
     "workExp": {
         "title": "Work Experience",
@@ -108,7 +107,7 @@ function generateSlides(curriculum) {
     codeHTML =  '<div class="content">' +
                     '<h2>' + curriculum.personal.name + '</h2>' +
                     '<h3>' + curriculum.personal.role + '</h3>' +
-                    '<p>' + curriculum.personal.email + '&nbsp;&nbsp;|&nbsp;&nbsp;' + curriculum.personal.phone + '</p>' +
+                    '<p>' + curriculum.personal.email + '</p>' +
                     '<p class="country">' + curriculum.personal.country + '</p>' +
                 '</div>' +
                 '<a class="content icon-lkdn icon" href="' + curriculum.linkedin + '" target="_blank" rel="external"></a>' +
