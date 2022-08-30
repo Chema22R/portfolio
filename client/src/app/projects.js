@@ -22,7 +22,7 @@ addProjects([
         "title": "3D Previewer",
         "description": "3D objects previewer that allows users to interact and carry out certain basic operations on loaded objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and processed geometry of the objects, so that they can be easily loaded again.",
         "url": "https://3d-previewer.chema22r.com",
-        "statusCheckUrl": "https://previewer-3d.onrender.com/checkStatus",
+        "statusCheckUrl": "https://3d-previewer.onrender.com/checkStatus",
         "github": "https://github.com/Chema22R/3d-previewer"
     },
     {
