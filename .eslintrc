@@ -1,0 +1,31 @@
+{
+    "env": {
+        "browser": true,
+        "es2022": true
+    },
+    "extends": [
+        "chema22r",
+        "chema22r/react"
+    ],
+    "globals": {},
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "impliedStrict": true,
+            "jsx": true
+        },
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        }
+    },
+    "rules": {}
+}
