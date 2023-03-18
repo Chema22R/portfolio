@@ -1,14 +1,11 @@
 #socialContainer {
-    position: fixed;
-    top: 0;
-
     width: 100%;
-
-    margin-top: 20px;
 }
 
 #socialContainer > div {
     display: flex;
+    margin-bottom: 20px;
+
     justify-content: center;
 }
 
@@ -20,4 +17,11 @@
 
 #socialContainer > div > a:hover {
     opacity: 0.6;
+}
+
+@media screen and (max-width: 370px) {
+    #socialContainer > div > a {
+        margin: 12px 8px;
+        font-size: 30px;
+    }
 }

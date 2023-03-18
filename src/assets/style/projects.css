@@ -3,9 +3,10 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    max-width: 1460px;
+    max-width: min(100%, 1460px);
     min-width: 0;
-    padding: 120px 50px;
+    padding: 50px;
+    padding-top: 100px;
     margin: auto;
 
     justify-content: center;
