@@ -1,0 +1,23 @@
+#socialContainer {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+#socialContainer > div {
+    display: flex;
+    justify-content: center;
+}
+
+#socialContainer > div > a {
+    margin: 12px;
+    font-size: 35px;
+    color: #333;
+}
+
+#socialContainer > div > a:hover {
+    opacity: 0.6;
+}

@@ -32,29 +32,3 @@ button {
     bottom: 0;
     left: 0;
 }
-
-#leftover {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    background: #000;
-    opacity: 0.4;
-
-    z-index: 2;
-}
-
-
-/* Z-index guide
-    ==========================================================================
-
-buttonsLeft             1
-leftover                2
-curriculumContainer     3
-buttonsRight            4
-ps__scrollbar-y-rail    4
-exitButton              5
-*/

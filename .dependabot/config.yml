@@ -11,16 +11,4 @@ update_configs:
       - "dependencies"
     allowed_updates:
       - match:
-         update_type: "security"
-  - package_manager: "javascript"
-    directory: "/client"
-    update_schedule: "live"
-    default_reviewers:
-      - "Chema22R"
-    default_assignees:
-      - "Chema22R"
-    default_labels:
-      - "dependencies"
-    allowed_updates:
-      - match:
-          update_type: "security"
+        update_type: "security"

@@ -4,7 +4,7 @@ addProjects([
     {
         "id": "curriculum",
         "title": "About me",
-        "description": "Welcome to my web page!<br>My name is Jose Maria, I am a web developer and this is the main page of my server.<br>From here you can access some of my personal projects, as well as view my resume, simply by clicking on the cards.<br>I hope you enjoy!",
+        "description": "Welcome to my web page!<br>My name is Jose Maria, I am a full stack developer and this is the main page of my server.<br>From here you can access some of my personal projects, simply by clicking on the cards. If you want to know more about my work, take a look at my github.<br>I hope you enjoy!",
         "url": "",
         "statusCheckUrl": null,
         "github": null
@@ -40,7 +40,7 @@ function addProjects(projects) {
 
     for (let i=0, codeHTML; i<projects.length; i++) {
         codeHTML =  "<div id='project-" + projects[i].id + "' class='project" + device + "'>" +
-                    (projects[i].id === "curriculum" ? "<a id='helpBubble' href='" + projects[i].url + "'><img src='images/me.png'><p>Click on this card to<br>know more about me!</p></a>" : "") +
+                    (projects[i].id === "curriculum" ? "<a id='helpBubble' href='" + projects[i].url + "'><img src='images/me.png'><p>Welcome!</p></a>" : "") +
                     "<a href='" + projects[i].url + "'>" +
                     "<figure>" +
                     "<img class='projectFront' src='images/" + projects[i].id + ".png' alt='" + projects[i].title + "'>" +
@@ -88,12 +88,6 @@ function addProjects(projects) {
 function loadHandlers() {
     $("#project-curriculum > a").on("click", function(e) {
         e.preventDefault();
-
-        $("#project-curriculum").css({transform: "perspective(600px) rotateY(0deg)"});
-
-        $("#leftover, #curriculumContainer").fadeIn("slow");
-        $(document.body).css({overflow: "hidden"});
-        $("#curriculumData").scrollTop(0);
     });
 
     if (!window.isMobile.any()) {

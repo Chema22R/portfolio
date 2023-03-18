@@ -5,10 +5,14 @@
 
     max-width: 1460px;
     min-width: 0;
-    padding: 50px;
+    padding: 120px 50px;
     margin: auto;
 
     justify-content: center;
+}
+
+#project-curriculum > a {
+    cursor: default;
 }
 
 .project {
@@ -243,9 +247,12 @@
     flex-direction: row;
 }
 
-#helpBubble > img {height: 50px;}
+#helpBubble > img {
+    height: 50px;
+}
 
 #helpBubble > p {
+    margin-top: 20px;
     padding: 5px 12px;
 
     border-radius: 8px;
