@@ -213,7 +213,7 @@
     100% {transform: rotate(360deg);}
 }
 
-.project figure .projectBack .icon-gthb {
+.project figure .projectBack .icon-repo {
     position: absolute;
     top: 0;
     right: 0;
@@ -232,8 +232,8 @@
     -webkit-transition: padding .5s, background-color .5s;
 }
 
-.project.mobile figure .projectBack .icon-gthb,
-.project figure .projectBack .icon-gthb:hover {
+.project.mobile figure .projectBack .icon-repo,
+.project figure .projectBack .icon-repo:hover {
     padding: 8px 8px 32px 32px;
     background-color: rgba(255,255,255,.2);
     transition: padding .5s, background-color .5s;
