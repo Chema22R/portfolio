@@ -8,14 +8,14 @@
         "id": "downloadhub",
         "title": "Download Hub",
         "description": "Application with the aim of gathering multiple media sources in one single place, providing the best possible user experience.<br>It provides a search engine that allows users to find the content they are looking for, as well as a section with the most popular content of the moment.",
-        "url": "https://download-hub.chema22r.com",
-        "health": "https://api.download-hub.chema22r.com/health"
+        "url": "https://dwthub.com",
+        "health": "https://api.dwthub.com/health"
     },
     {
         "id": "printersdiscovery",
         "title": "Printers Discovery",
         "description": "Application with the aim of analyze the local network in search of prototypes of printers, capturing and storing their information.<br>Through the interface, users can modify the information of the detected printers and reserve them to work freely for a period of time.",
-        "url": "https://printers-discovery.chema22r.com",
+        "url": "https://printersdiscovery.chema22r.com",
         "health": "https://printers-discovery.herokuapp.com/health",
         "repo": "https://github.com/Chema22R/printers-discovery"
     },
@@ -23,7 +23,7 @@
         "id": "3dpreviewer",
         "title": "3D Previewer",
         "description": "3D objects previewer that allows users to interact and carry out certain basic operations on loaded objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and processed geometry of the objects, so that they can be easily loaded again.",
-        "url": "https://3d-previewer.chema22r.com",
+        "url": "https://3dpreviewer.chema22r.com",
         "health": "https://previewer-3d.herokuapp.com/health",
         "repo": "https://github.com/Chema22R/3d-previewer"
     },
