@@ -1,5 +1,5 @@
 {
-    "name": "personal-web-server_client",
+    "name": "portfolio_client",
     "version": "1.0.0",
     "description": "Application to give a personal presentation of the own projects and the curriculum",
     "main": "./src/index.js",
@@ -12,14 +12,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Chema22R/personal-web-server.git"
+        "url": "git+https://github.com/Chema22R/portfolio.git"
     },
     "author": "Chema22R (https://github.com/Chema22R)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Chema22R/personal-web-server/issues"
+        "url": "https://github.com/Chema22R/portfolio/issues"
     },
-    "homepage": "https://github.com/Chema22R/personal-web-server#readme",
+    "homepage": "https://github.com/Chema22R/portfolio#readme",
     "dependencies": {
         "jquery": "^3.6.1",
         "particles.js": "^2.0.0"
