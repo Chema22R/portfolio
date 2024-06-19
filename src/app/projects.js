@@ -13,7 +13,7 @@ $('#socialContainer').append(
         `<a class='content icon-npm icon' href='${socialData.npm}' target='_blank' rel='external'></a>` +
         `<a class='content icon-cdpn icon' href='${socialData.codepen}' target='_blank' rel='external'></a>` +
         `<a class='content icon-gml icon' href='${socialData.email}' rel='external'></a>` +
-        `<a class='content icon-cv icon' href='${socialData.driveCv}' target='_blank' rel='external'></a>` +
+        // `<a class='content icon-cv icon' href='${socialData.driveCv}' target='_blank' rel='external'></a>` +
     '</div>'
 );
 
