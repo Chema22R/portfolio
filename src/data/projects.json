@@ -9,14 +9,14 @@
         "title": "Download Hub",
         "description": "Application with the aim of gathering multiple media sources in one single place, providing the best possible user experience.<br>It provides a search engine that allows users to find the content they are looking for, as well as a section with the most popular content of the moment.",
         "url": "https://dwthub.com",
-        "health": "https://alt-api.dwthub.com/health"
+        "health": "https://api.dwthub.com/health"
     },
     {
         "id": "printersdiscovery",
         "title": "Printers Discovery",
         "description": "Application with the aim of analyze the local network in search of prototypes of printers, capturing and storing their information.<br>Through the interface, users can modify the information of the detected printers and reserve them to work freely for a period of time.",
         "url": "https://printersdiscovery.chema22r.com",
-        "health": "https://alt-api.printersdiscovery.chema22r.com/health",
+        "health": "https://api.printersdiscovery.chema22r.com/health",
         "repo": "https://github.com/Chema22R/printers-discovery"
     },
     {
@@ -24,7 +24,7 @@
         "title": "3D Previewer",
         "description": "3D objects previewer that allows users to interact and carry out certain basic operations on loaded objects, enabling their analysis in detail.<br>In addition, the application stores the extracted and processed geometry of the objects, so that they can be easily loaded again.",
         "url": "https://3dpreviewer.chema22r.com",
-        "health": "https://alt-api.3dpreviewer.chema22r.com/health",
+        "health": "https://api.3dpreviewer.chema22r.com/health",
         "repo": "https://github.com/Chema22R/3d-previewer"
     },
     {
@@ -32,7 +32,7 @@
         "title": "Memoriizu",
         "description": "Application focused on language learning, in which users add the content they want to study, in addition to the period in which they want the content to be distributed.<br>A session is generated daily with the content that users should complete for that day, emphasizing the failures committed in previous sessions.",
         "url": "https://memoriizu.chema22r.com",
-        "health": "https://alt-api.memoriizu.chema22r.com/health",
+        "health": "https://api.memoriizu.chema22r.com/health",
         "repo": "https://github.com/Chema22R/memoriizu"
     }
 ]
